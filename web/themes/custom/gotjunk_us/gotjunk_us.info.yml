@@ -6,7 +6,7 @@ core_version_requirement: ^8 || ^9
 base theme: bootstrap_barrio
 
 libraries:
-  - gotjunk_us/bootstrap_cdn
+  - gotjunk_us/bootstrap
   - gotjunk_us/global-styling
 
 regions:
