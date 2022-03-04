@@ -2,8 +2,8 @@
  * @file
  * Subtheme specific CSS.
  */
- .review-block {
-     height: 500px;
+ .views_slideshow_cycle_teaser_section {
+     height: 500px !important;
      background: url("/sites/default/files/review-background-desktop.jpg") no-repeat;
      background-size: cover;
  }
