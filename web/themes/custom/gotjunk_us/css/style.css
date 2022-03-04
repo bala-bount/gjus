@@ -2,3 +2,7 @@
  * @file
  * Subtheme specific CSS.
  */
+ .view-review-block-view {
+     background: url("/sites/default/files/review-background-desktop.jpg") no-repeat;
+     background-size: cover;
+ }
