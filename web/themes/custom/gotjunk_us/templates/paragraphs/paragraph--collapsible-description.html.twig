@@ -49,9 +49,13 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      <h3>{{ content.field_title }}</h3>
-      {{ content.field_description }}
-      {{ content|without('field_title', 'field_description') }}
+      {% if {{ content.field_collapse_text }} %}
+        <a href="#read-more">{{ content.field_collapse_text }}</a>
+      {% endif %}
+      {% if {{ content.field_collapse_image }} %}
+        {{ content.field_collapse_image }}
+      {% endif %}
+      <div id="read-more">{{ content.field_collapsible_description }}</div>
     {% endblock %}
   </div>
 {% endblock paragraph %}
