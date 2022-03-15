@@ -49,13 +49,13 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      {% if {{ content.field_collapse_text }} %}
-        <a href="#read-more">{{ content.field_collapse_text }}</a>
+      {% if content.field_collapse_text %}
+        <a href="#read-more" data-bs-toggle="collapse">{{ content.field_collapse_text }}</a>
       {% endif %}
-      {% if {{ content.field_collapse_image }} %}
+      {% if content.field_collapse_image %}
         {{ content.field_collapse_image }}
       {% endif %}
-      <div id="read-more">{{ content.field_collapsible_description }}</div>
+      <div id="read-more" class="collapse">{{ content.field_collapsible_description }}</div>
     {% endblock %}
   </div>
 {% endblock paragraph %}
