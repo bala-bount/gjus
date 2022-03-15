@@ -32,7 +32,6 @@ function gotjunk_us_form_system_theme_settings_alter(&$form, FormStateInterface 
     'bg-transparent' => t('Transparent'),
   ];
 }
-
 function gotjunk_preprocess_paragraph__card_deck(&$variables) {
-  $variables['attributes']['class'][] = 'row row-cols-1 row-cols-md-3 g-4';
+  $variables['attributes']['class'][] = 'card-group';
 }
