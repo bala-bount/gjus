@@ -53,8 +53,9 @@
       <div class="card-img-overlay">
         {{ content.field_title }}
         {{ content.field_subtitle }}
+        {{ content.field_obe_form }}
       </div>
-      {{ content|without('field_banner_image', 'field_title', 'field_subtitle') }}
+      {{ content|without('field_banner_image', 'field_title', 'field_subtitle', 'field_obe_form') }}
     {% endblock %}
   </div>
 {% endblock paragraph %}
