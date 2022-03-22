@@ -3,10 +3,6 @@
  * Default template for fields rendering. 
 */
 #}
-{% block content %}
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        {% for item in items %}
-            {{ item.content }}
-        {% endfor %}
-    </div>
-{% endblock %}
+{% for item in items %}
+    {{ item.content }}
+{% endfor %}
