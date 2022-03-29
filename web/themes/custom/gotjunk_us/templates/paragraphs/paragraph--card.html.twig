@@ -54,7 +54,7 @@
           {% set img_uri = file_url(paragraph.field_image.entity.uri.value) %}
           <div class="card {{ content.field_layout }}" style="background: url('{{ img_uri }}') no-repeat; background-size:cover; width: 380px; height:380px;">
             <div class="card-img-overlay"><h5 class="card-title">{{ content.field_title }}</h5></div>
-            {{ content|without('field_image', 'field_title', 'field_link_to') }}
+            {{ content|without('field_image', 'field_title', 'field_link_to', 'field_layout') }}
           </div>
         </div>
       </a>
