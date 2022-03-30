@@ -49,22 +49,21 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      <a href="{{ content.field_link_to.0['#url'] }}">
-        <div class="col">
-          <div class="card">
-            {{ content.field_image }}
-            <div class="card-body">
-              {% if content.field_title %}
-                <div class="card-title">{{ content.field_title }}</div>
-              {% endif %}
-              {% if content.field_description or content.field_link_to.0['#title'] %}
-                <div class="card-text">{{ content.field_description }} {{ content.field_link_to.0['#title'] }}</div>
-              {% endif %}
-            </div>
-            {{ content|without('field_image', 'field_title', 'field_link_to', 'field_description') }}
+      {% set url = content.field_link_to.0['#url'] %}
+      <div class="col">
+        <div class="card">
+          <a href="{{ url }}">{{ content.field_image }}</a>
+          <div class="card-body">
+            {% if content.field_title %}
+              <div class="card-title"><a href="{{ url }}">{{ content.field_title }}</a></div>
+            {% endif %}
+            {% if content.field_description or content.field_link_to.0['#title'] %}
+              <div class="card-text">{{ content.field_description }} <a href="{{ url }}">{{ content.field_link_to.0['#title'] }}</a></div>
+            {% endif %}
           </div>
+          {{ content|without('field_image', 'field_title', 'field_link_to', 'field_description') }}
         </div>
-      </a>
+      </div>
     {% endblock %}
   </div>
 {% endblock paragraph %}
