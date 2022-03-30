@@ -47,15 +47,24 @@
   ]
 %}
 {% block paragraph %}
-  <div class="card">
+  <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      {{ content.field_banner_image }}
-      <div class="card-img-overlay">
-        <h1 class="card-title">{{ content.field_title }}</h1>
-        <h6 class="card-subtitle">{{ content.field_subtitle }}</h6>
-        {{ content.field_obe_form }}
-      </div>
-      {{ content|without('field_banner_image', 'field_title', 'field_subtitle', 'field_obe_form') }}
+      <a href="{{ content.field_link_to.0['#url'] }}">
+        <div class="col">
+          <div class="card">
+            {{ content.field_image }}
+            <div class="card-body">
+              {% if content.field_title %}
+                <div class="card-title">{{ content.field_title }}</div>
+              {% endif %}
+              {% if content.field_description or content.field_link_to.0['#title'] %}
+                <div class="card-text">{{ content.field_description }} {{ content.field_link_to.0['#title'] }}</div>
+              {% endif %}
+            </div>
+            {{ content|without('field_image', 'field_title', 'field_link_to', 'field_description') }}
+          </div>
+        </div>
+      </a>
     {% endblock %}
   </div>
 {% endblock paragraph %}
