@@ -1,0 +1,67 @@
+<?php
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Form\FormStateInterface;
+
+
+/**
+ * @param array $form
+ * @param FormStateInterface $form_state
+ * @param $form_id
+ */
+function gotjunk_module_form_menu_link_content_form_alter(array &$form, FormStateInterface $form_state, $form_id)
+{
+  /** @var \Drupal\menu_link_content\MenuLinkContentInterface $menu_link_content */
+  $menu_link_content = $form_state->getFormObject()->getEntity();
+
+  // get link options
+  $menu_link_options = $menu_link_content->link ? $menu_link_content->link->first()->options : [];
+
+  // add custom fields classes
+  $form['classes'] = [
+    '#type' => 'textfield',
+    '#title' => t('Custom CSS classes '),
+    '#description' => t('Enter custom classes to be added to the menu item. Add spaces between multiple classes.'),
+    '#default_value' => isset($menu_link_options['classes']) ? $menu_link_options['classes'] : '',
+    '#weight' => 30,
+  ];
+
+  // add custom submit handler
+  $form['actions']['submit']['#submit'][] = 'gotjunk_module_form_menu_link_content_form_submit';
+}
+
+/**
+ * @param array $form
+ * @param FormStateInterface $form_state
+ */
+function gotjunk_module_form_menu_link_content_form_submit(array &$form, FormStateInterface $form_state)
+{
+  // get classes values
+  $classes = $form_state->getValue('classes');
+  // get menu link entity
+  $menuLinkEntity = $form_state->getBuildInfo()['callback_object']->getEntity();
+  // get defaul link options
+  $menu_link_options = $menuLinkEntity->link->first()->options;
+  // add classes to link options
+  $options = array_merge($menu_link_options, ['classes' => $classes]);
+  // change new link options
+  $menuLinkEntity->link->first()->options = $options;
+  $menuLinkEntity->save();
+}
+/**
+ * @param $variables
+ */
+function gotjunk_module_preprocess_menu(&$variables)
+{
+  foreach ($variables['items'] as $item) {
+    // get options
+    $options = $item['original_link']->getOptions();
+    if ($options && isset($options['classes'])) {
+      $classes_array = explode(' ', $options['classes']);
+      foreach ($classes_array as $class) {
+        // add classes to class attribute
+        $item['attributes']->addClass(Html::cleanCssIdentifier($class, []));
+      }
+    }
+  }
+}
