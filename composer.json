@@ -69,6 +69,7 @@
         "drupal/bootstrap_barrio": "^5.5",
         "drupal/core-composer-scaffold": "^9.2",
         "drupal/core-recommended": "^9.2",
+        "drupal/metatag": "^1.19",
         "drupal/paragraphs": "^1.13",
         "drupal/token": "^1.10",
         "drupal/token_filter": "^1.3",
