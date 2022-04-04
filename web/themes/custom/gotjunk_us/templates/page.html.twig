@@ -112,6 +112,16 @@
         </nav>
 {% endblock %}
 
+{% if page.featured_top %}
+  {% block featured %}
+    <div class="featured-top">
+      <aside class="featured-top__inner section container-fluid clearfix" role="complementary">
+        {{ page.featured_top }}
+      </aside>
+    </div>
+  {% endblock %}
+{% endif %}
+
 {% block content %}
         <div id="main" class="{{ container }}">
           {{ page.breadcrumb }}
