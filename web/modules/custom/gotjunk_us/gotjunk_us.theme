@@ -1,0 +1,49 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the SASS Starterkit subtheme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_system_theme_settings_alter() for settings form.
+ *
+ * Replace Barrio setting options with subtheme ones.
+ *
+ * Example on how to alter theme settings form
+ */
+function gotjunk_us_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = [
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  ];
+  $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = [
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  ];
+}
+function gotjunk_us_preprocess_paragraph__card_deck(&$variables) {
+  $variables['attributes']['class'][] = 'card-group';
+}
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for block templates.
+ */
+function gotjunk_us_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  $block_id = $variables['elements']['#id'];
+  
+  if ($block_id == 'footerservicesmenu' || $block_id == 'footercompanymenu' ||
+		$block_id == 'footerregion' || $block_id == 'footersocialicons' ){
+			$suggestions[] = 'block__jobsfooter';
+  }
+ 
+}
