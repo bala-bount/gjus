@@ -2,22 +2,26 @@
  * @file
  * Subtheme specific CSS.
  */
- .views_slideshow_cycle_teaser_section {
+ /* .views_slideshow_cycle_teaser_section {
      height: 500px !important;
      background: url("/sites/default/files/review-background-desktop.jpg") no-repeat;
      background-size: cover;
- }
+ } */
  @font-face {
     font-family: 'Roboto-Light';
-    src: url('../fonts/Roboto-Light-webfont.woff') format('woff')
+    src: url('../fonts/roboto-v20-latin-ext-300.woff2') format('woff2')
   }
   @font-face {
     font-family: 'Roboto-Regular';
-    src: url('../fonts/Roboto-Regular-webfont.woff') format('woff')
+    src: url('../fonts/roboto-v20-latin-ext-regular.woff2') format('woff2')
+  }
+  @font-face {
+    font-family: 'Roboto-Normal';
+    src: url('../fonts/roboto-v20-latin-ext-500.woff2') format('woff2')
   }
   @font-face {
     font-family: 'Roboto-Bold';
-    src: url('../fonts/Roboto-Bold-webfont.woff') format('woff')
+    src: url('../fonts/roboto-v20-latin-ext-700.woff2') format('woff2')
   }
 img {
   max-width: 100%;
@@ -238,10 +242,44 @@ button:focus:not(:focus-visible), .form-control:focus {
   padding: 0px;
   position: relative;
 }
-.region-featured-top .block-block-content .content .field--name-field-header-image  img {
+.region-featured-top .block-views-blockbanner-block-view-block-1 {
+  padding: 0;
+}
+.region-featured-top .block-views-blockbanner-block-view-block-1 .view-id-banner_block_view .card {
+  border: none;
+  border-radius: 0px;
+}
+.region-featured-top .block-views-blockbanner-block-view-block-1 .view-id-banner_block_view .card .card-img-overlay {
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  padding-top: 45px;
+  margin: 0 auto;
+  text-align: center;
+}
+.region-featured-top .block-views-blockbanner-block-view-block-1 .view-id-banner_block_view .card .card-img-overlay h1 {
+  font-family: 'Roboto-bold',Helvetica,Arial,sans-serif;
+  font-size: 3.5rem;
+  line-height: 4rem;
+  margin: 0 auto 10px;
+  color: #fff;
+  text-transform: uppercase;
+  max-width: 100%;
+  text-shadow: 1px 2px 3px #333;
+}
+.region-featured-top .block-views-blockbanner-block-view-block-1 .view-id-banner_block_view .card .card-img-overlay h6 {
+  color: #fff;
+    text-shadow: 1px 1px 2px #333;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    display: block;
+    font-family: "Roboto-Bold";
+}
+.region-featured-top .block-views-blockbanner-block-view-block-1 .content .field--name-field-header-image  img {
   margin: 0px;
 }
-.region-featured-top .block-block-content .content .field--name-body p {
+.region-featured-top .block-views-blockbanner-block-view-block-1 .content .field--name-body p {
   font-family: 'Roboto-Light',Helvetica,Arial,sans-serif;
   font-size: 50px;
   line-height: 50px;
@@ -253,7 +291,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   text-shadow: 1px 1px 15px #333333;
   text-align: center;
 }
-.region-featured-top .block-block-content .content .field--name-body {
+.region-featured-top .block-views-blockbanner-block-view-block-1 .content .field--name-body {
   color: #ffffff;
   position: absolute;
   width: auto;
@@ -349,7 +387,8 @@ button:focus:not(:focus-visible), .form-control:focus {
   background: #8dc63f;
   text-align: center;
   color: #fff;
-  padding: 67px 0;
+  padding-top: 67px;
+  padding-bottom: 67px;
 }
 #block-footercustomerservice .content .field__item p {
   font-size: 1.75rem;
