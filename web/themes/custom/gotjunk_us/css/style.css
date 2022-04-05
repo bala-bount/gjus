@@ -657,7 +657,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   padding: 0;
   margin-bottom:0;
 }
-.block-languageswitcherinterfacetext .nav.links-inline{
+#block-languageswitcherinterfacetext .nav.links-inline {
   display: block;
 }
 /* jobs content area body */
@@ -883,7 +883,7 @@ button:focus:not(:focus-visible), .form-control:focus {
       height: 40px;
   }
   .navbar-light .navbar-brand img {
-    width: 100%;
+    width: 200px;
   }  
 }
 @media only screen and (max-width: 767px) {
@@ -988,5 +988,8 @@ button:focus:not(:focus-visible), .form-control:focus {
   }
   .site-footer .footer-main .block {
     padding: 0px 15px;
+  }
+  #block-customerservice {
+    display: none;
   }
 }
