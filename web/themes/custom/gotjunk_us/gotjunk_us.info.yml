@@ -8,6 +8,7 @@ base theme: bootstrap_barrio
 libraries:
   - gotjunk_us/bootstrap
   - gotjunk_us/global-styling
+  - gotjunk_us/fonts
 
 regions:
   top_header: 'Top header'

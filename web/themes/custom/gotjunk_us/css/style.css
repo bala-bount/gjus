@@ -69,7 +69,7 @@ button:focus:not(:focus-visible), .form-control:focus {
 .navbar-light .navbar-brand img {
   width: 288px;
 }
-.service-number {
+#block-customerservice {
   position: absolute;
   top: 0;
   right: 16px;
@@ -417,8 +417,8 @@ button:focus:not(:focus-visible), .form-control:focus {
   line-height: 26px;
   margin-bottom: 8px;
   letter-spacing: 1px;
-  text-transform: uppercase;
   font-family: 'Roboto-Regular',Helvetica,Arial,sans-serif;
+  font-weight: 700;
 }
 .site-footer .footer-main .block {
   margin: 0 0 15px;
@@ -484,7 +484,7 @@ button:focus:not(:focus-visible), .form-control:focus {
 .footer-bottom {
     background-color: #373d41;
     color: #fff;
-    padding: 25px 20px 0;
+    padding: 25px 20px 25px;
     font-size: 14px;
     text-align: center;
 }
@@ -495,7 +495,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   color: #fff;
   text-decoration: underline;
 }
-.service-number p {
+#block-customerservice .content p {
   font-weight: lighter;
   color: #00539f;
   font-size: 22px;
@@ -520,7 +520,7 @@ button:focus:not(:focus-visible), .form-control:focus {
 .footer-utility {
   background-color: #fff;
   padding-top: 30px;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 }
 .footer-utility .footer-logo {
   padding-top: 30px;
@@ -552,7 +552,10 @@ button:focus:not(:focus-visible), .form-control:focus {
 .site-footer .footer-bottom .content, .site-footer .footer-bottom .content p, .site-footer .footer-bottom .content a {
   font-size: 14px;
   color: #fff;
-  font-family: 'Roboto-Light',Helvetica,Arial,sans-serif;
+  font-family: 'Roboto-Regular',Helvetica,Arial,sans-serif;
+}
+.site-footer .footer-bottom .content p {
+  margin: 0;
 }
 .location-switch-footer .current-country,
 .location-switch-footer .current-country span {
@@ -607,6 +610,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   font-family: 'Roboto-Light';
   line-height: 1.5rem;
   letter-spacing: .01em;
+  margin-bottom: 1.5rem;
 }
 .footer-utility .content {
   color: #000;
@@ -652,6 +656,9 @@ button:focus:not(:focus-visible), .form-control:focus {
   margin-top: 10px;
   padding: 0;
   margin-bottom:0;
+}
+.block-languageswitcherinterfacetext .nav.links-inline{
+  display: block;
 }
 /* jobs content area body */
 #block-jobs-theme-content .node__content .field--name-field-title,

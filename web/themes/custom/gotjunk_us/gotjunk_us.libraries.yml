@@ -6,6 +6,10 @@ global-styling:
     component:
       css/style.css: {}
       css/colors.css: {}
+fonts:
+  css:
+    theme:
+        fonts/fontawesome/css/all.min.css: {}
 bootstrap:
   js:
     /libraries/bootstrap/dist/js/bootstrap.bundle.min.js: { weight: -48 }
