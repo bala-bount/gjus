@@ -43,7 +43,7 @@ function gotjunk_us_theme_suggestions_block_alter(array &$suggestions, array $va
   
   if ($block_id == 'footerservicesmenu' || $block_id == 'footercompanymenu' ||
 		$block_id == 'languageswitcherinterfacetext' || $block_id == 'footersocialicons' ){
-			$suggestions[] = 'block__jobsfooter';
+			$suggestions[] = 'block__gjfooter';
   }
  
 }

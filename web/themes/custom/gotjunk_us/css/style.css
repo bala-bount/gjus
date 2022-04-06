@@ -2,12 +2,7 @@
  * @file
  * Subtheme specific CSS.
  */
- /* .views_slideshow_cycle_teaser_section {
-     height: 500px !important;
-     background: url("/sites/default/files/review-background-desktop.jpg") no-repeat;
-     background-size: cover;
- } */
- @font-face {
+  @font-face {
     font-family: 'Roboto-Light';
     src: url('../fonts/roboto-v20-latin-ext-300.woff2') format('woff2')
   }
@@ -16,7 +11,7 @@
     src: url('../fonts/roboto-v20-latin-ext-regular.woff2') format('woff2')
   }
   @font-face {
-    font-family: 'Roboto-Normal';
+    font-family: 'Roboto-Medium';
     src: url('../fonts/roboto-v20-latin-ext-500.woff2') format('woff2')
   }
   @font-face {
@@ -59,7 +54,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   max-width: 1200px;
 }
 #main.container {
-  max-width: 1150px;
+  max-width: 1200px;
 }
 .navbar-light .navbar-toggler {
   color: #000;
@@ -303,7 +298,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   left: 0;
   right: 0;
 }
-/* green jobs menu */
+/* green menu */
 .menu--home-menu {
   background-color: #8dc63f;
 }
@@ -660,8 +655,7 @@ button:focus:not(:focus-visible), .form-control:focus {
 #block-languageswitcherinterfacetext .nav.links-inline {
   display: block;
 }
-/* jobs content area body */
-#block-jobs-theme-content .node__content .field--name-field-title,
+/* #block-jobs-theme-content .node__content .field--name-field-title,
 #block-jobs-theme-content .node__content .field--name-field-title-text, 
 #block-jobs-theme-content .node__content .field--name-field-optional-title {
   max-width: 980px;
@@ -734,7 +728,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   line-height: 18px;
   text-transform: uppercase;
   color: #ffffff;
-}
+} */
 .views-element-container .views-view-grid .views-col .views-field-title {
     font-family: 'Roboto-Light',Helvetica,Arial,sans-serif;
     font-size: 24px;
@@ -851,6 +845,123 @@ button:focus:not(:focus-visible), .form-control:focus {
   line-height: 56px;
   margin: -10px 0 40px 0;
 }
+/* Home Page  */
+.field--name-field-home-content h3 {
+    color: #00539f;
+    font-family: 'Roboto-Light',Helvetica,Arial,sans-serif;
+    line-height: 3.5rem;
+    text-align: center;
+    padding-top: 0;
+    padding-left: 0;
+    margin-top: 2.5rem;
+    margin-bottom: 0.625rem;
+    text-align: center;
+}
+.field--name-field-home-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: .01em;
+  color: #333;
+  max-width: 770px;
+  font-family: 'Roboto-Light',Helvetica,Arial,sans-serif;
+}
+.field--name-field-home-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: .01em;
+  color: #333;
+  max-width: 770px;
+  font-family: 'Roboto-Light',Helvetica,Arial,sans-serif;
+}
+.field--name-field-home-content .card-group {
+  flex-flow: nowrap;
+}
+.field--name-field-home-content .card-group .paragraph--type--card .col {
+  padding: 0px 0.9375rem;
+}
+.field--name-field-home-content .card-group .paragraph--type--card:first-child .col {
+  padding-left: 0;
+}
+.field--name-field-home-content .card-group .paragraph--type--card:last-child .col {
+  padding-right: 0;
+}
+.field--name-field-home-content .card-group .paragraph--type--card .col .card {
+  height: 370px!important;
+  width: 370px!important;
+}
+.field--name-field-home-content .card-group .paragraph--type--card .col .card .card-img-overlay .field--name-field-title {
+  position: relative;
+    top: 50%;
+    width: 100%;
+    display: block;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-weight: 700;
+    font-family: 'Roboto-Bold';
+    text-shadow: 1px 2px 3px #333;
+    color: #fff;
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+}
+/* Featured Bottom */
+.featured-bottom .container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+.featured-bottom .row {
+  --bs-gutter-x:0;
+}
+.featured-bottom .view-review-block-view {
+  height: 620px;
+  background: url("../images/review-background-desktop.jpg") no-repeat;
+  background-size: cover;
+}
+.featured-bottom .views_slideshow_cycle_main {
+  position: relative;
+  color: #fff;
+  max-width: 1170px;
+  margin: auto;
+}
+.featured-bottom .views_slideshow_cycle_teaser_section {
+  margin: 100px auto 163px;
+  position: relative;
+  width: 77%;
+}
+.featured-bottom .review-block-section {
+  color: #fff;
+}
+.featured-bottom .review-block-section h4 {
+  font-weight: 400;
+  white-space: nowrap;
+  color: #fff;
+  font-size: 1rem;
+}
+.featured-bottom .review-block-section .review-content {
+  display: table-cell;
+  height: 220px;
+  vertical-align: middle;
+}
+.featured-bottom .review-block-section .review-content p {
+  font-size: 38px;
+  font-weight: 300;
+  font-family: 'Roboto-Light';
+  line-height: 50px;
+  color: #fff;
+}
+.featured-bottom .review-block-section .reviewer-wrapper {
+  margin-top: 30px;
+}
+.featured-bottom .review-block-section .reviewer-wrapper .reviewer-name, 
+.featured-bottom .review-block-section .reviewer-wrapper .reviewer-date {
+  margin-right: 7px;
+  margin-bottom: 0px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: .01em;
+  color: #fff;
+}
 /* Responsive */
 @media only screen and (max-width: 1199px) {
   .footer-pickup .zipcode-footer .checkprice {
@@ -956,7 +1067,7 @@ button:focus:not(:focus-visible), .form-control:focus {
     font-size: 25px;
     line-height: 32px;
   }
-  #block-jobs-theme-content .node__content .field--name-field-title, 
+  /* #block-jobs-theme-content .node__content .field--name-field-title, 
   #block-jobs-theme-content .node__content .field--name-field-title-text, 
   #block-jobs-theme-content .node__content .field--name-field-optional-title,
   .views-element-container.block-views-blockinstagram-tile-view-block-1 h2 {
@@ -985,7 +1096,7 @@ button:focus:not(:focus-visible), .form-control:focus {
     width: 100%;
     margin-right: 0;
     margin-top: 15px;
-  }
+  } */
   .site-footer .footer-main .block {
     padding: 0px 15px;
   }
