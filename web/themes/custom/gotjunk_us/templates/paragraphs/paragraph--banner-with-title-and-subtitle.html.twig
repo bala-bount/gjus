@@ -47,15 +47,21 @@
   ]
 %}
 {% block paragraph %}
-  <div class="card">
     {% block content %}
-      {{ content.field_banner_image }}
-      <div class="card-img-overlay">
-        <h1 class="card-title">{{ content.field_title }}</h1>
-        <h6 class="card-subtitle">{{ content.field_subtitle }}</h6>
-        {{ content.field_obe_form }}
+      <div class="card">
+        {{ content.field_banner_image }}
+        <div class="card-img-overlay">
+          <h1 class="card-title">{{ content.field_title }}</h1>
+          <h6 class="card-subtitle">{{ content.field_subtitle }}</h6>
+        </div>
       </div>
-      {{ content|without('field_banner_image', 'field_title', 'field_subtitle', 'field_obe_form') }}
+      <div class="card">
+        {{ content.field_mobile_banner_image }}
+        <div class="card-img-overlay">
+          <h1 class="card-title">{{ content.field_title }}</h1>
+          <h6 class="card-subtitle">{{ content.field_subtitle }}</h6>
+        </div>
+      </div>
+      {{ content|without('field_banner_image', 'field_mobile_banner_image', 'field_title', 'field_subtitle') }}
     {% endblock %}
-  </div>
 {% endblock paragraph %}
