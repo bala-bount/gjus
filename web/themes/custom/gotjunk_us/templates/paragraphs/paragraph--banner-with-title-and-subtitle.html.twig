@@ -49,14 +49,8 @@
 {% block paragraph %}
     {% block content %}
       <div class="card">
-        {{ content.field_banner_image }}
-        <div class="card-img-overlay">
-          <h1 class="card-title">{{ content.field_title }}</h1>
-          <h6 class="card-subtitle">{{ content.field_subtitle }}</h6>
-        </div>
-      </div>
-      <div class="card">
-        {{ content.field_mobile_banner_image }}
+        <div class="banner">{{ content.field_banner_image }}</div>
+        <div class="mobile-banner">{{ content.field_mobile_banner_image }}</div>
         <div class="card-img-overlay">
           <h1 class="card-title">{{ content.field_title }}</h1>
           <h6 class="card-subtitle">{{ content.field_subtitle }}</h6>
