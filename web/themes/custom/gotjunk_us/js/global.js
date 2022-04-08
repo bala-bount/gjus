@@ -17,12 +17,14 @@
       );
       jQuery('.read-more-expand').click(
         function(){
+          jQuery('read-more-expand').hide();
           jQuery('#read-more').slideDown();
         }
       );
       jQuery('.read-more-collapse').click(
         function(){
           jQuery('#read-more').slideUp();
+          jQuery('read-more-expand').show();
         }
       );
     jQuery(".find-a-job a").replaceWith('<a class="use-ajax" data-dialog-options="{&quot;width&quot;:400}" data-dialog-type="modal" href="/find-jobs-on-indeed">Find A Job</a>');	

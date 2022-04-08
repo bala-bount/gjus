@@ -912,10 +912,10 @@ button:focus:not(:focus-visible), .form-control:focus {
 /* .field--name-field-home-content .card-group .paragraph--type--card .col {
   padding: 0px 0.9375rem;
 } */
-.field--name-field-home-content .card-group .paragraph--type--card:first-child .card {
+.field--name-field-home-content .card-group .paragraph--type--card:first-child .col .card {
   margin: 0;
 }
-.field--name-field-home-content .card-group .paragraph--type--card:last-child .card {
+.field--name-field-home-content .card-group .paragraph--type--card:last-child .col .card {
   margin-right: 0;
 }
 .field--name-field-home-content .card-group .paragraph--type--card .col .card {
@@ -955,7 +955,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   height: 416px;
 }
 #block-gotjunk-us-content .field--name-field-media {
-  margin: 0 auto;
+  text-align: center;
 }
 /* Featured Bottom */
 .featured-bottom .container {
