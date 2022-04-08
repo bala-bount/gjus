@@ -52,7 +52,14 @@ function gotjunk_us_theme_suggestions_block_alter(array &$suggestions, array $va
  */
 function gotjunk_us_preprocess_links__language_block(&$variables) {
   // External URI.
-  $url = Url::fromUri('https://www.1800gotjunk.com.au/au_en');
+  $url = Url::fromUri('https://www.1800gotjunk.com.au');
   $variables['links']['en-au']['link']['#url'] = $url;
   $variables['links']['en-au']['link']['#options']['attributes']=['target' => '_blank'];
+}
+/**
+ * Implements hook_preprocess_HOOK() for links__language_block template.
+ */
+function gotjunk_us_preprocess_links__language_block(&$variables) {
+  // Sets language variable with the current language id.
+  $variables['language'] = \Drupal::languageManager()->getCurrentLanguage()->getId();
 }
