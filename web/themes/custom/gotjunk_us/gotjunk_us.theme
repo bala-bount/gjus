@@ -49,7 +49,7 @@ function gotjunk_us_theme_suggestions_block_alter(array &$suggestions, array $va
 /**
  * Use External URL for Australia link in region dropdown and open it in new tab.
  */
-function subthemea_preprocess_links__language_block(&$variables) {
+function gotjunk_us_preprocess_links__language_block(&$variables) {
   // External URI.
   $url = Url::fromUri('https://www.1800gotjunk.com.au/au_en');
   $variables['links']['en-au']['link']['#url'] = $url;
