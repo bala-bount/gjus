@@ -96,7 +96,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   text-transform: uppercase;
   color: #333;
   font-size: .875rem;
-  padding-right: 0.625rem;
+  padding-right: 1rem;
   background-image: url(../images/arrow-down-icon-black.svg);
   background-repeat: no-repeat;
   background-position: right center;
@@ -116,7 +116,11 @@ button:focus:not(:focus-visible), .form-control:focus {
   background-position-x: -61px;
   background-position-y: -14px;
 }
-
+.header .language-switcher-language-url a.dropdown-toggle span.flag.en-ca,
+.header .language-switcher-language-url a.dropdown-toggle span.flag.fr {
+  background-position-x: -11px;
+  background-position-y: -14px;
+}
 .header .language-switcher-language-url a.dropdown-toggle span.flag {
   display: inline-block;
   width: 30px;
@@ -127,6 +131,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   left: unset;
   right: 0;
   padding: 0;
+  border-radius: 0;
 }
 .header .language-switcher-language-url ul.dropdown-menu:before {
   content: "";
@@ -141,7 +146,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   left: 10px;
   z-index: 89;
 }
-.header .language-switcher-language-url.dropdown .dropdown-menu.show::before {
+.header .language-switcher-language-url ul.dropdown-menu.show::before {
     left: 137px;
 }
 .header .language-switcher-language-url ul.dropdown-menu:after {
@@ -172,18 +177,22 @@ button:focus:not(:focus-visible), .form-control:focus {
 .header .language-switcher-language-url ul.dropdown-menu li.nav-link a {
   padding-left: 2.688rem;
 }
-.header .language-switcher-language-url ul.dropdown-menu li.dnav-link {
+.header .language-switcher-language-url ul.dropdown-menu li.nav-link {
   background-position-x: 10px;
   background-position-y: center;
   background-size: 24px 24px;
   background-repeat: no-repeat;
   padding: 0;
 }
+.header .language-switcher-language-url ul.dropdown-menu li.nav-link:hover,
+.header .language-switcher-language-url ul.dropdown-menu li.nav-link:focus {
+  background-color: #eee;
+}
 .header .language-switcher-language-url li.en {
   background-image: url(../images/flags/en.png);
 }
 .header .language-switcher-language-url li.en-ca,
-.header .language-switcher-language-url.fr-ca {
+.header .language-switcher-language-url li.fr {
   background-image: url(../images/flags/ca.png);
 }
 .header .language-switcher-language-url li.en-au {
