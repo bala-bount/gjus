@@ -37,10 +37,10 @@
 {{ attach_library('bootstrap_barrio/links') }}
 
 {% if links %}
-  <div class="{{ language }}"></div>
-  <nav{{ attributes.addClass(['nav', 'links-inline']) }}>
+  <a class="{{ language }} dropdown-toggle" id="dropdownLanguages" data-bs-toggle="dropdown" aria-expanded="false"></a>
+  <ul{{ attributes.addClass(['dropdown-menu']) }} aria-labelledby="dropdownLanguages">
     {%- for key, item in links -%}
-      <span{{ item.attributes.addClass(key|clean_class, 'nav-link') }}>
+      <li{{ item.attributes.addClass(key|clean_class, 'nav-link') }}>
         {%- if item.link -%}
           {{ item.link }}
         {%- elseif item.text_attributes -%}
@@ -48,7 +48,7 @@
         {%- else -%}
           {{ item.text }}
         {%- endif -%}
-      </span>
+      </li>
     {%- endfor -%}
-  </nav>
+  </ul>
 {% endif %}
