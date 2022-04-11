@@ -102,6 +102,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   background-position: right center;
   display: block;
   background-size: 12px 12px;
+  cursor: pointer;
 }
 .header .language-switcher-language-url a.dropdown-toggle::after {
   margin-left: 0;
@@ -354,6 +355,70 @@ button:focus:not(:focus-visible), .form-control:focus {
 .menu--home-menu .nav > li:last-child {
   border-right: 1px solid #ffffff;
 }
+.featured-top .block-webform {
+  z-index: 400;
+  padding: 1.5rem 0;
+  background-color: #00539f;
+}
+.featured-top .block-webform .webform-submission-form {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.featured-top .block-webform .webform-submission-form .webform-flexbox {
+  width: 58%;
+  margin: 0 auto;
+}
+.featured-top .block-webform .webform-submission-form .webform-flexbox .webform-flex {
+  flex: initial;
+}
+.featured-top .block-webform .webform-submission-form .webform-flexbox .webform-flex--container{
+  margin: 0;
+}
+.featured-top .block-webform .webform-flexbox input {
+  font-size: 1.063rem;
+  padding-left: 1.063rem;
+  width: 278px;
+  margin-bottom: 0;
+  height: 46px;
+  -webkit-appearance: none;
+  border-radius: 0;
+  background-color: #fff;
+  font-family: inherit;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ccc;
+  -webkit-box-shadow: inset 0 1px 2px rgb(0 0 0 / 10%);
+  box-shadow: inset 0 1px 2px rgb(0 0 0 / 10%);
+  color: rgba(0,0,0,.75);
+  padding: 0.5rem;
+}
+.featured-top .block-webform .webform-flexbox label {
+  font-size: 2.063rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: right;
+  color: #fff;
+  vertical-align: middle;
+  line-height: 38px;
+}
+.featured-top .block-webform .webform-flexbox .webform-button--submit {
+  background-color: #004382;
+  padding: 0.594rem 0.625rem;
+  text-transform: uppercase;
+  border-style: solid;
+  border-width: 0;
+  cursor: pointer;
+  font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+  height: 46px;
+  border-radius: 0;
+  font-size: 1rem;
+  color: #fff;
+  -webkit-transition: background-color .3s ease-out;
+  transition: background-color .3s ease-out;
+}
   /* Footer */
   
 .site-footer {
@@ -532,6 +597,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   background-repeat: no-repeat;
   background-position: right center;
   background-size: 12px 12px;
+  cursor: pointer;
 }
 .footer-utility {
   background-color: #fff;
