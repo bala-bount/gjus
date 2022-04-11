@@ -88,23 +88,22 @@ button:focus:not(:focus-visible), .form-control:focus {
 .collapse.navbar-collapse .navigation {
   margin-left: auto;
 }
-.location-switch-mini {
+.header .language-switcher-language-url {
   margin-left: 0.625rem;
 }
-.location-switch-mini .dropdown>a, .header-container .navbar-nav .nav-item.dropdown a {
+.header .language-switcher-language-url a.dropdown-toggle {
   font-weight: 700;
   text-transform: uppercase;
   color: #333;
   font-size: .875rem;
   padding-right: 0.625rem;
-  background-image: url(assets/images/arrow-down-icon-black.svg);
+  background-image: url(../images/arrow-down-icon-black.svg);
   background-repeat: no-repeat;
   background-position: right center;
   display: block;
   background-size: 12px 12px;
 }
-.location-switch-mini .dropdown>a.dropdown-toggle::after,
-.header-container .navbar-nav .nav-item.dropdown a:after {
+.header .language-switcher-language-url a.dropdown-toggle::after {
   margin-left: 0;
   vertical-align: 0;
   content: "";
@@ -113,23 +112,23 @@ button:focus:not(:focus-visible), .form-control:focus {
   border-bottom: 0;
  border-left: 0.3em solid transparent;
 }
-.location-switch-mini .dropdown>a span.flag.en {
+.header .language-switcher-language-url a.dropdown-toggle span.flag.en {
   background-position-x: -61px;
   background-position-y: -14px;
 }
 
-.location-switch-mini .dropdown>a span.flag {
+.header .language-switcher-language-url a.dropdown-toggle span.flag {
   display: inline-block;
   width: 30px;
   height: 20px;
-  background: url(assets/images/flags/css-sprites.png) no-repeat;
+  background: url(../images/flags/css-sprites.png) no-repeat;
 }
-.location-switch-mini .dropdown .dropdown-menu[data-bs-popper] {
+.header .language-switcher-language-url ul.dropdown-menu[data-bs-popper] {
   left: unset;
   right: 0;
   padding: 0;
 }
-.location-switch-mini .dropdown .dropdown-menu:before {
+.header .language-switcher-language-url ul.dropdown-menu:before {
   content: "";
   display: block;
   width: 0;
@@ -142,10 +141,10 @@ button:focus:not(:focus-visible), .form-control:focus {
   left: 10px;
   z-index: 89;
 }
-.location-switch-mini .dropdown .dropdown-menu.show::before {
+.header .language-switcher-language-url.dropdown .dropdown-menu.show::before {
     left: 137px;
 }
-.location-switch-mini .dropdown .dropdown-menu:after {
+.header .language-switcher-language-url ul.dropdown-menu:after {
   content: "";
   display: block;
   width: 0;
@@ -158,37 +157,37 @@ button:focus:not(:focus-visible), .form-control:focus {
   left: 9px;
   z-index: 88;
 }
-.location-switch-mini .dropdown .dropdown-menu.show::after {
+.header .language-switcher-language-url ul.dropdown-menu.show::after {
   left: 136px;
 }
-.dropdown-menu li a {
+.header .language-switcher-language-url ul.dropdown-menu li a {
   display: block;
   padding: 0.5rem;
   color: #555;
   text-decoration: none;
 }
-.location-switch-mini .dropdown ul.dropdown-menu li {
+.header .language-switcher-language-url ul.dropdown-menu li {
   font-size: 0.875rem;
 }
-.location-switch-mini .dropdown ul.dropdown-menu li.dropdown-item a {
+.header .language-switcher-language-url ul.dropdown-menu li.nav-link a {
   padding-left: 2.688rem;
 }
-.location-switch-mini .dropdown ul.dropdown-menu li.dropdown-item {
+.header .language-switcher-language-url ul.dropdown-menu li.dnav-link {
   background-position-x: 10px;
   background-position-y: center;
   background-size: 24px 24px;
   background-repeat: no-repeat;
   padding: 0;
 }
-.location-switch-mini .dropdown ul.dropdown-menu li.en {
-  background-image: url(assets/images/flags/en.png);
+.header .language-switcher-language-url li.en {
+  background-image: url(../images/flags/en.png);
 }
-.location-switch-mini .dropdown ul.dropdown-menu li.en-ca,
-.location-switch-mini .dropdown ul.dropdown-menu li.fr-ca {
-  background-image: url(assets/images/flags/ca.png);
+.header .language-switcher-language-url li.en-ca,
+.header .language-switcher-language-url.fr-ca {
+  background-image: url(../images/flags/ca.png);
 }
-.location-switch-mini .dropdown ul.dropdown-menu li.en-au {
-  background-image: url(assets/images/flags/en-au.png);
+.header .language-switcher-language-url li.en-au {
+  background-image: url(../images/flags/en-au.png);
 }
 .navigation.menu--sub-menu {
   padding: 1.25rem;
@@ -892,6 +891,7 @@ button:focus:not(:focus-visible), .form-control:focus {
 }
 #block-gotjunk-us-content .field--name-field-media {
   text-align: center;
+  margin-bottom: 2.4rem;
 }
 /* Featured Bottom */
 .featured-bottom .container {
