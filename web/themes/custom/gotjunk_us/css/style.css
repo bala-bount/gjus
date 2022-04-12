@@ -588,10 +588,10 @@ button:focus:not(:focus-visible), .form-control:focus {
 .node--type-wwt-home-page .field--name-field-junk-list > .field__item:first-child .field--name-field-items {
   columns: 2;
 }
-.node--type-wwt-home-page .field--name-field-junk-list > .field__item:first-child .field--name-field-items > .field__item {
+.node--type-wwt-home-page .field--name-field-junk-list > .field__item .field--name-field-items > .field__item {
   margin-bottom: 0.5rem;
 }
-.node--type-wwt-home-page .field--name-field-junk-list > .field__item:first-child .field--name-field-items a {
+.node--type-wwt-home-page .field--name-field-junk-list > .field__item .field--name-field-items a {
   font-family: 'Roboto-Light';
   margin-left: 8px;
   color: #00539f;
@@ -605,6 +605,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   font-size: 1.5rem;
   color: #8dc63f;
   top: 3px;
+  font-weight: 900;
 }
   /* Footer */
   
