@@ -37,9 +37,8 @@
 {{ attach_library('bootstrap_barrio/links') }}
 
 {% if links %}
-  <a class="{{ language }} dropdown-toggle" id="dropdownLanguages" data-bs-toggle="dropdown" aria-expanded="false"><span class="flag {{ language }}"></span></a>
-  <span>{{ language_label }}</span>
-  <span>Switch regions</span>
+  <span class="current-country">{{ language_label }}</span>
+  <a class="{{ language }} dropdown-toggle" id="dropdownLanguages" data-bs-toggle="dropdown" aria-expanded="false"><span class="flag {{ language }}"><span>Switch regions</span></span></a>
   <ul{{ attributes.addClass(['dropdown-menu']) }} aria-labelledby="dropdownLanguages">
     {%- for key, item in links -%}
       <li{{ item.attributes.addClass(key|clean_class, 'nav-link') }}>

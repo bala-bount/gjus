@@ -199,6 +199,10 @@ button:focus:not(:focus-visible), .form-control:focus {
 .header .language-switcher-language-url li.en-au {
   background-image: url(../images/flags/en-au.png);
 }
+.header .language-switcher-language-url .current-country,
+.header .language-switcher-language-url a.dropdown-toggle span span {
+  display: none;
+}
 .navigation.menu--sub-menu {
   padding: 1.25rem;
   background-color: #00539f;
@@ -466,6 +470,12 @@ button:focus:not(:focus-visible), .form-control:focus {
   align-items: center;
   box-shadow: 0 0.313rem 0.625rem rgb(0 0 0 / 20%);
 }
+.menu--wwt-menu.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99999;
+}
 .menu--wwt-menu .nav {
   margin: 0 auto;
 }
@@ -697,7 +707,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   border: 0;
   padding: 0px;
 }
-.footer-main ul {
+.footer-main ul.nav {
   display: block;
   list-style: none;
   margin: 0;

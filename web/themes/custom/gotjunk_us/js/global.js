@@ -27,8 +27,24 @@
           $('.read-more-expand').show();
         }
       );
-      $(".find-a-job a").replaceWith('<a class="use-ajax" data-dialog-options="{&quot;width&quot;:400}" data-dialog-type="modal" href="/find-jobs-on-indeed">Find A Job</a>');	
     }
   };
+  Drupal.behaviors.menuWWTWWD = {
+    attach: function(context, settings) {
+      if($(".node--type-wwt-home-page, .node--type-wwt-items-page, .node--type-wwd-main-page").length){
+      window.onscroll = function(){
+        var header = $(".block-webform-block").offset();
+        // Get the offset position of the navbar
+        var sticky = header.top;
+  
+        if ($(window).scrollTop() >= sticky) {
+          $(".menu--wwt-menu").addClass("sticky");
+        } else {
+          $(".menu--wwt-menu").removeClass("sticky");
+        }
+      };
+      }
+    }
+  }
 
 })(jQuery, Drupal);
