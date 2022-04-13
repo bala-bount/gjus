@@ -49,12 +49,17 @@ function gotjunk_us_theme_suggestions_block_alter(array &$suggestions, array $va
 }
 /**
  * Use External URL for Australia link in region dropdown and open it in new tab.
+ * Sets language and language_label variables.
  */
 function gotjunk_us_preprocess_links__language_block(&$variables) {
   // External URI for Australia link.
   $url = Url::fromUri('https://www.1800gotjunk.com.au');
   $variables['links']['en-au']['link']['#url'] = $url;
   $variables['links']['en-au']['link']['#options']['attributes']=['target' => '_blank'];
-  // Sets language variable with the current language id.
-  $variables['language'] = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  // Sets language, language_label variables with the current language id and label respectively.
+  $language_manager = \Drupal::languageManager();
+  $language_code = $language_manager->getCurrentLanguage()->getId();
+  $language_list = $language_manager::getStandardLanguageList();
+  $variables['language'] = $language_code;
+  $variables['language_label'] = $language_list[$language_code][1];
 }
