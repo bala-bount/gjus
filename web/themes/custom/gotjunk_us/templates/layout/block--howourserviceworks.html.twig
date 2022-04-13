@@ -32,21 +32,25 @@
 {%
   set classes = [
     'block',
+    'wwt-service-wroks',
     'block-' ~ configuration.provider|clean_class,
     'block-' ~ plugin_id|clean_class,
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes }}>{{ label }}</h2>
-  {% endif %}
-  {{ title_suffix }}
   {% block content %}
-    <div{{ content_attributes.addClass('content') }}>
-      {{ content.field_block_image }}
-	  {{ content.body }}
-	  {{ content.field_button }}
+    <div{{ content_attributes.addClass('content row') }}>
+      <div class="service-content col-md-7">
+        {{ title_prefix }}
+        {% if label %}
+          <h2{{ title_attributes }}>{{ label }}</h2>
+        {% endif %}
+        {{ title_suffix }}
+        {{ content.body }}
+        {{ content.field_button }}
+      </div>
+      {% set img_url = file_url(content.field_block_image['#items'].entity.uri.value) %}
+      <div class="service-image col-md-5" style="background-image:url('{{ img_url }}')"></div>
     </div>
   {% endblock %}
 </div>

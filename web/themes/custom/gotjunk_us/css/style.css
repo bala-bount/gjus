@@ -91,9 +91,7 @@ button:focus:not(:focus-visible), .form-control:focus {
 .header .language-switcher-language-url {
   margin-left: 0.625rem;
 }
-.header .language-switcher-language-url a.dropdown-toggle {
-  font-weight: 700;
-  text-transform: uppercase;
+.language-switcher-language-url a.dropdown-toggle {
   color: #333;
   font-size: .875rem;
   padding-right: 1rem;
@@ -104,7 +102,19 @@ button:focus:not(:focus-visible), .form-control:focus {
   background-size: 12px 12px;
   cursor: pointer;
 }
-.header .language-switcher-language-url a.dropdown-toggle::after {
+.footer-main .language-switcher-language-url a.dropdown-toggle {
+  background: none;
+}
+.footer-main .language-switcher-language-url a.dropdown-toggle span span::after {
+  content: " ";
+  background: url(../images/flags/css-sprites.png) no-repeat -112px -80px;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-left: 10px;
+  top: 0;
+}
+.language-switcher-language-url a.dropdown-toggle::after {
   margin-left: 0;
   vertical-align: 0;
   content: "";
@@ -128,13 +138,13 @@ button:focus:not(:focus-visible), .form-control:focus {
   height: 20px;
   background: url(../images/flags/css-sprites.png) no-repeat;
 }
-.header .language-switcher-language-url ul.dropdown-menu[data-bs-popper] {
+.language-switcher-language-url ul.dropdown-menu {
   left: unset;
   right: 0;
   padding: 0;
   border-radius: 0;
 }
-.header .language-switcher-language-url ul.dropdown-menu:before {
+.language-switcher-language-url ul.dropdown-menu:before {
   content: "";
   display: block;
   width: 0;
@@ -147,10 +157,13 @@ button:focus:not(:focus-visible), .form-control:focus {
   left: 10px;
   z-index: 89;
 }
-.header .language-switcher-language-url ul.dropdown-menu.show::before {
+.language-switcher-language-url ul.dropdown-menu.show::before {
     left: 137px;
 }
-.header .language-switcher-language-url ul.dropdown-menu:after {
+.footer-main .language-switcher-language-url ul.dropdown-menu.show::before {
+  left: 134px;
+}
+.language-switcher-language-url ul.dropdown-menu:after {
   content: "";
   display: block;
   width: 0;
@@ -163,20 +176,26 @@ button:focus:not(:focus-visible), .form-control:focus {
   left: 9px;
   z-index: 88;
 }
-.header .language-switcher-language-url ul.dropdown-menu.show::after {
+.language-switcher-language-url ul.dropdown-menu.show::after {
   left: 136px;
 }
-.header .language-switcher-language-url ul.dropdown-menu li a {
+.footer-main .language-switcher-language-url ul.dropdown-menu.show::after {
+  left: 133px;
+}
+.language-switcher-language-url ul.dropdown-menu li a {
   display: block;
   padding: 0.5rem;
   color: #555;
   text-decoration: none;
 }
-.header .language-switcher-language-url ul.dropdown-menu li {
+.language-switcher-language-url ul.dropdown-menu li {
   font-size: 0.875rem;
 }
-.header .language-switcher-language-url ul.dropdown-menu li.nav-link a {
+.language-switcher-language-url ul.dropdown-menu li.nav-link a {
   padding-left: 2.688rem;
+}
+.footer-main .language-switcher-language-url ul.dropdown-menu li.nav-link a {
+  padding: 0;
 }
 .header .language-switcher-language-url ul.dropdown-menu li.nav-link {
   background-position-x: 10px;
@@ -185,8 +204,8 @@ button:focus:not(:focus-visible), .form-control:focus {
   background-repeat: no-repeat;
   padding: 0;
 }
-.header .language-switcher-language-url ul.dropdown-menu li.nav-link:hover,
-.header .language-switcher-language-url ul.dropdown-menu li.nav-link:focus {
+.language-switcher-language-url ul.dropdown-menu li.nav-link:hover,
+.language-switcher-language-url ul.dropdown-menu li.nav-link:focus {
   background-color: #eee;
 }
 .header .language-switcher-language-url li.en {
@@ -559,7 +578,7 @@ button:focus:not(:focus-visible), .form-control:focus {
 .node--type-wwt-home-page .field--name-body p a {
   text-decoration: underline;
 }
-.node--type-wwt-home-page .field--name-body h2 {
+.node--type-wwt-home-page .field--name-body h2, .wwt-service-wroks .content .service-content h2 {
   font-family: 'Roboto-Light';
   margin-top: 0;
   font-size: 2.5rem;
@@ -616,6 +635,46 @@ button:focus:not(:focus-visible), .form-control:focus {
   color: #8dc63f;
   top: 3px;
   font-weight: 900;
+}
+.wwt-service-wroks .content {
+  /* -webkit-box-orient: vertical;
+  -webkit-box-direction: normal; */
+  background-color: #f7f7f7;
+  margin: 1.75rem 0 2.25rem;
+}
+.wwt-service-wroks .content .service-content h2 {
+  padding-top: 0;
+}
+.wwt-service-wroks .content .service-content {
+  padding: 2rem 3rem 3rem;
+}
+.wwt-service-wroks .content .service-content ol {
+  padding-left: 1.4rem;
+}
+.wwt-service-wroks .content .service-content ol li {
+  font-family: "Roboto-Light";
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #222;
+}
+.wwt-service-wroks .content .service-content ol li a {
+  text-decoration: underline;
+  color: #00539f;
+}
+.wwt-service-wroks .content .service-content .field--name-field-button {
+  display: inline-block;
+  margin: 1.3rem 0 0;
+  width: auto;
+}
+.wwt-service-wroks .content .service-image {
+  padding: 0;
+  background-size: cover;
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 40%;
+  height: 100%;
 }
   /* Footer */
   
@@ -701,6 +760,7 @@ button:focus:not(:focus-visible), .form-control:focus {
 }
 .site-footer .footer-main .block {
   margin: 0 0 0.938rem;
+  position: relative;
 }
 .site-footer .block {
   margin: 0;
@@ -904,7 +964,7 @@ button:focus:not(:focus-visible), .form-control:focus {
 .footer-utility .content .field--name-field-sub-links .field__item a {
   color: #000;
 }
-.footer-main .menu--footer-region .nav-item.menu-item--collapsed:before {
+.footer-main .language-switcher-language-url a.dropdown-toggle:before {
   background: url(../images/pin.png) -4px -1px no-repeat;
   background-size: auto 25px;
   content: " ";
@@ -920,13 +980,13 @@ button:focus:not(:focus-visible), .form-control:focus {
 .footer-main .menu--footer-region span {
   display: inline;
 }
-.footer-main .menu--footer-region .nav-item:before {
+.footer-main .language-switcher-language-url .current-country:before {
   background: url(../images/flags/sprite-country-noCircles.png) -5px -34px no-repeat;
   background-size: 30px auto;
   content: " ";
   display: inline-block;
   height: 26px;
-  margin-right: -3px;
+  margin-right: 0;
   position: relative;
   vertical-align: middle;
   width: 26px;
@@ -1075,7 +1135,8 @@ button:focus:not(:focus-visible), .form-control:focus {
 .field--name-field-home-content .paragraph--type--collapsible-description #read-more h2 {
   text-align: left;
 }
-.field--name-field-home-content .paragraph--type--collapsible-description #read-more a.read-availavility {
+.field--name-field-home-content .paragraph--type--collapsible-description #read-more a.read-availavility, 
+.wwt-service-wroks .content .service-content .field--name-field-button a {
     display: block;
     padding: 1rem 2rem;
     font-size: 1rem;
@@ -1414,5 +1475,18 @@ button:focus:not(:focus-visible), .form-control:focus {
   }
   .featured-top .block-webform {
     display: none;
+  }
+  .wwt-service-wroks .content .service-content {
+    width: 100%;
+    -webkit-box-ordinal-group: 3;
+    order: 2;
+    padding: 2rem 1.25rem 3rem;
+  }
+  .wwt-service-wroks .content .service-image {
+    position: unset;
+    width: 100%;
+    -webkit-box-ordinal-group: 2;
+    order: 1;
+    height: 20rem;
   }
 }
