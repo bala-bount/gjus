@@ -49,7 +49,7 @@
         {{ content.body }}
         {{ content.field_button }}
       </div>
-      {% set img_url = file_url(content.field_block_image.entity.uri.value) %}
+      {% set img_url = file_url(content.field_block_image['#items'].entity.uri.value) %}
       <div class="service-image col-md-5" style="background-image:url('{{ img_url }}')"></div>
     </div>
   {% endblock %}

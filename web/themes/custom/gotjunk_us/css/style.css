@@ -179,7 +179,7 @@ button:focus:not(:focus-visible), .form-control:focus {
 .language-switcher-language-url ul.dropdown-menu.show::after {
   left: 136px;
 }
-.footer-min .language-switcher-language-url ul.dropdown-menu.show::after {
+.footer-main .language-switcher-language-url ul.dropdown-menu.show::after {
   left: 133px;
 }
 .language-switcher-language-url ul.dropdown-menu li a {
@@ -578,7 +578,7 @@ button:focus:not(:focus-visible), .form-control:focus {
 .node--type-wwt-home-page .field--name-body p a {
   text-decoration: underline;
 }
-.node--type-wwt-home-page .field--name-body h2 {
+.node--type-wwt-home-page .field--name-body h2, .wwt-service-wroks .content .service-content h2 {
   font-family: 'Roboto-Light';
   margin-top: 0;
   font-size: 2.5rem;
@@ -640,12 +640,41 @@ button:focus:not(:focus-visible), .form-control:focus {
   /* -webkit-box-orient: vertical;
   -webkit-box-direction: normal; */
   background-color: #f7f7f7;
+  margin: 1.75rem 0 2.25rem;
+}
+.wwt-service-wroks .content .service-content h2 {
+  padding-top: 0;
 }
 .wwt-service-wroks .content .service-content {
   padding: 2rem 3rem 3rem;
 }
+.wwt-service-wroks .content .service-content ol {
+  padding-left: 1.4rem;
+}
+.wwt-service-wroks .content .service-content ol li {
+  font-family: "Roboto-Light";
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #222;
+}
+.wwt-service-wroks .content .service-content ol li a {
+  text-decoration: underline;
+  color: #00539f;
+}
+.wwt-service-wroks .content .service-content .field--name-field-button {
+  display: inline-block;
+  margin: 1.3rem 0 0;
+  width: auto;
+}
 .wwt-service-wroks .content .service-image {
   padding: 0;
+  background-size: cover;
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 40%;
+  height: 100%;
 }
   /* Footer */
   
@@ -731,6 +760,7 @@ button:focus:not(:focus-visible), .form-control:focus {
 }
 .site-footer .footer-main .block {
   margin: 0 0 0.938rem;
+  position: relative;
 }
 .site-footer .block {
   margin: 0;
@@ -1105,7 +1135,8 @@ button:focus:not(:focus-visible), .form-control:focus {
 .field--name-field-home-content .paragraph--type--collapsible-description #read-more h2 {
   text-align: left;
 }
-.field--name-field-home-content .paragraph--type--collapsible-description #read-more a.read-availavility {
+.field--name-field-home-content .paragraph--type--collapsible-description #read-more a.read-availavility, 
+.wwt-service-wroks .content .service-content .field--name-field-button a {
     display: block;
     padding: 1rem 2rem;
     font-size: 1rem;
@@ -1444,5 +1475,18 @@ button:focus:not(:focus-visible), .form-control:focus {
   }
   .featured-top .block-webform {
     display: none;
+  }
+  .wwt-service-wroks .content .service-content {
+    width: 100%;
+    -webkit-box-ordinal-group: 3;
+    order: 2;
+    padding: 2rem 1.25rem 3rem;
+  }
+  .wwt-service-wroks .content .service-image {
+    position: unset;
+    width: 100%;
+    -webkit-box-ordinal-group: 2;
+    order: 1;
+    height: 20rem;
   }
 }
