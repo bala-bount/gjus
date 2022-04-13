@@ -39,8 +39,8 @@
 %}
 <div{{ attributes.addClass(classes) }}>
   {% block content %}
-    <div{{ content_attributes.addClass('content') }}>
-      <div class="service-content">
+    <div{{ content_attributes.addClass('content row') }}>
+      <div class="service-content col-md-7">
         {{ title_prefix }}
         {% if label %}
           <h2{{ title_attributes }}>{{ label }}</h2>
@@ -49,7 +49,8 @@
         {{ content.body }}
         {{ content.field_button }}
       </div>
-      <div class="service-image">{{ content.field_block_image }}</div>
+      {% set img_url = file_url(content.field_block_image.entity.uri.value) %}
+      <div class="service-image col-md-5" style="background-image:url('{{ img_url }}')"></div>
     </div>
   {% endblock %}
 </div>

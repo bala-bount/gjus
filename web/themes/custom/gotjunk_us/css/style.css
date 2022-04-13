@@ -138,7 +138,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   height: 20px;
   background: url(../images/flags/css-sprites.png) no-repeat;
 }
-.header .language-switcher-language-url ul.dropdown-menu {
+.language-switcher-language-url ul.dropdown-menu {
   left: unset;
   right: 0;
   padding: 0;
@@ -160,6 +160,9 @@ button:focus:not(:focus-visible), .form-control:focus {
 .language-switcher-language-url ul.dropdown-menu.show::before {
     left: 137px;
 }
+.footer-main .language-switcher-language-url ul.dropdown-menu.show::before {
+  left: 134px;
+}
 .language-switcher-language-url ul.dropdown-menu:after {
   content: "";
   display: block;
@@ -175,6 +178,9 @@ button:focus:not(:focus-visible), .form-control:focus {
 }
 .language-switcher-language-url ul.dropdown-menu.show::after {
   left: 136px;
+}
+.footer-min .language-switcher-language-url ul.dropdown-menu.show::after {
+  left: 133px;
 }
 .language-switcher-language-url ul.dropdown-menu li a {
   display: block;
@@ -629,6 +635,17 @@ button:focus:not(:focus-visible), .form-control:focus {
   color: #8dc63f;
   top: 3px;
   font-weight: 900;
+}
+.wwt-service-wroks .content {
+  /* -webkit-box-orient: vertical;
+  -webkit-box-direction: normal; */
+  background-color: #f7f7f7;
+}
+.wwt-service-wroks .content .service-content {
+  padding: 2rem 3rem 3rem;
+}
+.wwt-service-wroks .content .service-image {
+  padding: 0;
 }
   /* Footer */
   
