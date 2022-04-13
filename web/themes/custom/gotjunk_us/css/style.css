@@ -92,8 +92,6 @@ button:focus:not(:focus-visible), .form-control:focus {
   margin-left: 0.625rem;
 }
 .language-switcher-language-url a.dropdown-toggle {
-  font-weight: 700;
-  text-transform: uppercase;
   color: #333;
   font-size: .875rem;
   padding-right: 1rem;
@@ -103,6 +101,18 @@ button:focus:not(:focus-visible), .form-control:focus {
   display: block;
   background-size: 12px 12px;
   cursor: pointer;
+}
+.footer-main .language-switcher-language-url a.dropdown-toggle {
+  background: none;
+}
+.footer-main .language-switcher-language-url a.dropdown-toggle span span::after {
+  content: " ";
+  background: url(../images/flags/css-sprites.png) no-repeat -112px -80px;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-left: 10px;
+  top: 0;
 }
 .language-switcher-language-url a.dropdown-toggle::after {
   margin-left: 0;
@@ -128,7 +138,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   height: 20px;
   background: url(../images/flags/css-sprites.png) no-repeat;
 }
-.header .language-switcher-language-url ul.dropdown-menu[data-bs-popper] {
+.header .language-switcher-language-url ul.dropdown-menu {
   left: unset;
   right: 0;
   padding: 0;
@@ -178,6 +188,9 @@ button:focus:not(:focus-visible), .form-control:focus {
 .language-switcher-language-url ul.dropdown-menu li.nav-link a {
   padding-left: 2.688rem;
 }
+.footer-main .language-switcher-language-url ul.dropdown-menu li.nav-link a {
+  padding: 0;
+}
 .header .language-switcher-language-url ul.dropdown-menu li.nav-link {
   background-position-x: 10px;
   background-position-y: center;
@@ -185,8 +198,8 @@ button:focus:not(:focus-visible), .form-control:focus {
   background-repeat: no-repeat;
   padding: 0;
 }
-.header .language-switcher-language-url ul.dropdown-menu li.nav-link:hover,
-.header .language-switcher-language-url ul.dropdown-menu li.nav-link:focus {
+.language-switcher-language-url ul.dropdown-menu li.nav-link:hover,
+.language-switcher-language-url ul.dropdown-menu li.nav-link:focus {
   background-color: #eee;
 }
 .header .language-switcher-language-url li.en {
@@ -904,7 +917,7 @@ button:focus:not(:focus-visible), .form-control:focus {
 .footer-utility .content .field--name-field-sub-links .field__item a {
   color: #000;
 }
-.footer-main .menu--footer-region .nav-item.menu-item--collapsed:before {
+.footer-main .language-switcher-language-url a.dropdown-toggle:before {
   background: url(../images/pin.png) -4px -1px no-repeat;
   background-size: auto 25px;
   content: " ";
@@ -920,13 +933,13 @@ button:focus:not(:focus-visible), .form-control:focus {
 .footer-main .menu--footer-region span {
   display: inline;
 }
-.footer-main .menu--footer-region .nav-item:before {
+.footer-main .language-switcher-language-url .current-country:before {
   background: url(../images/flags/sprite-country-noCircles.png) -5px -34px no-repeat;
   background-size: 30px auto;
   content: " ";
   display: inline-block;
   height: 26px;
-  margin-right: -3px;
+  margin-right: 0;
   position: relative;
   vertical-align: middle;
   width: 26px;
