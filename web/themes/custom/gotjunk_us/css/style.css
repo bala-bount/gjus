@@ -91,7 +91,7 @@ button:focus:not(:focus-visible), .form-control:focus {
 .header .language-switcher-language-url {
   margin-left: 0.625rem;
 }
-.header .language-switcher-language-url a.dropdown-toggle {
+.language-switcher-language-url a.dropdown-toggle {
   font-weight: 700;
   text-transform: uppercase;
   color: #333;
@@ -104,7 +104,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   background-size: 12px 12px;
   cursor: pointer;
 }
-.header .language-switcher-language-url a.dropdown-toggle::after {
+.language-switcher-language-url a.dropdown-toggle::after {
   margin-left: 0;
   vertical-align: 0;
   content: "";
@@ -134,7 +134,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   padding: 0;
   border-radius: 0;
 }
-.header .language-switcher-language-url ul.dropdown-menu:before {
+.language-switcher-language-url ul.dropdown-menu:before {
   content: "";
   display: block;
   width: 0;
@@ -147,10 +147,10 @@ button:focus:not(:focus-visible), .form-control:focus {
   left: 10px;
   z-index: 89;
 }
-.header .language-switcher-language-url ul.dropdown-menu.show::before {
+.language-switcher-language-url ul.dropdown-menu.show::before {
     left: 137px;
 }
-.header .language-switcher-language-url ul.dropdown-menu:after {
+.language-switcher-language-url ul.dropdown-menu:after {
   content: "";
   display: block;
   width: 0;
@@ -163,19 +163,19 @@ button:focus:not(:focus-visible), .form-control:focus {
   left: 9px;
   z-index: 88;
 }
-.header .language-switcher-language-url ul.dropdown-menu.show::after {
+.language-switcher-language-url ul.dropdown-menu.show::after {
   left: 136px;
 }
-.header .language-switcher-language-url ul.dropdown-menu li a {
+.language-switcher-language-url ul.dropdown-menu li a {
   display: block;
   padding: 0.5rem;
   color: #555;
   text-decoration: none;
 }
-.header .language-switcher-language-url ul.dropdown-menu li {
+.language-switcher-language-url ul.dropdown-menu li {
   font-size: 0.875rem;
 }
-.header .language-switcher-language-url ul.dropdown-menu li.nav-link a {
+.language-switcher-language-url ul.dropdown-menu li.nav-link a {
   padding-left: 2.688rem;
 }
 .header .language-switcher-language-url ul.dropdown-menu li.nav-link {
