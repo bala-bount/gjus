@@ -57,9 +57,7 @@ function gotjunk_us_preprocess_links__language_block(&$variables) {
   $variables['links']['en-au']['link']['#url'] = $url;
   $variables['links']['en-au']['link']['#options']['attributes']=['target' => '_blank'];
   // Sets language, language_label variables with the current language id and label respectively.
-  $language_manager = \Drupal::languageManager();
-  $language_code = $language_manager->getCurrentLanguage()->getId();
-  $language_list = $language_manager::getStandardLanguageList();
+  $language_code = \Drupal::languageManager()->getCurrentLanguage()->getId();
   $variables['language'] = $language_code;
-  $variables['language_label'] = $language_list[$language_code][1];
+  $variables['language_label'] = $variables['links'][$language_code]['link']['#title'];
 }
