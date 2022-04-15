@@ -64,9 +64,10 @@ function gotjunk_us_preprocess_links__language_block(&$variables) {
 function gotjunk_us_preprocess_page(&$variables) {
 
   if (!empty($variables['node'])) {
+	  var_dump($variables['node']);exit;
     $variables['sub_title'] = $variables['node']->field_items_sub_title->value;
 	$variables['body'] = $variables['node']->body->value;
-	$variables['field_sidebar_image'] = $variables['node']->field_sidebar_image->value;
-	$variables['field_items_list'] = $variables['node']->field_items_list->value;
+	$variables['sidebar_image'] = $variables['node']->field_sidebar_image->value;
+	$variables['items_list'] = $variables['node']->field_items_list->value;
   }
 }
