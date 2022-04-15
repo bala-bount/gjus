@@ -61,13 +61,3 @@ function gotjunk_us_preprocess_links__language_block(&$variables) {
   $variables['language'] = $language_code;
   $variables['language_label'] = $variables['links'][$language_code]['link']['#title'];
 }
-function gotjunk_us_preprocess_page(&$variables) {
-
-  if (!empty($variables['node'])) {
-	  var_dump($variables['node']);exit;
-    $variables['sub_title'] = $variables['node']->field_items_sub_title->value;
-	$variables['body'] = $variables['node']->body->value;
-	$variables['sidebar_image'] = $variables['node']->field_sidebar_image->value;
-	$variables['items_list'] = $variables['node']->field_items_list->value;
-  }
-}
