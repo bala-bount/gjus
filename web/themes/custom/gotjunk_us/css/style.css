@@ -485,7 +485,49 @@ button:focus:not(:focus-visible), .form-control:focus {
   left: -1.25rem;
   margin-top: -0.188rem;
 }
-.menu--wwt-menu {
+/* Top mobile menu */
+.menu--wwt-mobile-menu {
+  padding: 0px;
+  display: none;
+}
+.menu--wwt-mobile-menu .nav {
+  justify-content: center;
+  width: 100%;
+}
+.menu--wwt-mobile-menu .nav li {
+  flex: 1;
+}
+.menu--wwt-mobile-menu .nav li a {
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 700;
+  font-family: 'Roboto-Bold';
+  color: #fff;
+  background: #8dc63f;
+  padding: 15px 0;
+  position: static;
+}
+.menu--wwt-mobile-menu .nav li.mobile-phone-number a {
+  background: #00539f;
+}
+.menu--wwt-mobile-menu .nav li a:before {
+  display: inline-block;
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: relative;
+  background: url(../images/icon-bookonline.png) center no-repeat;
+  background-position-y: 0px;
+  top: 4px;
+}
+.menu--wwt-mobile-menu .nav li.mobile-phone-number a:before {
+  background-image: url(../images/icon-call.png);
+  margin-right: 5px;
+}
+.menu--wwt-menu, 
+.menu--what-we-do-menu {
   width: 100%;
   background: #fff;
   border-bottom: 1px solid #000;
@@ -493,22 +535,26 @@ button:focus:not(:focus-visible), .form-control:focus {
   align-items: center;
   box-shadow: 0 0.313rem 0.625rem rgb(0 0 0 / 20%);
 }
-.menu--wwt-menu.sticky {
+.menu--wwt-menu.sticky,
+.menu--what-we-do-menu.sticky {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 99999;
 }
-.menu--wwt-menu .nav {
+.menu--wwt-menu .nav,
+.menu--what-we-do-menu .nav {
   margin: 0 auto;
 }
-.menu--wwt-menu .nav li {
+.menu--wwt-menu .nav li,
+.menu--what-we-do-menu .nav li {
   font-size: 1rem;
   font-family: 'Roboto-Light';
   line-height: 1.5rem;
   position: relative;
 }
-.menu--wwt-menu .nav li a {
+.menu--wwt-menu .nav li a,
+.menu--what-we-do-menu .nav li a {
   color: #333;
   padding: 1.25rem;
   font-weight: 500;
@@ -516,13 +562,35 @@ button:focus:not(:focus-visible), .form-control:focus {
   font-family: 'Roboto-Medium';
   text-align: center;
 }
+.menu--wwt-menu .nav li.wwt-menu-book-now,
+.menu--what-we-do-menu .nav li.wwt-menu-book-now {
+  display: none;
+}
+.menu--wwt-menu.sticky .nav li.wwt-menu-book-now,
+.menu--what-we-do-menu.sticky .nav li.wwt-menu-book-now {
+  display: block;
+}
+.menu--wwt-menu .nav li.wwt-menu-book-now a,
+.menu--what-we-do-menu .nav li.wwt-menu-book-now a {
+  color: #fff;
+  background: #8dc63f;
+  padding: 0.625rem 2.5rem;
+  font-family: 'Roboto-Bold';
+  font-size: 0.938rem;
+  margin-top: 0.625rem;
+}
 .menu--wwt-menu .nav li.menu-item--active-trail>a.active, 
 .menu--wwt-menu .nav li.menu-item--active-trail:focus>a.active,
-.menu--wwt-menu .nav li:hover a {
+.menu--wwt-menu .nav li:hover a,
+.menu--what-we-do-menu .nav li.menu-item--active-trail>a.active, 
+.menu--what-we-do-menu .nav li.menu-item--active-trail:focus>a.active,
+.menu--what-we-do-menu .nav li:hover a {
   color: #00539f;
 }
 .menu--wwt-menu .nav > li.menu-item--active-trail>a:after,
-.menu--wwt-menu .nav > li:hover>a:after {
+.menu--wwt-menu .nav > li:hover>a:after,
+.menu--what-we-do-menu .nav > li.menu-item--active-trail>a:after,
+.menu--what-we-do-menu .nav > li:hover>a:after {
   background: #00539f;
   position: absolute;
   width: 100%;
@@ -532,7 +600,12 @@ button:focus:not(:focus-visible), .form-control:focus {
   content: "";
   display: flex;
 }
-.menu--wwt-menu .nav .menu-item--expanded .menu {
+.menu--wwt-menu .nav li.wwt-menu-book-now:hover > a:after,
+.menu--what-we-do-menu .nav li.wwt-menu-book-now:hover > a:after {
+  background: none;
+}
+.menu--wwt-menu .nav .menu-item--expanded .menu,
+.menu--what-we-do-menu .nav .menu-item--expanded .menu {
   display: none;
   min-width: 200px;
   position: absolute;
@@ -553,19 +626,24 @@ button:focus:not(:focus-visible), .form-control:focus {
   background-clip: padding-box;
 }
 .menu--wwt-menu .nav .menu-item--expanded a:hover + .menu, 
-.menu--wwt-menu .nav .menu-item--expanded .menu:hover {
+.menu--wwt-menu .nav .menu-item--expanded .menu:hover,
+.menu--what-we-do-menu .nav .menu-item--expanded a:hover + .menu, 
+.menu--what-we-do-menu .nav .menu-item--expanded .menu:hover {
   display: block;
 }
-.menu--wwt-menu .nav .menu-item--expanded .menu {
+.menu--wwt-menu .nav .menu-item--expanded .menu,
+.menu--what-we-do-menu .nav .menu-item--expanded .menu {
   columns:2;
 }
-.menu--wwt-menu .nav .menu-item--expanded .menu>li {
+.menu--wwt-menu .nav .menu-item--expanded .menu>li,
+.menu--what-we-do-menu .nav .menu-item--expanded .menu>li {
   display: block;
   list-style: none;
   margin-left: 0;
   line-height: 1.5rem;
 }
-.menu--wwt-menu .nav .menu-item--expanded .menu>li a {
+.menu--wwt-menu .nav .menu-item--expanded .menu>li a,
+.menu--what-we-do-menu .nav .menu-item--expanded .menu>li a {
   padding: 3px 15px;
   width: 200px;
   border: 0;
@@ -576,7 +654,8 @@ button:focus:not(:focus-visible), .form-control:focus {
   color: #333;
   font-family: 'Roboto-Regular';
 }
-.menu--wwt-menu .nav .menu-item--expanded .menu>li a:hover {
+.menu--wwt-menu .nav .menu-item--expanded .menu>li a:hover,
+.menu--what-we-do-menu .nav .menu-item--expanded .menu>li a:hover {
   color: #8dc63f;
 }
 .node.node--type-wwt-home-page .field--name-body p a {
@@ -1555,5 +1634,8 @@ button:focus:not(:focus-visible), .form-control:focus {
     text-align: left;
     font-size: 2.5rem;
     line-height: 3rem;
+  }
+  .menu--wwt-mobile-menu {
+    display: block;
   }
 }
