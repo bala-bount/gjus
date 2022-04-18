@@ -687,16 +687,16 @@ button:focus:not(:focus-visible), .form-control:focus {
   width: 40%;
   height: 100%;
 }
-.node.node--type-wwt-items-page .field--name-body {
+/* .node.node--type-wwt-items-page .field--name-body {
   width: 70%;
   float: left;
-}
+} */
 .node.node--type-wwt-items-page .field--name-field-sidebar-image {
-  width: 30%;
-  float: right;
+  /* width: 30%;
+  float: right; */
   margin: 0
 }
-.node.node--type-wwt-items-page .field--name-field-items-list {
+.node.node--type-wwt-items-page .wwt-items-list {
   width: 100%;
   clear: both;
   columns: 3;
@@ -708,7 +708,8 @@ button:focus:not(:focus-visible), .form-control:focus {
   margin-bottom: 0.5rem;
 }
 .node.node--type-wwt-items-page .field--name-body ol li,
-.node.node--type-wwt-items-page .field--name-body ul li {
+.node.node--type-wwt-items-page .field--name-body ul li,
+.node.node--type-wwt-items-page ul.wwt-items-list li {
   font-size: 1rem;
   font-family: 'Roboto-Light';
   line-height: 1.5rem;

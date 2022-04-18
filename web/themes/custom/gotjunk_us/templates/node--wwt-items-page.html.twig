@@ -93,17 +93,21 @@
       </div>
     {% endif %}
   </header>
-  <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
- {{content.field_items_sub_title}}
- {{content.body}}
+  <div{{ content_attributes.addClass('node__content', 'clearfix', 'row') }}>
+      {{content.field_items_sub_title}}
+    <div class="col-md-9">
+      {{content.body}}
 
-{% if content.field_items_list[0] %}
-  <ul>
-    {% for key, item in content.field_items_list if key|first != '#' %}
-      <li>{{ item }}</li>
-    {% endfor %}
-  </ul>
-{% endif %}
-  {{content.field_sidebar_image}}
-
+      {% if content.field_items_list[0] %}
+        <ul class="wwt-items-list">
+          {% for key, item in content.field_items_list if key|first != '#' %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+    <div class="col-md-3">
+      {{content.field_sidebar_image}}
+    </div>
+</div>
 </article>
