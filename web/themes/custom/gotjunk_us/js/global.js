@@ -39,8 +39,10 @@
   
         if ($(window).scrollTop() >= sticky) {
           $(".menu--wwt-menu").addClass("sticky");
+          $(".menu--what-we-do-menu").addClass("sticky");
         } else {
           $(".menu--wwt-menu").removeClass("sticky");
+          $(".menu--what-we-do-menu").removeClass("sticky");
         }
       };
       }

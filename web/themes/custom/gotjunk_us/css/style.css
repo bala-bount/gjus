@@ -631,9 +631,11 @@ button:focus:not(:focus-visible), .form-control:focus {
 .menu--what-we-do-menu .nav .menu-item--expanded .menu:hover {
   display: block;
 }
-.menu--wwt-menu .nav .menu-item--expanded .menu,
-.menu--what-we-do-menu .nav .menu-item--expanded .menu {
+.menu--wwt-menu .nav .menu-item--expanded .menu {
   columns:2;
+}
+.menu--what-we-do-menu .nav .menu-item--expanded .menu {
+  columns:1;
 }
 .menu--wwt-menu .nav .menu-item--expanded .menu>li,
 .menu--what-we-do-menu .nav .menu-item--expanded .menu>li {
@@ -644,15 +646,21 @@ button:focus:not(:focus-visible), .form-control:focus {
 }
 .menu--wwt-menu .nav .menu-item--expanded .menu>li a,
 .menu--what-we-do-menu .nav .menu-item--expanded .menu>li a {
-  padding: 3px 15px;
+  padding: 0.188rem .938rem;
   width: 200px;
   border: 0;
   white-space: normal;
-  line-height: 20px;
+  line-height: 1.25rem;
+  font-size: 1rem;
   text-align: left;
   font-weight: 400;
   color: #333;
   font-family: 'Roboto-Regular';
+}
+.menu--what-we-do-menu .nav .menu-item--expanded .menu>li.nav-item a {
+  padding: 0.375rem 0.5rem;
+  width: auto;
+  border: 0;
 }
 .menu--wwt-menu .nav .menu-item--expanded .menu>li a:hover,
 .menu--what-we-do-menu .nav .menu-item--expanded .menu>li a:hover {
@@ -1238,7 +1246,8 @@ button:focus:not(:focus-visible), .form-control:focus {
 /* Home Page  */
 .field--name-field-home-content h3, .field--name-field-home-content h2,
 .node.node--type-wwt-home-page .field--name-field-sub-title, 
-.node.node--type-wwt-items-page .field--name-field-items-sub-title {
+.node.node--type-wwt-items-page .field--name-field-items-sub-title,
+.node--type-wwd-main-page .field--name-field-content h3 {
     color: #00539f;
     font-family: 'Roboto-Light',Helvetica,Arial,sans-serif;
     line-height: 3.5rem;
@@ -1278,10 +1287,14 @@ button:focus:not(:focus-visible), .form-control:focus {
     margin: 3rem auto 0;
     font-family: 'Roboto-Bold',Helvetica,Arial,sans-serif;
 }
-.field--name-field-home-content .read-more-expand, .field--name-field-home-content .read-more-collapse {
+.field--name-field-home-content .read-more-expand, .field--name-field-home-content .read-more-collapse,
+.node--type-wwd-main-page .field--name-field-content .field--name-field-collapse-text {
   font-family: 'Roboto-Light',Helvetica,Arial,sans-serif;
   font-size: 0.875rem;
   text-transform: uppercase;
+}
+.node--type-wwd-main-page .field--name-field-content .field--name-field-collapse-text {
+  text-align: center;
 }
 .field--name-field-home-content p {
   max-width: 740px;
@@ -1289,13 +1302,17 @@ button:focus:not(:focus-visible), .form-control:focus {
 }
 .field--name-field-home-content p,
 .node.node--type-wwt-home-page .field--name-body p,
-.node.node--type-wwt-items-page .field--name-body p {
+.node.node--type-wwt-items-page .field--name-body p,
+.node--type-wwd-main-page .field--name-field-content p {
   font-size: 1rem;
   line-height: 1.6;
   letter-spacing: .01em;
   color: #333;
   font-family: 'Roboto-Light',Helvetica,Arial,sans-serif;
   margin: 0 auto 1.5rem;
+}
+.node--type-wwd-main-page .field--name-field-content p a {
+  text-decoration: underline;
 }
 .field--name-field-home-content .paragraph--type--collapsible-description #read-more {
   max-width: 770px;
@@ -1587,6 +1604,9 @@ button:focus:not(:focus-visible), .form-control:focus {
   }
   .field--name-field-home-content .card-group .paragraph--type--card .col {
     padding: 0;
+  }
+  .region-featured-top .view-id-banner_block_view .view-content.row {
+    --bs-gutter-x: 0;
   }
   .region-featured-top .block-views-blockbanner-block-view-block-1 .view-id-banner_block_view .card .mobile-banner {
     display: block;
