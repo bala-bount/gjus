@@ -80,7 +80,13 @@
 				        {{ sub_title }}
 						{{ body|raw }}
 						{{ sidebar_image }}
-						{{ items_list }}	
+						{% if items_list[0] %}
+						  <ul>
+							{% for key, item in items_list if key|first != '#' %}
+							  <li>{{ item.value }}</li>
+							{% endfor %}
+						  </ul>
+						{% endif %}
                 </section>
               </main>
           </div>

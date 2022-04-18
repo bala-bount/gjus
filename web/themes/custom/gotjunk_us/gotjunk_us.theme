@@ -61,7 +61,7 @@ function gotjunk_us_preprocess_links__language_block(&$variables) {
   $variables['language'] = $language_code;
   $variables['language_label'] = $variables['links'][$language_code]['link']['#title'];
 }
-function jobs_theme_preprocess_page(&$variables) {
+function gotjunk_us_preprocess_page(&$variables) {
 
   if (!empty($variables['node']) && $variables['node']->bundle() == 'wwt_items_page') {
     $variables['sub_title'] = $variables['node']->field_items_sub_title[0]->value;
@@ -73,6 +73,6 @@ function jobs_theme_preprocess_page(&$variables) {
 	$media_url = file_create_url($uri); 
     $variables['sidebar_image'] = $media_url;
 	
-	//$variables['items_list'] = $variables['node']->field_items_list[0]->value;
+	$variables['items_list'] = $variables['node']->field_items_list->getValue();
   }
 }
