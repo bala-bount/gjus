@@ -1416,6 +1416,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   text-align: center;
   display: block;
   text-decoration: none;
+  cursor: pointer;
 }
 .field--name-field-home-content p {
   max-width: 740px;
@@ -1503,7 +1504,8 @@ button:focus:not(:focus-visible), .form-control:focus {
   max-width: 100%;
   padding: 0;
 }
-.featured-bottom .row {
+.featured-bottom .row,
+.featured-top .view-banner-block-view .row {
   --bs-gutter-x:0;
 }
 .featured-bottom .view-review-block-view {
@@ -1679,9 +1681,6 @@ button:focus:not(:focus-visible), .form-control:focus {
   .featured-bottom .review-block-section .review-content {
     height: auto;
   }
-  .featured-bottom .view-review-block-view {
-    height: 443px;
-  }
   .featured-bottom .views_slideshow_cycle_teaser_section {
     margin: 2.5rem auto 2.5rem;
     width: 90%!important;
@@ -1726,9 +1725,10 @@ button:focus:not(:focus-visible), .form-control:focus {
   .field--name-field-home-content .card-group .paragraph--type--card .col {
     padding: 0;
   }
-  .view-banner-block-view .row.view-content {
-    --bs-gutter-x: 0;
-  }
+  /* .featured-top .row {
+    --bs-gutter: 0;
+    padding: 0;
+  } */
   .region-featured-top .block-views-blockbanner-block-view-block-1 .view-id-banner_block_view .card .mobile-banner {
     display: block;
   }
@@ -1771,13 +1771,31 @@ button:focus:not(:focus-visible), .form-control:focus {
   .node.node--type-wwt-home-page .field--name-field-junk-list > .field__item:last-child .field--name-field-column-image {
     display: none;
   }
-  .field--name-field-home-content h3, 
-  .field--name-field-home-content h2, .node.node--type-wwt-home-page .field--name-field-sub-title {
+  .field--name-field-home-content h3, .field--name-field-home-content h2, 
+  .node.node--type-wwt-home-page .field--name-field-sub-title, 
+  .node.node--type-wwt-items-page .field--name-field-items-sub-title,
+  .node--type-wwd-main-page .field--name-field-content .paragraph--type--title-and-description h3 {
     text-align: left;
     font-size: 2.5rem;
     line-height: 3rem;
   }
   .menu--wwt-mobile-menu {
     display: block;
+  }
+  .node--type-wwd-main-page .paragraph--type--card-grid .field--name-field-siblings > .field__items > .field__item {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 1.875rem;
+  }
+  .node--type-wwd-main-page .field--name-field-services-list .field__items {
+    columns: 2;
+  }
+  .node--type-wwd-main-page .field--name-field-blue-notice .field--type-text-with-summary,
+  .node--type-wwd-main-page .field--name-field-blue-notice .field--name-field-notice-image {
+    width: 100%;
+  }
+  .node--type-wwd-main-page .field--name-field-wwd-media .media-oembed-content {
+    height: 400px;
   }
 }
