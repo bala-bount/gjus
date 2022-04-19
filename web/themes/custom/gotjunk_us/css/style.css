@@ -714,13 +714,15 @@ button:focus:not(:focus-visible), .form-control:focus {
 .node.node--type-wwt-home-page .field--name-field-junk-list > .field__item .field--name-field-items > .field__item {
   margin-bottom: 0.5rem;
 }
-.node.node--type-wwt-home-page .field--name-field-junk-list > .field__item .field--name-field-items a {
+.node.node--type-wwt-home-page .field--name-field-junk-list > .field__item .field--name-field-items a,
+.node--type-wwd-main-page .field--name-field-services-list .field__items .field__item a {
   font-family: 'Roboto-Light';
   margin-left: 8px;
   color: #00539f;
   font-size: 1rem;
 }
-.node.node--type-wwt-home-page .field--name-field-junk-list > .field__item .field--name-field-items .field__item:before {
+.node.node--type-wwt-home-page .field--name-field-junk-list > .field__item .field--name-field-items .field__item:before,
+.node--type-wwd-main-page .field--name-field-services-list .field__items .field__item:before {
   font-family: 'Font Awesome 6 Free';
   content: "\f00c";
   left: 0;
@@ -797,11 +799,97 @@ button:focus:not(:focus-visible), .form-control:focus {
 }
 .node.node--type-wwt-items-page .field--name-body ol li,
 .node.node--type-wwt-items-page .field--name-body ul li,
-.node.node--type-wwt-items-page ul.wwt-items-list li {
+.node.node--type-wwt-items-page ul.wwt-items-list li,
+.node--type-wwd-main-page .field--name-field-blue-notice .field--type-text-with-summary ul li {
   font-size: 1rem;
   font-family: 'Roboto-Light';
   line-height: 1.5rem;
   margin-bottom: 0.5rem;
+}
+/* wwd home page */
+.node--type-wwd-main-page .paragraph--type--card-grid .field--name-field-siblings > .field__items > .field__item {
+  width: 33.33333%;
+  position: relative;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  float: left;
+  font-size: 1rem;
+  font-family: 'Roboto-Light';
+  line-height: 1.5rem;
+  margin-bottom: 3rem;
+}
+.paragraph--type--card-typical .card {
+  border-radius: 0;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.paragraph--type--card-typical .card .card-body {
+  padding: 0;
+}
+.node--type-wwd-main-page .field--name-field-content .paragraph--type--card-typical .card .card-body .card-text p {
+  margin: 0;
+}
+.node--type-wwd-main-page .paragraph--type--card-grid .field--name-field-siblings .field--name-field-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: 'Roboto-Regular';
+  text-transform: none;
+  line-height: 2rem;
+  margin-top: 0;
+  color: #333;
+  padding-top: 0;
+  margin-bottom: 0.5rem;
+}
+.node--type-wwd-main-page .field--name-field-content .paragraph--type--card-typical .card .card-body .card-text a {
+  font-family: 'Roboto-Light';
+}
+.node--type-wwd-main-page .field--name-field-services-list .field__label {
+  margin-top: 0;
+  font-size: 1.625rem;
+  line-height: 2.125rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  text-transform: none;
+}
+.node--type-wwd-main-page .field--name-field-services-list .field__items {
+  columns: 3;
+}
+.node--type-wwd-main-page .field--name-field-blue-notice {
+  background: #00539f;
+  color: #fff;
+  overflow: hidden;
+  margin-bottom: 3.75rem;
+}
+.node--type-wwd-main-page .field--name-field-blue-notice .field--type-text-with-summary {
+  padding: 1.875rem 1.875rem 0;
+  display: inline-block;
+  width: 50%;
+}
+.node--type-wwd-main-page .field--name-field-blue-notice .field--type-text-with-summary h2 {
+  color: #fff;
+  font-size: 2.3em;
+}
+.node--type-wwd-main-page .field--name-field-blue-notice .field--type-text-with-summary h3 {
+  font-family: 'Roboto-Medium';
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
+}
+.node--type-wwd-main-page .field--name-field-blue-notice .field--type-text-with-summary p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: 'Roboto-Light';
+  color: #fff;
+}
+.node--type-wwd-main-page .field--name-field-blue-notice .field--name-field-notice-image {
+  float: right;
+  display: inline-block;
+  width: 50%;
+}
+.node--type-wwd-main-page .field--name-field-blue-notice .field--name-field-notice-image img {
+  margin: 0;
 }
   /* Footer */
   
@@ -1288,13 +1376,17 @@ button:focus:not(:focus-visible), .form-control:focus {
     font-family: 'Roboto-Bold',Helvetica,Arial,sans-serif;
 }
 .field--name-field-home-content .read-more-expand, .field--name-field-home-content .read-more-collapse,
-.node--type-wwd-main-page .field--name-field-content .field--name-field-collapse-text {
+.node--type-wwd-main-page .field--name-field-content .read-more-expand, 
+.node--type-wwd-main-page .field--name-field-content .read-more-collapse {
   font-family: 'Roboto-Light',Helvetica,Arial,sans-serif;
   font-size: 0.875rem;
   text-transform: uppercase;
 }
-.node--type-wwd-main-page .field--name-field-content .field--name-field-collapse-text {
+.node--type-wwd-main-page .field--name-field-content .read-more-expand,
+.node--type-wwd-main-page .field--name-field-content .read-more-collapse {
   text-align: center;
+  display: block;
+  text-decoration: none;
 }
 .field--name-field-home-content p {
   max-width: 740px;
@@ -1605,7 +1697,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   .field--name-field-home-content .card-group .paragraph--type--card .col {
     padding: 0;
   }
-  .region-featured-top .view-id-banner_block_view .view-content.row {
+  .region-featured-top .view-banner-block-view .view-content.row {
     --bs-gutter-x: 0;
   }
   .region-featured-top .block-views-blockbanner-block-view-block-1 .view-id-banner_block_view .card .mobile-banner {
