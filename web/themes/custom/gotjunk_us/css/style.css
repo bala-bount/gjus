@@ -309,6 +309,9 @@ button:focus:not(:focus-visible), .form-control:focus {
   max-height: 500px;
   overflow: hidden;
 }
+.region-featured-top .block-views-blockbanner-block-view-block-1 .view-id-banner_block_view .card .banner img {
+  width: 100%;
+}
 .region-featured-top .block-views-blockbanner-block-view-block-1 .view-id-banner_block_view .card .mobile-banner {
   display: none;
 }
@@ -695,7 +698,8 @@ button:focus:not(:focus-visible), .form-control:focus {
 .node.node--type-wwt-home-page .field--name-body h2, 
 .wwt-service-wroks .content .service-content h2,
 .node.node--type-wwt-items-page .field--name-body h2,
-.node--type-wwd-child-page .field--name-field-title-and-description .paragraph h3
+.node--type-wwd-child-page .field--name-field-title-and-description .paragraph h3,
+.node--type-wwd-child-page .field--name-field-bottom-text .paragraph h3
  {
   font-family: 'Roboto-Light';
   margin-top: 0;
@@ -739,14 +743,16 @@ button:focus:not(:focus-visible), .form-control:focus {
   margin-bottom: 0.5rem;
 }
 .node.node--type-wwt-home-page .field--name-field-junk-list > .field__item .field--name-field-items a,
-.node--type-wwd-main-page .field--name-field-services-list .field__items .field__item a {
+.node--type-wwd-main-page .field--name-field-services-list .field__items .field__item a,
+.node--type-wwd-child-page .field--name-field-wwd-child-list.field__items .field__item a {
   font-family: 'Roboto-Light';
   margin-left: 8px;
   color: #00539f;
   font-size: 1rem;
 }
 .node.node--type-wwt-home-page .field--name-field-junk-list > .field__item .field--name-field-items .field__item:before,
-.node--type-wwd-main-page .field--name-field-services-list .field__items .field__item:before {
+.node--type-wwd-main-page .field--name-field-services-list .field__items .field__item:before,
+.node--type-wwd-child-page .field--name-field-wwd-child-list.field__items .field__item:before {
   font-family: 'Font Awesome 6 Free';
   content: "\f00c";
   left: 0;
@@ -825,7 +831,8 @@ button:focus:not(:focus-visible), .form-control:focus {
 .node.node--type-wwt-items-page .field--name-body ul li,
 .node.node--type-wwt-items-page ul.wwt-items-list li,
 .node--type-wwd-main-page .field--name-field-blue-notice .field--type-text-with-summary ul li,
-.node--type-wwd-child-page .field--name-field-title-and-description .paragraph ol li {
+.node--type-wwd-child-page .field--name-field-title-and-description .paragraph ol li,
+.node--type-wwd-child-page .field--name-field-title-and-description .paragraph ul li {
   font-size: 1rem;
   font-family: 'Roboto-Light';
   line-height: 1.5rem;
@@ -881,7 +888,8 @@ button:focus:not(:focus-visible), .form-control:focus {
   font-weight: 400;
   text-transform: none;
 }
-.node--type-wwd-main-page .field--name-field-services-list .field__items {
+.node--type-wwd-main-page .field--name-field-services-list .field__items,
+.node--type-wwd-child-page .field--name-field-wwd-child-list.field__items {
   columns: 3;
   margin-bottom: 2.5rem;
 }
@@ -955,7 +963,14 @@ button:focus:not(:focus-visible), .form-control:focus {
 }
 .node--type-wwd-child-page .field--name-field-media .field--type-image img {
   margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
+  clear: both;
+}
+.field--name-field-media-image .field--type-image {
+  margin: 0;
+}
+.node--type-wwd-child-page .field--name-field-bottom-text .paragraph h3 {
+  clear: both;
 }
   /* Footer */
   
@@ -1129,6 +1144,9 @@ button:focus:not(:focus-visible), .form-control:focus {
   font-size: .875rem;
   color: #333;
   font-family: 'Roboto-Bold',Helvetica,Arial,sans-serif;
+}
+.navbar-light .navbar-nav .nav-item.active a {
+  color: #00539f;
 }
 .navbar-light .navbar-nav .nav-item span {
   padding-right: 1.25rem;
@@ -1465,7 +1483,8 @@ button:focus:not(:focus-visible), .form-control:focus {
 .node.node--type-wwt-home-page .field--name-body p,
 .node.node--type-wwt-items-page .field--name-body p,
 .node--type-wwd-main-page .field--name-field-content p,
-.node--type-wwd-child-page .field--name-field-title-and-description .paragraph p {
+.node--type-wwd-child-page .field--name-field-title-and-description .paragraph p,
+.node--type-wwd-child-page .field--name-field-bottom-text .paragraph p {
   font-size: 1rem;
   line-height: 1.5;
   letter-spacing: .01em;
@@ -1826,7 +1845,8 @@ button:focus:not(:focus-visible), .form-control:focus {
   .node.node--type-wwt-home-page .field--name-field-sub-title, 
   .node.node--type-wwt-items-page .field--name-field-items-sub-title,
   .node--type-wwd-main-page .field--name-field-content .paragraph--type--title-and-description h3,
-  .node--type-wwd-child-page .field--name-field-title-and-description .paragraph h3 {
+  .node--type-wwd-child-page .field--name-field-title-and-description .paragraph h3
+  .node--type-wwd-child-page .field--name-field-bottom-text .paragraph h3 {
     text-align: left;
     font-size: 2.5rem;
     line-height: 3rem;
@@ -1840,7 +1860,8 @@ button:focus:not(:focus-visible), .form-control:focus {
     padding-right: 0;
     margin-bottom: 1.875rem;
   }
-  .node--type-wwd-main-page .field--name-field-services-list .field__items {
+  .node--type-wwd-main-page .field--name-field-services-list .field__items,
+  .node--type-wwd-child-page .field--name-field-wwd-child-list.field__items {
     columns: 2;
   }
   .node--type-wwd-main-page .field--name-field-blue-notice .field--type-text-with-summary,

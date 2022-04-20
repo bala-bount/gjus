@@ -31,7 +31,7 @@
   };
   Drupal.behaviors.menuWWTWWD = {
     attach: function(context, settings) {
-      if($(".node--type-wwt-home-page, .node--type-wwt-items-page, .node--type-wwd-main-page").length){
+      if($(".node--type-wwt-home-page, .node--type-wwt-items-page, .node--type-wwd-main-page, .node--type-wwd-child-page").length){
       window.onscroll = function(){
         var header = $(".block-webform-block").offset();
         // Get the offset position of the navbar
