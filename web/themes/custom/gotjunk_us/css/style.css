@@ -698,8 +698,8 @@ button:focus:not(:focus-visible), .form-control:focus {
 .node.node--type-wwt-home-page .field--name-body h2, 
 .wwt-service-wroks .content .service-content h2,
 .node.node--type-wwt-items-page .field--name-body h2,
-.node--type-wwd-child-page .field--name-field-title-and-description .paragraph h3,
-.node--type-wwd-child-page .field--name-field-bottom-text .paragraph h3
+.node--type-wwd-child-page .field--name-field-title-and-description .paragraph h1,
+.node--type-wwd-child-page .field--name-field-bottom-text .paragraph h1
  {
   font-family: 'Roboto-Light';
   margin-top: 0;
@@ -929,7 +929,6 @@ button:focus:not(:focus-visible), .form-control:focus {
 }
 .node--type-wwd-main-page .field--name-field-blue-notice .field--name-field-notice-image {
   float: right;
-  display: inline-block;
   width: 50%;
   margin: 0;
 }
@@ -939,7 +938,7 @@ button:focus:not(:focus-visible), .form-control:focus {
 .node--type-wwd-main-page .paragraph--type--title-and-description {
   text-align: center;
 }
-.node--type-wwd-main-page .paragraph--type--title-and-description h3 {
+.node--type-wwd-main-page .paragraph--type--title-and-description h1 {
   font-size: 2.5rem;
   font-family: 'Roboto-Light';
   margin-bottom: 1.5rem;
@@ -955,11 +954,11 @@ button:focus:not(:focus-visible), .form-control:focus {
   margin-bottom: 3rem;
 }
 /* wwd child page */
-.node--type-wwd-child-page .field--name-field-title-and-description .field__item:first-child div.paragraph h3 {
+.node--type-wwd-child-page .field--name-field-title-and-description .field__item:first-child .paragraph h1.title {
   color: #8dc63f;
   text-align: center;
 }
-.node--type-wwd-child-page .field--name-field-title-and-description .field__item .paragraph h3 {
+.node--type-wwd-child-page .field--name-field-title-and-description .field__item .paragraph h2 {
   text-align: left;
 }
 .node--type-wwd-child-page .field--name-field-media .field--type-image img {
@@ -970,7 +969,7 @@ button:focus:not(:focus-visible), .form-control:focus {
 .field--name-field-media-image .field--type-image {
   margin: 0;
 }
-.node--type-wwd-child-page .field--name-field-bottom-text .paragraph h3 {
+.node--type-wwd-child-page .field--name-field-bottom-text .paragraph h1 {
   clear: both;
 }
   /* Footer */
@@ -1420,8 +1419,8 @@ button:focus:not(:focus-visible), .form-control:focus {
 .field--name-field-home-content h3, .field--name-field-home-content h2,
 .node.node--type-wwt-home-page .field--name-field-sub-title, 
 .node.node--type-wwt-items-page .field--name-field-items-sub-title,
-.node--type-wwd-main-page .field--name-field-content .paragraph--type--title-and-description h3,
-.node--type-wwd-child-page .field--name-field-title-and-description .field__item:first-child .paragraph h3 {
+.node--type-wwd-main-page .field--name-field-content .paragraph--type--title-and-description h1,
+.node--type-wwd-child-page .field--name-field-title-and-description .field__item:first-child .paragraph h1 {
     color: #00539f;
     font-family: 'Roboto-Light',Helvetica,Arial,sans-serif;
     line-height: 3.5rem;
@@ -1746,6 +1745,20 @@ button:focus:not(:focus-visible), .form-control:focus {
   .site-footer .footer-main .block {
     padding: 0px 0.938rem;
   }
+  .site-footer .footer-main .block.language-switcher-language-url {
+    text-align: center;
+  }
+  .site-footer .footer-main .block.language-switcher-language-url h2 {
+    text-align: left;
+  }
+  .footer-main .language-switcher-language-url a.dropdown-toggle {
+    display: inline-block;
+    width: 50%;
+  }
+  .footer-main .language-switcher-language-url span.current-country {
+    width: 48%;
+    display: inline-block;
+  }
   #block-customerservice {
     display: none;
   }
@@ -1845,9 +1858,9 @@ button:focus:not(:focus-visible), .form-control:focus {
   .field--name-field-home-content h3, .field--name-field-home-content h2, 
   .node.node--type-wwt-home-page .field--name-field-sub-title, 
   .node.node--type-wwt-items-page .field--name-field-items-sub-title,
-  .node--type-wwd-main-page .field--name-field-content .paragraph--type--title-and-description h3,
-  .node--type-wwd-child-page .field--name-field-title-and-description .paragraph h3
-  .node--type-wwd-child-page .field--name-field-bottom-text .paragraph h3 {
+  .node--type-wwd-main-page .field--name-field-content .paragraph--type--title-and-description h1,
+  .node--type-wwd-child-page .field--name-field-title-and-description .paragraph h1
+  .node--type-wwd-child-page .field--name-field-bottom-text .paragraph h1 {
     text-align: left;
     font-size: 2.5rem;
     line-height: 3rem;
