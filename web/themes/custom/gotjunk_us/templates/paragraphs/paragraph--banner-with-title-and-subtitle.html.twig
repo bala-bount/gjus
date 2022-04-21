@@ -49,8 +49,8 @@
 {% block paragraph %}
     {% block content %}
       <div class="card">
-      {% set img_uri = file_url(content.field_banner_image.entity.uri.value) %}
-      {% set mobile_img_uri = file_url(content.field_mobile_banner_image.entity.uri.value) %}
+      {% set img_uri = file_url(content.field_banner_image['#items'].entity.uri.value) %}
+      {% set mobile_img_uri = file_url(content.field_mobile_banner_image['#items'].entity.uri.value) %}
         <div class="banner" style="background-image: url('{{ img_uri }}')">{{ content.field_banner_image }}</div>
         <div class="mobile-banner" style="background-image: url('{{ mobile_img_uri }}')">{{ content.field_mobile_banner_image }}</div>
         <div class="card-img-overlay">

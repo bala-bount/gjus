@@ -938,7 +938,8 @@ button:focus:not(:focus-visible), .form-control:focus {
 .node--type-wwd-main-page .paragraph--type--title-and-description {
   text-align: center;
 }
-.node--type-wwd-main-page .paragraph--type--title-and-description h1 {
+.node--type-wwd-main-page .paragraph--type--title-and-description h1,
+.node--type-wwd-child-page .field--name-field-title-and-description .field__item .paragraph h2 {
   font-size: 2.5rem;
   font-family: 'Roboto-Light';
   margin-bottom: 1.5rem;
@@ -1416,7 +1417,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   margin: -0.625rem 0 2.5rem 0;
 }
 /* Home Page  */
-.field--name-field-home-content h3, .field--name-field-home-content h2,
+.field--name-field-home-content h1, .field--name-field-home-content h2,
 .node.node--type-wwt-home-page .field--name-field-sub-title, 
 .node.node--type-wwt-items-page .field--name-field-items-sub-title,
 .node--type-wwd-main-page .field--name-field-content .paragraph--type--title-and-description h1,
@@ -1855,7 +1856,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   .node.node--type-wwt-home-page .field--name-field-junk-list > .field__item:last-child .field--name-field-column-image {
     display: none;
   }
-  .field--name-field-home-content h3, .field--name-field-home-content h2, 
+  .field--name-field-home-content h1, .field--name-field-home-content h2, 
   .node.node--type-wwt-home-page .field--name-field-sub-title, 
   .node.node--type-wwt-items-page .field--name-field-items-sub-title,
   .node--type-wwd-main-page .field--name-field-content .paragraph--type--title-and-description h1,
