@@ -51,7 +51,18 @@ body {
 button:focus:not(:focus-visible), .form-control:focus {
   box-shadow: none;
 }
-
+p {
+  font-weight: 300;
+  font-size: 1rem;
+  font-family: 'Roboto-Light';
+  line-height: 1.5rem;
+  letter-spacing: .01em;
+  text-align: left;
+  color: #333;
+  text-transform: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
 /* Header */
 .header-container {
   position: relative;
@@ -992,7 +1003,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   list-style-type: none;
   position: relative;
   z-index: 100;
-  margin: 0 -2px;
+  /* margin: 0 -2px; */
   width: 200px;
   white-space: normal;
 }
@@ -1015,9 +1026,13 @@ button:focus:not(:focus-visible), .form-control:focus {
 .menu--commercial .nav li > ul.menu {
   display: none;
 }
-.menu--commercial .nav > li:hover {
+.menu--commercial .nav > li.menu-item--expanded:hover {
   color: #555;
   background-color: #f7f7f7;
+}
+.menu--commercial .nav > li.menu-item--expanded:hover > a {
+  color: #555;
+  background-image: none;
 }
 .menu--commercial .nav li:hover > ul.menu {
   display: block;
@@ -1049,6 +1064,28 @@ button:focus:not(:focus-visible), .form-control:focus {
 }
 .menu--commercial .nav li:hover > ul.menu li a:hover {
   color: #004382;
+}
+#block-commercialtopblock {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: #efeeed;
+  clear: both;
+  text-align: center;
+}
+#block-commercialtopblock p {
+  margin: 0;
+  font-size: 1rem;
+  text-align: center;
+}
+#block-commercialtopblock p img {
+  margin-left: 25px;
+  margin-right: 25px;
+  width: auto;
+  max-width: none;
+}
+#block-commercialtopblock p img:last-child {
+  margin-left: 10px;
+  margin-right: 10px;
 }
   /* Footer */
   
