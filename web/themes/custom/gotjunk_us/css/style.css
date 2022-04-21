@@ -996,7 +996,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   width: 200px;
   white-space: normal;
 }
-.menu--commercial .nav > li:last-child { {
+.menu--commercial .nav > li:last-child {
   border-right: 1px solid #fff;
 }
 .menu--commercial .nav li > a {
