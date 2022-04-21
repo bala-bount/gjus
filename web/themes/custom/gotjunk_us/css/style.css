@@ -306,8 +306,12 @@ button:focus:not(:focus-visible), .form-control:focus {
   border-radius: 0px;
 }
 .region-featured-top .block-views-blockbanner-block-view-block-1 .view-id-banner_block_view .card .banner {
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
   max-height: 500px;
-  overflow: hidden;
+  height: 500px;
+  width: 100%;
 }
 .region-featured-top .block-views-blockbanner-block-view-block-1 .view-id-banner_block_view .card .banner img {
   width: 100%;
@@ -371,7 +375,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   right: 0;
 }
 /* green menu */
-.menu--home-menu {
+/* .menu--home-menu {
   background-color: #8dc63f;
 }
 .menu--home-menu .nav {
@@ -404,7 +408,7 @@ button:focus:not(:focus-visible), .form-control:focus {
 }
 .menu--home-menu .nav > li:last-child {
   border-right: 1px solid #ffffff;
-}
+} */
 .featured-top .block-webform {
   z-index: 400;
   padding: 1.5rem 0;
@@ -699,7 +703,8 @@ button:focus:not(:focus-visible), .form-control:focus {
 .wwt-service-wroks .content .service-content h2,
 .node.node--type-wwt-items-page .field--name-body h2,
 .node--type-wwd-child-page .field--name-field-title-and-description .paragraph h1,
-.node--type-wwd-child-page .field--name-field-bottom-text .paragraph h1
+.node--type-wwd-child-page .field--name-field-bottom-text .paragraph h1,
+.field--name-field-home-content h2
  {
   font-family: 'Roboto-Light';
   margin-top: 0;
@@ -972,6 +977,78 @@ button:focus:not(:focus-visible), .form-control:focus {
 }
 .node--type-wwd-child-page .field--name-field-bottom-text .paragraph h1 {
   clear: both;
+}
+/* commercial page */
+.menu--commercial {
+  background-color: #8dc63f;
+}
+.menu--commercial .nav {
+  justify-content: center;
+}
+.menu--commercial .nav > li {
+  border-left: 1px solid #fff;
+  font-family: 'Roboto-Regular';
+  display: inline-block;
+  list-style-type: none;
+  position: relative;
+  z-index: 100;
+  margin: 0 -2px;
+  width: 200px;
+  white-space: normal;
+}
+.menu--commercial .nav > li:last-child { {
+  border-right: 1px solid #fff;
+}
+.menu--commercial .nav li > a {
+  text-transform: uppercase;
+  letter-spacing: .01em;
+  padding: 22px 12px;
+  display: inline-block;
+  width: 100%;
+  font-weight: 300;
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 1.063rem;
+  border-top: 1px solid #ccc;
+  text-align: left;
+}
+.menu--commercial .nav li > ul.menu {
+  display: none;
+}
+.menu--commercial .nav > li:hover {
+  color: #555;
+  background-color: #f7f7f7;
+}
+.menu--commercial .nav li:hover > ul.menu {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 62px;
+  background-color: #f7f7f7;
+  z-index: 100;
+  width: 300px;
+  padding: 0px;
+}
+.menu--commercial .nav li:hover > ul.menu li {
+  z-index: 100;
+  display: block;
+  text-align: left;
+  width: 100%;
+}
+.menu--commercial .nav li:hover > ul.menu li a {
+  display: inline-block;
+  text-transform: none;
+  padding: 10px 26px;
+  font-size: 19px;
+  line-height: 36px;
+  font-weight: 500;
+  color: #333;
+  width: 100%;
+  height: 100%;
+  border-top: 0;
+}
+.menu--commercial .nav li:hover > ul.menu li a:hover {
+  color: #004382;
 }
   /* Footer */
   
@@ -1417,7 +1494,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   margin: -0.625rem 0 2.5rem 0;
 }
 /* Home Page  */
-.field--name-field-home-content h1, .field--name-field-home-content h2,
+.field--name-field-home-content h1,
 .node.node--type-wwt-home-page .field--name-field-sub-title, 
 .node.node--type-wwt-items-page .field--name-field-items-sub-title,
 .node--type-wwd-main-page .field--name-field-content .paragraph--type--title-and-description h1,
@@ -1707,7 +1784,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   .navigation.menu--sub-menu ul li a {
     color: #555;
   }
-  .menu--home-menu {
+  /* .menu--home-menu {
     padding: 0;
   }
   .menu--home-menu .nav {
@@ -1728,7 +1805,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   }
    .menu--home-menu .nav > li:last-child {
     border-right: 0px;
-  }
+  } */
   .footer-utility .field--name-field-truck-card, .footer-utility .field.field__items {
     height: auto;
     width: 100%;
@@ -1816,6 +1893,10 @@ button:focus:not(:focus-visible), .form-control:focus {
   } */
   .region-featured-top .block-views-blockbanner-block-view-block-1 .view-id-banner_block_view .card .mobile-banner {
     display: block;
+    background-position: top center;
+    background-size: cover;
+    height: 256px;
+    width: 100%;
   }
   .region-featured-top .block-views-blockbanner-block-view-block-1 .view-id-banner_block_view .card .banner {
     display: none;
@@ -1856,14 +1937,15 @@ button:focus:not(:focus-visible), .form-control:focus {
   .node.node--type-wwt-home-page .field--name-field-junk-list > .field__item:last-child .field--name-field-column-image {
     display: none;
   }
-  .field--name-field-home-content h1, .field--name-field-home-content h2, 
+  .field--name-field-home-content h1, 
   .node.node--type-wwt-home-page .field--name-field-sub-title, 
   .node.node--type-wwt-items-page .field--name-field-items-sub-title,
   .node--type-wwd-main-page .field--name-field-content .paragraph--type--title-and-description h1,
   .node--type-wwd-child-page .field--name-field-title-and-description .paragraph h1
-  .node--type-wwd-child-page .field--name-field-bottom-text .paragraph h1 {
+  .node--type-wwd-child-page .field--name-field-bottom-text .paragraph h1
+  {
     text-align: left;
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 3rem;
   }
   .menu--wwt-mobile-menu {
