@@ -1149,26 +1149,36 @@ p {
  #accordion .collapse p {
   padding: 1rem 1rem 1rem 0;
 }
-#accordion .accordion-title {
-
-}
 #accordion .accordion-title.collapsed:after {
   content: "+";
 }
 #accordion .accordion-title:after {
   content: "--";
-  margin-right: -25px;
+  margin-right: -1.563rem;
   letter-spacing: -2px;
 }
 #accordion .accordion-title:after {
   float: right;
   color: #8dc63f;
-  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 1.25;
-  margin-top: -10px;
-  margin-right: -30px;
+  margin-top: -0.625rem;
+  margin-right: -1.875rem;
 }
-
+#block-commercialbottomblock .field--name-field-commercial-image, #block-commercialbottomblock .field--type-image img {
+  margin: 0;
+}
+#block-commercialbottomblock .field--name-field-commercial-content {
+  text-align: center;
+}
+#block-commercialbottomblock .field--name-field-commercial-content a {
+  font-size: 1.25rem;
+  line-height: 1.563rem;
+  text-transform: uppercase;
+  padding: 5px;
+  color: #333;
+  text-decoration: none;
+}
   /* Footer */
   
 .site-footer {
