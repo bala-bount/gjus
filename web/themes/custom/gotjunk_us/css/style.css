@@ -2,6 +2,7 @@
  * @file
  * Subtheme specific CSS.
  */
+ /* Common styles */
   @font-face {
     font-family: 'Roboto-Light';
     src: url('../fonts/roboto-v20-latin-ext-300.woff2') format('woff2')
@@ -33,9 +34,13 @@ a:hover {
   color: #0078a0;
 }
 ol, ul {
-  padding-left: 1.4rem;
+  padding-left: 1.2rem;
 }
-
+ol li, ul li {
+  font-size: 1rem;
+  font-family: 'Roboto-Light';
+  line-height: 1.5rem;
+}
 body {
   background: #fff;
   color: #222;
@@ -1006,7 +1011,7 @@ p {
   margin-bottom: 3rem;
 }
 /* wwd child page */
-.node--type-wwd-child-page .field--name-field-title-and-description .field__item:first-child .paragraph h1.title {
+.node--type-wwd-child-page .field--name-field-title-and-description .field__item .paragraph h1.title {
   color: #8dc63f;
   text-align: center;
   margin-top: 3rem;
@@ -1097,9 +1102,9 @@ p {
 .menu--commercial .nav li:hover > ul.menu li a {
   display: inline-block;
   text-transform: none;
-  padding: 10px 26px;
-  font-size: 19px;
-  line-height: 36px;
+  padding: 0.625rem 1.625rem;
+  font-size: 1.188rem;
+  line-height: 2.25rem;
   font-weight: 500;
   color: #333;
   width: 100%;
@@ -1110,8 +1115,8 @@ p {
   color: #004382;
 }
 #block-commercialtopblock {
-  padding-top: 30px;
-  padding-bottom: 20px;
+  padding-top: 1.875rem;
+  padding-bottom: 1.25rem;
   background-color: #efeeed;
   clear: both;
   text-align: center;
@@ -1122,15 +1127,48 @@ p {
   text-align: center;
 }
 #block-commercialtopblock p img {
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: 1.563rem;
+  margin-right: 1.563rem;
   width: auto;
   max-width: none;
 }
 #block-commercialtopblock p img:last-child {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
 }
+#accordion {
+  margin-bottom: 0;
+  border-bottom: 1px solid #ccc;
+}
+#accordion .accordion-title {
+  padding: 1rem 2.5rem 1rem 0;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: #333;
+}
+ #accordion .collapse p {
+  padding: 1rem 1rem 1rem 0;
+}
+#accordion .accordion-title {
+
+}
+#accordion .accordion-title.collapsed:after {
+  content: "+";
+}
+#accordion .accordion-title:after {
+  content: "--";
+  margin-right: -25px;
+  letter-spacing: -2px;
+}
+#accordion .accordion-title:after {
+  float: right;
+  color: #8dc63f;
+  font-size: 40px;
+  line-height: 1.25;
+  margin-top: -10px;
+  margin-right: -30px;
+}
+
   /* Footer */
   
 .site-footer {
@@ -1579,7 +1617,7 @@ p {
 .node.node--type-wwt-home-page .field--name-field-sub-title, 
 .node.node--type-wwt-items-page .field--name-field-items-sub-title,
 .node--type-wwd-main-page .field--name-field-content .paragraph--type--title-and-description h1,
-.node--type-wwd-child-page .field--name-field-title-and-description .field__item:first-child .paragraph h1 {
+.node--type-wwd-child-page .field--name-field-title-and-description .field__item .paragraph h1 {
     /* color: #00539f;
     font-family: 'Roboto-Light',Helvetica,Arial,sans-serif; */
     line-height: 3.5rem;
@@ -1590,9 +1628,15 @@ p {
     text-align: center;
     font-size: 3rem;
 }
+.node.node--type-wwt-home-page .field--name-field-sub-title {
+  color: #00539f;
+  font-family: 'Roboto-Light',Helvetica,Arial,sans-serif;
+}
 .node.node--type-wwt-items-page .field--name-field-items-sub-title {
   color: #8dc63f;
   margin-top: 1rem;
+  font-family: 'Roboto-Light',Helvetica,Arial,sans-serif;
+  margin-bottom: 1.5rem;
 }
 .node.node--type-wwt-home-page .field.field--name-field-sub-title {
   margin-bottom: 1.5rem;
@@ -1903,6 +1947,12 @@ p {
   }  
   .site-footer .footer-main .block {
     padding: 0px 0.938rem;
+  }
+  .site-footer .footer-main .field--name-field-block-image .field--name-field-media-image {
+    text-align: center;
+  }
+  .site-footer .footer-main .field--name-field-block-image .field--name-field-media-image img {
+    max-width: 340px;
   }
   .site-footer .footer-main .block.language-switcher-language-url {
     text-align: center;
