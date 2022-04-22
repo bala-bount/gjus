@@ -51,6 +51,37 @@ body {
 button:focus:not(:focus-visible), .form-control:focus {
   box-shadow: none;
 }
+h1, .h1 {
+  font-weight: 300;
+  font-size: 3rem;
+  font-family: 'Roboto-Light';
+  line-height: 3.5rem;
+  text-transform: capitalize;
+  letter-spacing: .01em;
+  color: #00539f;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+h2, .h2 {
+  font-weight: 300;
+  font-size: 2.5rem;
+  font-family: 'Roboto-Light';
+  line-height: 3rem;
+  color: #00539f;
+  padding: 1rem 0 0;
+  margin: 0 0 1rem;
+}
+h3, h4, .h3, .h4 {
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  padding: 0;
+  margin: 0 0 0.5rem;
+  text-transform: none;
+  letter-spacing: .01em;
+  padding: 0;
+  margin: 0 0 0.5rem;
+}
 p {
   font-weight: 300;
   font-size: 1rem;
@@ -384,6 +415,9 @@ p {
   -ms-transform: translateY(-50%);
   left: 0;
   right: 0;
+}
+.region-featured-top .block-views-blockbanner-block-view-block-1 .view-id-banner_block_view .card-img-overlay .field--name-field-media-image img {
+  max-width: 450px;
 }
 /* green menu */
 /* .menu--home-menu {
@@ -1022,6 +1056,13 @@ p {
   line-height: 1.063rem;
   border-top: 1px solid #ccc;
   text-align: left;
+}
+.menu--commercial .nav > li.menu-item--expanded > a {
+  padding-right: 50px;
+  background-image: url(../images/arrow-down-icon-black.svg);
+  background-repeat: no-repeat;
+  background-position: right 17px center;
+  background-size: 20px 20px;
 }
 .menu--commercial .nav li > ul.menu {
   display: none;
@@ -2007,5 +2048,11 @@ p {
   }
   .navbar-light .navbar-toggler {
     display: block;
+  }
+  .region-featured-top .block-views-blockbanner-block-view-block-1 .view-id-banner_block_view .card-img-overlay .field--name-field-media-image img {
+    max-width: 300px;
+  }
+  .menu--commercial .nav > li.menu-item--expanded > a {
+    background-image: url(../images/arrow-down-icon-white.svg);
   }
 }
