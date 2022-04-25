@@ -49,10 +49,10 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-	  {{ content.field_commercial_image }}
-	  {{ content.field_commercial_title }}
-	  {{ content.field_commercial_content[0]['#url'] }}
-
+    <a href="{{ content.field_commercial_content[0]['#url'] }}">
+      {{ content.field_commercial_image }}
+      {{ content.field_commercial_title }}
+    </a>
     {% endblock %}
   </div>
 {% endblock paragraph %}

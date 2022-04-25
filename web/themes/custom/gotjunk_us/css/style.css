@@ -1171,13 +1171,14 @@ p {
 #block-commercialbottomblock .field--name-field-commercial-content {
   text-align: center;
 }
-#block-commercialbottomblock .field--name-field-commercial-content a {
+#block-commercialbottomblock .paragraph--type--commercial-fields .field--name-field-commercial-title {
   font-size: 1.25rem;
   line-height: 1.563rem;
   text-transform: uppercase;
   padding: 5px;
   color: #333;
   text-decoration: none;
+  text-align: center;
 }
   /* Footer */
   
