@@ -1165,6 +1165,9 @@ p {
   margin-top: -0.625rem;
   margin-right: -1.875rem;
 }
+#block-commercialbottomblock {
+  margin-bottom: 5.625rem;
+}
 #block-commercialbottomblock .field--name-field-commercial-image, #block-commercialbottomblock .field--type-image img {
   margin: 0;
 }
@@ -1687,6 +1690,7 @@ p {
   font-size: 0.875rem;
   text-transform: uppercase;
   font-size: 1rem;
+  cursor: pointer;
 }
 .node--type-wwd-main-page .field--name-field-content .read-more-expand,
 .node--type-wwd-main-page .field--name-field-content .read-more-collapse {
@@ -2118,5 +2122,8 @@ p {
   }
   .menu--commercial .nav > li.menu-item--expanded > a {
     background-image: url(../images/arrow-down-icon-white.svg);
+  }
+  .featured-bottom .review-block-section h4 {
+    white-space: normal;
   }
 }
