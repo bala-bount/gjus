@@ -1146,7 +1146,7 @@ p {
   line-height: 1.75rem;
   color: #333;
 }
- #accordion .collapse p {
+ #accordion div p {
   padding: 1rem 1rem 1rem 0;
 }
 #accordion .accordion-title.collapsed:after {
@@ -1182,6 +1182,28 @@ p {
   color: #333;
   text-decoration: none;
   text-align: center;
+}
+#block-gotjunk-us-page-title h1.title {
+  width: 66%;
+  margin: 3rem auto 1.5rem;
+}
+#block-gotjunk-us-content .node--type-page, #block-commercialvideoblock {
+  width: 66%;
+  margin: 0 auto;
+}
+#block-commercialvideoblock .field--name-field-sub-title {
+  font-weight: 300;
+  font-size: 1rem;
+  font-family: 'Roboto-Light';
+  line-height: 1.5rem;
+  letter-spacing: .01em;
+  color: #333;
+  text-transform: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+#block-commercialvideoblock .field--name-field-custom-media {
+  margin-bottom: 4rem;
 }
   /* Footer */
   
@@ -2125,5 +2147,31 @@ p {
   }
   .featured-bottom .review-block-section h4 {
     white-space: normal;
+  }
+  #block-gotjunk-us-page-title h1.title, #block-gotjunk-us-content .node--type-page {
+    width: 100%;
+  }
+  #block-gotjunk-us-page-title h1.title, #block-gotjunk-us-content .node--type-page h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  #block-commercialbottomblock .paragraph--type--commercial-fields .field--name-field-commercial-title {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+  }
+  .menu--commercial {
+    background-color: #ccc;
+    padding: 0;
+  }
+  .menu--commercial .nav {
+    display: block;
+  }
+  .menu--commercial .nav > li {
+    border: none;
+    width: 100%;
+  }
+  .menu--commercial .nav li > a {
+    font-size: 1rem;
+    border-bottom: 1px solid #fff;
   }
 }
