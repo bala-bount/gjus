@@ -47,7 +47,7 @@
   ]
 %}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
+  <div{{ attributes.addClass(classes) }} class="{{ content.field_layout }}">
     {% block content %}
       <a href="{{ content.field_link_to.0['#url'] }}">
         <div class="col">

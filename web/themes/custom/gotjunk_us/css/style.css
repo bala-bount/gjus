@@ -1773,8 +1773,8 @@ b, strong {
   margin-right: 0;
 }
 .field--name-field-home-content .card-group .paragraph--type--card .col .card {
-  height: 370px!important;
-  width: 370px!important;
+  height: 370px;
+  width: 370px;
   border-radius: 0;
   border: none;
   margin: 0 auto;
@@ -2191,7 +2191,7 @@ b, strong {
   .menu--commercial .nav li:hover > ul.menu li a {
     border: none;
     padding-top: 0;
-    padding: bottom: 0;
+    padding-bottom: 0;
   }
   .menu--commercial .nav > li.menu-item--expanded > a {
     background-image: url(../images/cross-out-grey.png);
