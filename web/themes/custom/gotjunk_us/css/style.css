@@ -2,6 +2,7 @@
  * @file
  * Subtheme specific CSS.
  */
+ /* Common styles */
   @font-face {
     font-family: 'Roboto-Light';
     src: url('../fonts/roboto-v20-latin-ext-300.woff2') format('woff2')
@@ -33,9 +34,13 @@ a:hover {
   color: #0078a0;
 }
 ol, ul {
-  padding-left: 1.4rem;
+  padding-left: 1.2rem;
 }
-
+ol li, ul li {
+  font-size: 1rem;
+  font-family: 'Roboto-Light';
+  line-height: 1.5rem;
+}
 body {
   background: #fff;
   color: #222;
@@ -51,7 +56,47 @@ body {
 button:focus:not(:focus-visible), .form-control:focus {
   box-shadow: none;
 }
-
+h1, .h1 {
+  font-weight: 300;
+  font-size: 3rem;
+  font-family: 'Roboto-Light';
+  line-height: 3.5rem;
+  letter-spacing: .01em;
+  color: #00539f;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+h2, .h2 {
+  font-weight: 300;
+  font-size: 2.5rem;
+  font-family: 'Roboto-Light';
+  line-height: 3rem;
+  color: #00539f;
+  padding: 1rem 0 0;
+  margin: 0 0 1rem;
+}
+h3, h4, .h3, .h4 {
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  padding: 0;
+  margin: 0 0 0.5rem;
+  text-transform: none;
+  letter-spacing: .01em;
+  padding: 0;
+  margin: 0 0 0.5rem;
+}
+p {
+  font-weight: 300;
+  font-size: 1rem;
+  font-family: 'Roboto-Light';
+  line-height: 1.5rem;
+  letter-spacing: .01em;
+  color: #333;
+  text-transform: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
 /* Header */
 .header-container {
   position: relative;
@@ -306,8 +351,12 @@ button:focus:not(:focus-visible), .form-control:focus {
   border-radius: 0px;
 }
 .region-featured-top .block-views-blockbanner-block-view-block-1 .view-id-banner_block_view .card .banner {
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
   max-height: 500px;
-  overflow: hidden;
+  height: 500px;
+  width: 100%;
 }
 .region-featured-top .block-views-blockbanner-block-view-block-1 .view-id-banner_block_view .card .banner img {
   width: 100%;
@@ -370,8 +419,11 @@ button:focus:not(:focus-visible), .form-control:focus {
   left: 0;
   right: 0;
 }
+.region-featured-top .block-views-blockbanner-block-view-block-1 .view-id-banner_block_view .card-img-overlay .field--name-field-media-image img {
+  max-width: 450px;
+}
 /* green menu */
-.menu--home-menu {
+/* .menu--home-menu {
   background-color: #8dc63f;
 }
 .menu--home-menu .nav {
@@ -404,7 +456,7 @@ button:focus:not(:focus-visible), .form-control:focus {
 }
 .menu--home-menu .nav > li:last-child {
   border-right: 1px solid #ffffff;
-}
+} */
 .featured-top .block-webform {
   z-index: 400;
   padding: 1.5rem 0;
@@ -698,16 +750,17 @@ button:focus:not(:focus-visible), .form-control:focus {
 .node.node--type-wwt-home-page .field--name-body h2, 
 .wwt-service-wroks .content .service-content h2,
 .node.node--type-wwt-items-page .field--name-body h2,
-.node--type-wwd-child-page .field--name-field-title-and-description .paragraph h3,
-.node--type-wwd-child-page .field--name-field-bottom-text .paragraph h3
+.node--type-wwd-child-page .field--name-field-title-and-description .paragraph h1,
+.node--type-wwd-child-page .field--name-field-bottom-text .paragraph h1,
+.field--name-field-home-content h2
  {
-  font-family: 'Roboto-Light';
+  /* font-family: 'Roboto-Light'; */
   margin-top: 0;
-  font-size: 2.5rem;
-  line-height: 3rem;
-  padding-top: 1rem;
+  /* font-size: 2.5rem; */
+  /* line-height: 3rem; */
+  /* padding-top: 1rem; */
   margin-bottom: 1rem;
-  color: #00539f;
+  /* color: #00539f; */
 }
 .node.node--type-wwt-home-page .field--name-field-junk-list {
   padding-top: 1rem;
@@ -910,6 +963,9 @@ button:focus:not(:focus-visible), .form-control:focus {
   font-size: 2.3rem;
   line-height: 2.25rem;
   letter-spacing: .01em;
+  font-family: 'Roboto-Regular';
+  padding-top: 0;
+  margin-bottom: 0.5rem;
 }
 .node--type-wwd-main-page .field--name-field-blue-notice .field--type-text-with-summary h3 {
   font-family: 'Roboto-Medium';
@@ -929,7 +985,6 @@ button:focus:not(:focus-visible), .form-control:focus {
 }
 .node--type-wwd-main-page .field--name-field-blue-notice .field--name-field-notice-image {
   float: right;
-  display: inline-block;
   width: 50%;
   margin: 0;
 }
@@ -939,14 +994,15 @@ button:focus:not(:focus-visible), .form-control:focus {
 .node--type-wwd-main-page .paragraph--type--title-and-description {
   text-align: center;
 }
-.node--type-wwd-main-page .paragraph--type--title-and-description h3 {
-  font-size: 2.5rem;
-  font-family: 'Roboto-Light';
+.node--type-wwd-main-page .paragraph--type--title-and-description h1,
+.node--type-wwd-child-page .field--name-field-title-and-description .field__item .paragraph h2 {
+  /* font-size: 2.5rem;
+  font-family: 'Roboto-Light'; */
   margin-bottom: 1.5rem;
-  line-height: 3rem;
-  font-weight: 300;
+  /* line-height: 3rem; */
+  /* font-weight: 300; */
   padding: 1rem 0 0;
-  color: #00539f;
+  /* color: #00539f; */
 }
 .node--type-wwd-main-page .paragraph--type--title-and-description p {
   margin-bottom: 1.5rem;
@@ -955,11 +1011,13 @@ button:focus:not(:focus-visible), .form-control:focus {
   margin-bottom: 3rem;
 }
 /* wwd child page */
-.node--type-wwd-child-page .field--name-field-title-and-description .field__item:first-child div.paragraph h3 {
+.node--type-wwd-child-page .field--name-field-title-and-description .field__item .paragraph h1.title {
   color: #8dc63f;
   text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
 }
-.node--type-wwd-child-page .field--name-field-title-and-description .field__item .paragraph h3 {
+.node--type-wwd-child-page .field--name-field-title-and-description .field__item .paragraph h2 {
   text-align: left;
 }
 .node--type-wwd-child-page .field--name-field-media .field--type-image img {
@@ -970,8 +1028,182 @@ button:focus:not(:focus-visible), .form-control:focus {
 .field--name-field-media-image .field--type-image {
   margin: 0;
 }
-.node--type-wwd-child-page .field--name-field-bottom-text .paragraph h3 {
+.node--type-wwd-child-page .field--name-field-bottom-text .paragraph h1 {
   clear: both;
+}
+/* commercial page */
+.menu--commercial {
+  background-color: #8dc63f;
+}
+.menu--commercial .nav {
+  justify-content: center;
+}
+.menu--commercial .nav > li {
+  border-left: 1px solid #fff;
+  font-family: 'Roboto-Regular';
+  display: inline-block;
+  list-style-type: none;
+  position: relative;
+  z-index: 100;
+  /* margin: 0 -2px; */
+  width: 200px;
+  white-space: normal;
+}
+.menu--commercial .nav > li:last-child {
+  border-right: 1px solid #fff;
+}
+.menu--commercial .nav li > a {
+  text-transform: uppercase;
+  letter-spacing: .01em;
+  padding: 22px 12px;
+  display: inline-block;
+  width: 100%;
+  font-weight: 300;
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 1.063rem;
+  border-top: 1px solid #ccc;
+  text-align: left;
+}
+.menu--commercial .nav > li.menu-item--expanded > a {
+  padding-right: 50px;
+  background-image: url(../images/arrow-down-icon-black.svg);
+  background-repeat: no-repeat;
+  background-position: right 17px center;
+  background-size: 20px 20px;
+}
+.menu--commercial .nav li > ul.menu {
+  display: none;
+}
+.menu--commercial .nav > li.menu-item--expanded:hover {
+  color: #555;
+  background-color: #f7f7f7;
+}
+.menu--commercial .nav > li.menu-item--expanded:hover > a {
+  color: #555;
+  background-image: none;
+}
+.menu--commercial .nav li:hover > ul.menu {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 62px;
+  background-color: #f7f7f7;
+  z-index: 100;
+  width: 300px;
+  padding: 0px;
+}
+.menu--commercial .nav li:hover > ul.menu li {
+  z-index: 100;
+  display: block;
+  text-align: left;
+  width: 100%;
+}
+.menu--commercial .nav li:hover > ul.menu li a {
+  display: inline-block;
+  text-transform: none;
+  padding: 0.625rem 1.625rem;
+  font-size: 1.188rem;
+  line-height: 2.25rem;
+  font-weight: 500;
+  color: #333;
+  width: 100%;
+  height: 100%;
+  border-top: 0;
+}
+.menu--commercial .nav li:hover > ul.menu li a:hover {
+  color: #004382;
+}
+#block-commercialtopblock {
+  padding-top: 1.875rem;
+  padding-bottom: 1.25rem;
+  background-color: #efeeed;
+  clear: both;
+  text-align: center;
+}
+#block-commercialtopblock p {
+  margin: 0;
+  font-size: 1rem;
+  text-align: center;
+}
+#block-commercialtopblock p img {
+  margin-left: 1.563rem;
+  margin-right: 1.563rem;
+  width: auto;
+  max-width: none;
+}
+#block-commercialtopblock p img:last-child {
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+}
+#accordion {
+  margin-bottom: 0;
+  border-bottom: 1px solid #ccc;
+}
+#accordion .accordion-title {
+  padding: 1rem 2.5rem 1rem 0;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: #333;
+}
+ #accordion div p {
+  padding: 1rem 1rem 1rem 0;
+}
+#accordion .accordion-title.collapsed:after {
+  content: "+";
+}
+#accordion .accordion-title:after {
+  content: "--";
+  margin-right: -1.563rem;
+  letter-spacing: -2px;
+}
+#accordion .accordion-title:after {
+  float: right;
+  color: #8dc63f;
+  font-size: 2.5rem;
+  line-height: 1.25;
+  margin-top: -0.625rem;
+  margin-right: -1.875rem;
+}
+#block-commercialbottomblock {
+  margin-bottom: 5.625rem;
+}
+#block-commercialbottomblock .field--name-field-commercial-image, #block-commercialbottomblock .field--type-image img {
+  margin: 0;
+}
+#block-commercialbottomblock .field--name-field-commercial-content {
+  text-align: center;
+}
+#block-commercialbottomblock .paragraph--type--commercial-fields .field--name-field-commercial-title {
+  font-size: 1.25rem;
+  line-height: 1.563rem;
+  text-transform: uppercase;
+  padding: 5px;
+  color: #333;
+  text-decoration: none;
+  text-align: center;
+}
+#block-gotjunk-us-page-title h1.title {
+  width: 66%;
+  margin: 3rem auto 1.5rem;
+}
+#block-gotjunk-us-content .node--type-page, #block-commercialvideoblock {
+  width: 66%;
+  margin: 0 auto;
+}
+#block-commercialvideoblock .field--name-field-sub-title {
+  font-weight: 300;
+  font-size: 1rem;
+  font-family: 'Roboto-Light';
+  line-height: 1.5rem;
+  letter-spacing: .01em;
+  color: #333;
+  text-transform: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+#block-commercialvideoblock .field--name-field-custom-media {
+  margin-bottom: 4rem;
 }
   /* Footer */
   
@@ -1036,7 +1268,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   color: #fff;
   font-weight: 700;
   font-size: 3.438rem;
-  line-height: 3.5rem;
+  line-height: 3rem;
   text-transform: uppercase;
   letter-spacing: .01em;
   padding-bottom: 1.875rem;
@@ -1063,6 +1295,12 @@ button:focus:not(:focus-visible), .form-control:focus {
   margin: 0;
   border: 0;
   padding: 0px;
+}
+.site-footer .footer-main .field--name-field-block-image .field--name-field-media-image {
+  text-align: center;
+}
+.site-footer .footer-main .field--name-field-block-image .field--name-field-media-image img {
+  max-width: 340px;
 }
 .footer-main ul.nav {
   display: block;
@@ -1417,13 +1655,13 @@ button:focus:not(:focus-visible), .form-control:focus {
   margin: -0.625rem 0 2.5rem 0;
 }
 /* Home Page  */
-.field--name-field-home-content h3, .field--name-field-home-content h2,
+.field--name-field-home-content h1,
 .node.node--type-wwt-home-page .field--name-field-sub-title, 
 .node.node--type-wwt-items-page .field--name-field-items-sub-title,
-.node--type-wwd-main-page .field--name-field-content .paragraph--type--title-and-description h3,
-.node--type-wwd-child-page .field--name-field-title-and-description .field__item:first-child .paragraph h3 {
-    color: #00539f;
-    font-family: 'Roboto-Light',Helvetica,Arial,sans-serif;
+.node--type-wwd-main-page .field--name-field-content .paragraph--type--title-and-description h1,
+.node--type-wwd-child-page .field--name-field-title-and-description .field__item .paragraph h1 {
+    /* color: #00539f;
+    font-family: 'Roboto-Light',Helvetica,Arial,sans-serif; */
     line-height: 3.5rem;
     padding-top: 0;
     padding-left: 0;
@@ -1432,9 +1670,15 @@ button:focus:not(:focus-visible), .form-control:focus {
     text-align: center;
     font-size: 3rem;
 }
+.node.node--type-wwt-home-page .field--name-field-sub-title {
+  color: #00539f;
+  font-family: 'Roboto-Light',Helvetica,Arial,sans-serif;
+}
 .node.node--type-wwt-items-page .field--name-field-items-sub-title {
   color: #8dc63f;
   margin-top: 1rem;
+  font-family: 'Roboto-Light',Helvetica,Arial,sans-serif;
+  margin-bottom: 1.5rem;
 }
 .node.node--type-wwt-home-page .field.field--name-field-sub-title {
   margin-bottom: 1.5rem;
@@ -1468,6 +1712,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   font-size: 0.875rem;
   text-transform: uppercase;
   font-size: 1rem;
+  cursor: pointer;
 }
 .node--type-wwd-main-page .field--name-field-content .read-more-expand,
 .node--type-wwd-main-page .field--name-field-content .read-more-collapse {
@@ -1707,7 +1952,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   .navigation.menu--sub-menu ul li a {
     color: #555;
   }
-  .menu--home-menu {
+  /* .menu--home-menu {
     padding: 0;
   }
   .menu--home-menu .nav {
@@ -1728,7 +1973,7 @@ button:focus:not(:focus-visible), .form-control:focus {
   }
    .menu--home-menu .nav > li:last-child {
     border-right: 0px;
-  }
+  } */
   .footer-utility .field--name-field-truck-card, .footer-utility .field.field__items {
     height: auto;
     width: 100%;
@@ -1745,6 +1990,20 @@ button:focus:not(:focus-visible), .form-control:focus {
   }  
   .site-footer .footer-main .block {
     padding: 0px 0.938rem;
+  }  
+  .site-footer .footer-main .block.language-switcher-language-url {
+    text-align: center;
+  }
+  .site-footer .footer-main .block.language-switcher-language-url h2 {
+    text-align: left;
+  }
+  .footer-main .language-switcher-language-url a.dropdown-toggle {
+    display: inline-block;
+    width: 50%;
+  }
+  .footer-main .language-switcher-language-url span.current-country {
+    width: 48%;
+    display: inline-block;
   }
   #block-customerservice {
     display: none;
@@ -1802,6 +2061,10 @@ button:focus:not(:focus-visible), .form-control:focus {
   } */
   .region-featured-top .block-views-blockbanner-block-view-block-1 .view-id-banner_block_view .card .mobile-banner {
     display: block;
+    background-position: top center;
+    background-size: cover;
+    height: 256px;
+    width: 100%;
   }
   .region-featured-top .block-views-blockbanner-block-view-block-1 .view-id-banner_block_view .card .banner {
     display: none;
@@ -1842,14 +2105,15 @@ button:focus:not(:focus-visible), .form-control:focus {
   .node.node--type-wwt-home-page .field--name-field-junk-list > .field__item:last-child .field--name-field-column-image {
     display: none;
   }
-  .field--name-field-home-content h3, .field--name-field-home-content h2, 
+  .field--name-field-home-content h1, 
   .node.node--type-wwt-home-page .field--name-field-sub-title, 
   .node.node--type-wwt-items-page .field--name-field-items-sub-title,
-  .node--type-wwd-main-page .field--name-field-content .paragraph--type--title-and-description h3,
-  .node--type-wwd-child-page .field--name-field-title-and-description .paragraph h3
-  .node--type-wwd-child-page .field--name-field-bottom-text .paragraph h3 {
+  .node--type-wwd-main-page .field--name-field-content .paragraph--type--title-and-description h1,
+  .node--type-wwd-child-page .field--name-field-title-and-description .paragraph h1
+  .node--type-wwd-child-page .field--name-field-bottom-text .paragraph h1
+  {
     text-align: left;
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 3rem;
   }
   .menu--wwt-mobile-menu {
@@ -1874,5 +2138,40 @@ button:focus:not(:focus-visible), .form-control:focus {
   }
   .navbar-light .navbar-toggler {
     display: block;
+  }
+  .region-featured-top .block-views-blockbanner-block-view-block-1 .view-id-banner_block_view .card-img-overlay .field--name-field-media-image img {
+    max-width: 300px;
+  }
+  .menu--commercial .nav > li.menu-item--expanded > a {
+    background-image: url(../images/arrow-down-icon-white.svg);
+  }
+  .featured-bottom .review-block-section h4 {
+    white-space: normal;
+  }
+  #block-gotjunk-us-page-title h1.title, #block-gotjunk-us-content .node--type-page {
+    width: 100%;
+  }
+  #block-gotjunk-us-page-title h1.title, #block-gotjunk-us-content .node--type-page h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  #block-commercialbottomblock .paragraph--type--commercial-fields .field--name-field-commercial-title {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+  }
+  .menu--commercial {
+    background-color: #ccc;
+    padding: 0;
+  }
+  .menu--commercial .nav {
+    display: block;
+  }
+  .menu--commercial .nav > li {
+    border: none;
+    width: 100%;
+  }
+  .menu--commercial .nav li > a {
+    font-size: 1rem;
+    border-bottom: 1px solid #fff;
   }
 }

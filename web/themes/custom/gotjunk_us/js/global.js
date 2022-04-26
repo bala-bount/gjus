@@ -29,6 +29,15 @@
       );
     }
   };
+  Drupal.behaviors.mobilenavToggle = {
+    attach: function(context, settings) {
+      $('.navbar-toggler', context).once('mobilenavToggle').on('click',
+        function(){
+          $('#block-submenu').toggle();
+        }
+      );
+    }
+  };
   Drupal.behaviors.menuWWTWWD = {
     attach: function(context, settings) {
       if($(".node--type-wwt-home-page, .node--type-wwt-items-page, .node--type-wwd-main-page, .node--type-wwd-child-page").length){
