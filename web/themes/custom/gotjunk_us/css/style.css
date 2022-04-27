@@ -1772,7 +1772,7 @@ b, strong {
   flex-flow: wrap;
 }
 .field--name-field-home-content .card-group .paragraph--type--card {
-  padding: 0 938rem;
+  padding: 0px .938rem;
   margin-bottom: 1.25rem;
 }
 .field--name-field-home-content .card-group .paragraph--type--card:first-child .col .card {
@@ -2202,7 +2202,7 @@ b, strong {
     padding-top: 0;
     padding-bottom: 0;
   }
-  .menu--commercial .nav > li.menu-item--expanded > a {
+  .menu--commercial .nav > li.menu-item--expanded:hover > a {
     background-image: url(../images/cross-out-grey.png);
   }
   #block-commercialtopblock p img {
