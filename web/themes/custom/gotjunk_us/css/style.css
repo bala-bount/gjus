@@ -1760,12 +1760,21 @@ b, strong {
 .field--name-field-home-content .card-group {
   flex-flow: nowrap;
 }
-.field--name-field-home-content .card-group .paragraph--type--card {
-  width: 33.33%;
+.field--name-field-home-content .field__item:last-child .paragraph--type--title-and-description h1.title {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  margin-top: 1.875rem;
 }
-/* .field--name-field-home-content .card-group .paragraph--type--card .col {
-  padding: 0px 0.9375rem;
-} */
+.field--name-field-home-content .card-group .paragraph--type--card .col .card .card-img-overlay:hover {
+  background-color: rgba(0,0,0,.2);
+}
+.field--name-field-home-content .card-group.paragraph--type--card-deck {
+  flex-flow: wrap;
+}
+.field--name-field-home-content .card-group .paragraph--type--card {
+  padding: 0 938rem;
+  margin-bottom: 1.25rem;
+}
 .field--name-field-home-content .card-group .paragraph--type--card:first-child .col .card {
   margin: 0;
 }
@@ -1774,7 +1783,7 @@ b, strong {
 }
 .field--name-field-home-content .card-group .paragraph--type--card .col .card {
   height: 370px;
-  width: 370px;
+  width: auto;
   border-radius: 0;
   border: none;
   margin: 0 auto;
@@ -2046,7 +2055,7 @@ b, strong {
   }
   .field--name-field-home-content .card-group .paragraph--type--card {
     width: 100%;
-    margin-bottom: 1.25rem;
+    padding: 0;
   }
   .field--name-field-home-content .card-group .paragraph--type--card:last-child {
     margin-bottom: 0;
