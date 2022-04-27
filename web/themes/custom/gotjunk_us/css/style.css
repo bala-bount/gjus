@@ -97,6 +97,9 @@ p {
   padding: 0;
   margin: 0 0 1.5rem;
 }
+b, strong {
+  font-weight: bold;
+}
 /* Header */
 .header-container {
   position: relative;
@@ -1205,6 +1208,9 @@ p {
 #block-commercialvideoblock .field--name-field-custom-media {
   margin-bottom: 4rem;
 }
+#block-commercialvideoblock .field--name-field-custom-media .media-oembed-content {
+  height: 420px;
+}
   /* Footer */
   
 .site-footer {
@@ -1767,8 +1773,8 @@ p {
   margin-right: 0;
 }
 .field--name-field-home-content .card-group .paragraph--type--card .col .card {
-  height: 370px!important;
-  width: 370px!important;
+  height: 370px;
+  width: 370px;
   border-radius: 0;
   border: none;
   margin: 0 auto;
@@ -2148,7 +2154,7 @@ p {
   .featured-bottom .review-block-section h4 {
     white-space: normal;
   }
-  #block-gotjunk-us-page-title h1.title, #block-gotjunk-us-content .node--type-page {
+  #block-gotjunk-us-page-title h1.title, #block-gotjunk-us-content .node--type-page, #block-commercialvideoblock {
     width: 100%;
   }
   #block-gotjunk-us-page-title h1.title, #block-gotjunk-us-content .node--type-page h2 {
@@ -2173,5 +2179,42 @@ p {
   .menu--commercial .nav li > a {
     font-size: 1rem;
     border-bottom: 1px solid #fff;
+  }
+  #block-commercialvideoblock .field--name-field-custom-media .media-oembed-content {
+    height: auto;
+  }
+  .menu--commercial .nav li:hover > ul.menu {
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
+  .menu--commercial .nav li:hover > ul.menu li a {
+    border: none;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .menu--commercial .nav > li.menu-item--expanded > a {
+    background-image: url(../images/cross-out-grey.png);
+  }
+  #block-commercialtopblock p img {
+    margin: 0;
+    max-width: 100%;
+  }
+  .footer-main #block-footersocialicons {
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .footer-main #block-footersocialicons ul.nav {
+    margin-top: 1.125rem;
+  }
+  .footer-main #block-footersocialicons li.nav-item a {
+    width: 30px;
+    height: 30px;
+  }
+  .footer-main #block-footersocialicons li.nav-item {
+    margin-right: 1.25rem;
+  }
+  .footer-main #block-footersocialicons li.nav-item:last-child {
+    margin-right: 0;
   }
 }
