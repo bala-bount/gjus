@@ -47,12 +47,12 @@
   ]
 %}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
+  <div class="{{ classes|join(' ') }} {{ content.field_layout }}">
     {% block content %}
       <a href="{{ content.field_link_to.0['#url'] }}">
         <div class="col">
           {% set img_uri = file_url(paragraph.field_image.entity.uri.value) %}
-          <div class="card {{ content.field_layout }}" style="background: url('{{ img_uri }}') no-repeat; background-size:cover;">
+          <div class="card" style="background: url('{{ img_uri }}') no-repeat; background-size:cover;">
             <div class="card-img-overlay"><h5 class="card-title">{{ content.field_title }}</h5></div>
             {{ content|without('field_image', 'field_title', 'field_link_to', 'field_layout') }}
           </div>
