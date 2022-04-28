@@ -47,7 +47,14 @@
   ]
 %}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
+  
+  {% if content.field_column_width[0] %}
+    {% set width = content.field_column_width.0  %}
+    <div class="{{ classes|join(' ') }} col-{{ width }}">
+  {% else %}
+    <div{{ attributes.addClass(classes) }}>
+  {% endif %}
+  
     {% block content %}
 	    {{ content.field_column_image }}
         {% if content.field_title_text[0] %}
@@ -56,12 +63,7 @@
         {% for key, item in content.field_items if key|first != '#' %}
             <li>{{ item }}</li>
         {% endfor %}
-
-{% if content.field_column_width[0] %}
-	  {% set width = content.field_column_width.0  %}
-      {{width}}
- {% endif %}    
-
     {% endblock %}
+
   </div>
 {% endblock paragraph %}
