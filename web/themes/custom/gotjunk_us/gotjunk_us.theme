@@ -62,4 +62,10 @@ function gotjunk_us_preprocess_links__language_block(&$variables) {
   $variables['language'] = $language_code;
   $variables['language_label'] = $variables['links'][$language_code]['link']['#title'];
 }
-
+function gotjunk_us_theme_suggestions_paragraph_alter(&$suggestions, $variables) {
+  $paragraph = $variables['elements']['#paragraph'];
+  $parent = $paragraph->getParentEntity();
+  if ($parent) {
+    $suggestions[] = 'paragraph__' . $parent->bundle() . '__' .  $paragraph->bundle();
+  }
+}
