@@ -785,7 +785,8 @@ b, strong {
   line-height: 2.125rem;
   margin-bottom: 1.5rem;
 }
-.node.node--type-wwt-home-page .paragraph_field_items > .paragraph:first-child ul {
+.node.node--type-wwt-home-page .paragraph_field_items > .paragraph.col-md-8 ul,
+.node.node--type-wwt-home-page .paragraph_field_items > .paragraph.col-md-12 ul {
   columns: 2;
 }
 .node.node--type-wwt-home-page .paragraph_field_items > .paragraph ul {
@@ -1202,6 +1203,21 @@ b, strong {
 }
 #block-commercialvideoblock .field--name-field-custom-media .media-oembed-content {
   height: 420px;
+}
+#block-gotjunk-us-content .node--type-custom-page .layout__region {
+  clear: both;
+}
+#block-gotjunk-us-content .node--type-custom-page .view-blog-categories-dropdown-view {
+  width: 33%;
+}
+#block-gotjunk-us-content .node--type-custom-page .view-blog-categories-dropdown-view .btn.dropdown-toggle {
+  background-color: #fafafa;
+  border: 1px solid #ccc;
+  border-radius: 0;
+}
+#block-gotjunk-us-content .node--type-custom-page .view-blog-categories-dropdown-view .btn.dropdown-toggle:hover {
+  background-color: #f3f3f3;
+  border-color: #999;
 }
   /* Footer */
   
@@ -1829,20 +1845,20 @@ b, strong {
   background: url("../images/review-background-desktop.jpg") no-repeat;
   background-size: cover;
 }
-.featured-bottom .views_slideshow_cycle_main {
+.featured-bottom #review-carousel {
   position: relative;
   color: #fff;
   max-width: 1170px;
   margin: auto;
 }
-.featured-bottom .views_slideshow_cycle_teaser_section {
+.featured-bottom #review-carousel .carousel-inner {
   margin: 6.25rem auto 10.188rem;
   position: relative;
   width: 77%!important;
 }
-.featured-bottom .views_slideshow_cycle_teaser_section .views_slideshow_cycle_slide {
+/* .featured-bottom .views_slideshow_cycle_teaser_section .views_slideshow_cycle_slide {
   width: 100%!important;
-}
+} */
 .featured-bottom .review-block-section {
   color: #fff;
 }
@@ -1851,6 +1867,7 @@ b, strong {
   white-space: nowrap;
   color: #fff;
   font-size: 1rem;
+  font-family: 'Roboto-Light';
 }
 .featured-bottom .review-block-section .review-content {
   display: table-cell;
