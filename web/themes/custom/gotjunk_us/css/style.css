@@ -123,7 +123,7 @@ b, strong {
 }
 .navbar-light .navbar-toggler.collapsed {
   background: url(../images/flags/css-sprites.png) no-repeat right 0;
-  top:2px;
+  top: -5px;
 }
 .navbar-light .navbar-toggler i.fa-bars {
   display: none;
@@ -133,7 +133,7 @@ b, strong {
 }
 #block-customerservice {
   position: absolute;
-  top: 0;
+  top: 6px;
   right: 16px;
 }
 .header-container .navbar-toggler.collapsed i:before {
@@ -754,16 +754,9 @@ b, strong {
 .wwt-service-wroks .content .service-content h2,
 .node.node--type-wwt-items-page .field--name-body h2,
 .node--type-wwd-child-page .field--name-field-title-and-description .paragraph h1,
-.node--type-wwd-child-page .field--name-field-bottom-text .paragraph h1,
-.field--name-field-home-content h2
- {
-  /* font-family: 'Roboto-Light'; */
+.node--type-wwd-child-page .field--name-field-bottom-text .paragraph h1, .field--name-field-home-content h2 {
   margin-top: 0;
-  /* font-size: 2.5rem; */
-  /* line-height: 3rem; */
-  /* padding-top: 1rem; */
   margin-bottom: 1rem;
-  /* color: #00539f; */
 }
 .node.node--type-wwt-home-page .field--name-field-junk-list {
   padding-top: 1rem;
@@ -999,13 +992,8 @@ b, strong {
 }
 .node--type-wwd-main-page .paragraph--type--title-and-description h1,
 .node--type-wwd-child-page .field--name-field-title-and-description .field__item .paragraph h2 {
-  /* font-size: 2.5rem;
-  font-family: 'Roboto-Light'; */
   margin-bottom: 1.5rem;
-  /* line-height: 3rem; */
-  /* font-weight: 300; */
   padding: 1rem 0 0;
-  /* color: #00539f; */
 }
 .node--type-wwd-main-page .paragraph--type--title-and-description p {
   margin-bottom: 1.5rem;
@@ -1028,7 +1016,7 @@ b, strong {
   margin-bottom: 3rem;
   clear: both;
 }
-.field--name-field-media-image .field--type-image {
+.field--name-field-media-image .field--type-image, .paragraph--type--card-typical .card .field--name-field-image {
   margin: 0;
 }
 .node--type-wwd-child-page .field--name-field-bottom-text .paragraph h1 {
@@ -1307,6 +1295,7 @@ b, strong {
 }
 .site-footer .footer-main .field--name-field-block-image .field--name-field-media-image img {
   max-width: 340px;
+  margin: 0;
 }
 .footer-main ul.nav {
   display: block;
@@ -1381,6 +1370,7 @@ b, strong {
   font-size: 1.375rem;
   font-family: 'Roboto-Light',Helvetica,Arial,sans-serif;
   text-align: right;
+  margin-bottom: 1rem;
 }
 .navbar-light .navbar-nav .nav-item a, .navbar-light .navbar-nav .nav-item span {
   color: inherit;
@@ -1661,17 +1651,15 @@ b, strong {
   margin: -0.625rem 0 2.5rem 0;
 }
 /* Home Page  */
-.field--name-field-home-content h1,
-.node.node--type-wwt-home-page .field--name-field-sub-title, 
+.field--name-field-home-content h1, .node.node--type-wwt-home-page .field--name-field-sub-title, 
 .node.node--type-wwt-items-page .field--name-field-items-sub-title,
 .node--type-wwd-main-page .field--name-field-content .paragraph--type--title-and-description h1,
 .node--type-wwd-child-page .field--name-field-title-and-description .field__item .paragraph h1 {
-    /* color: #00539f;
-    font-family: 'Roboto-Light',Helvetica,Arial,sans-serif; */
     line-height: 3.5rem;
     padding-top: 0;
     padding-left: 0;
-    margin-top: 3.125rem;
+    /* margin-top: 3.125rem; */
+    margin-top: 3rem;
     margin-bottom: 0.625rem;
     text-align: center;
     font-size: 3rem;
@@ -1760,12 +1748,22 @@ b, strong {
 .field--name-field-home-content .card-group {
   flex-flow: nowrap;
 }
-.field--name-field-home-content .card-group .paragraph--type--card {
-  width: 33.33%;
+.field--name-field-home-content .field__item:last-child .paragraph--type--title-and-description h1.title {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  margin-top: 1.875rem;
+  text-align: center;
 }
-/* .field--name-field-home-content .card-group .paragraph--type--card .col {
-  padding: 0px 0.9375rem;
-} */
+.field--name-field-home-content .card-group .paragraph--type--card .col .card .card-img-overlay:hover {
+  background-color: rgba(0,0,0,.2);
+}
+.field--name-field-home-content .card-group.paragraph--type--card-deck {
+  flex-flow: wrap;
+}
+.field--name-field-home-content .card-group .paragraph--type--card {
+  padding: 0px .938rem;
+  margin-bottom: 1.25rem;
+}
 .field--name-field-home-content .card-group .paragraph--type--card:first-child .col .card {
   margin: 0;
 }
@@ -1774,7 +1772,7 @@ b, strong {
 }
 .field--name-field-home-content .card-group .paragraph--type--card .col .card {
   height: 370px;
-  width: 370px;
+  width: auto;
   border-radius: 0;
   border: none;
   margin: 0 auto;
@@ -1904,7 +1902,7 @@ b, strong {
 }
 @media only screen and (min-width: 992px) {
   .header-container .collapse.navbar-collapse {
-    margin-top: 2.688rem;
+    margin-top: 2.5rem;
   } 
 }
 @media only screen and (max-width: 991px) {
@@ -1917,13 +1915,16 @@ b, strong {
   }  
 }
 @media only screen and (max-width: 767px) {
+  #page-wrapper .header {
+    padding: 5px 0px;
+  }
   .header-search {
     display: none;
   }
   .header-container .navbar-collapse {
     background-color: #00539f;
     padding: 0.938rem 0px 0.938rem;
-    margin-top: 0.865rem;
+    margin-top: 0.275rem;
   }
   .header-container .navbar-collapse ul.navbar-nav li {
     text-align: center;
@@ -1958,28 +1959,6 @@ b, strong {
   .navigation.menu--sub-menu ul li a {
     color: #555;
   }
-  /* .menu--home-menu {
-    padding: 0;
-  }
-  .menu--home-menu .nav {
-    display: block;
-    margin: 0!important;
-  }
-  .menu--home-menu .nav li {
-    border-top: 1px solid #ffffff;
-    border: 0;
-    width: 100%;
-  }
-  .menu--home-menu .nav li:first-child a {
-    border-top: 0;
-  }
-  .menu--home-menu .nav li a {
-    text-align: center;
-    border-top: 1px solid #ffffff;
-  }
-   .menu--home-menu .nav > li:last-child {
-    border-right: 0px;
-  } */
   .footer-utility .field--name-field-truck-card, .footer-utility .field.field__items {
     height: auto;
     width: 100%;
@@ -2042,11 +2021,11 @@ b, strong {
     font-family: 'Roboto-Light',Helvetica,Arial,sans-serif;
   }
   .footer-customer {
-    padding: 2.313rem 1.25rem 3.375rem;
+    padding: 2.313rem 1.25rem 2.5rem;
   }
   .field--name-field-home-content .card-group .paragraph--type--card {
     width: 100%;
-    margin-bottom: 1.25rem;
+    padding: 0;
   }
   .field--name-field-home-content .card-group .paragraph--type--card:last-child {
     margin-bottom: 0;
@@ -2111,11 +2090,10 @@ b, strong {
   .node.node--type-wwt-home-page .field--name-field-junk-list > .field__item:last-child .field--name-field-column-image {
     display: none;
   }
-  .field--name-field-home-content h1, 
-  .node.node--type-wwt-home-page .field--name-field-sub-title, 
+  .field--name-field-home-content h1, .node.node--type-wwt-home-page .field--name-field-sub-title, 
   .node.node--type-wwt-items-page .field--name-field-items-sub-title,
   .node--type-wwd-main-page .field--name-field-content .paragraph--type--title-and-description h1,
-  .node--type-wwd-child-page .field--name-field-title-and-description .paragraph h1
+  .node--type-wwd-child-page .field--name-field-title-and-description .paragraph h1,
   .node--type-wwd-child-page .field--name-field-bottom-text .paragraph h1
   {
     text-align: left;
@@ -2193,7 +2171,7 @@ b, strong {
     padding-top: 0;
     padding-bottom: 0;
   }
-  .menu--commercial .nav > li.menu-item--expanded > a {
+  .menu--commercial .nav > li.menu-item--expanded:hover > a {
     background-image: url(../images/cross-out-grey.png);
   }
   #block-commercialtopblock p img {
@@ -2216,5 +2194,39 @@ b, strong {
   }
   .footer-main #block-footersocialicons li.nav-item:last-child {
     margin-right: 0;
+  }
+  .site-footer .footer-main #block-footerlogoblock {
+    display: none;
+  }
+  .footer-utility .content .field--name-field-header-image {
+    margin: 1.875rem 1.25rem 0.5rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1.5rem;
+  }
+  .node--type-wwd-main-page .paragraph--type--title-and-description h1,
+  .node--type-wwd-child-page .field--name-field-title-and-description .field__item .paragraph h2 { 
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  .wwt-service-wroks .content .service-content h2 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+  .language-switcher-language-url ul.dropdown-menu {
+    width: 90%;
+    margin: 0 auto!important;
+    transform: none !important;
+    inset: unset!important;
+  }
+  .footer-main .language-switcher-language-url ul.dropdown-menu.show::before {
+    left: unset;
+    right: 20%;
+  }
+  .footer-main .language-switcher-language-url ul.dropdown-menu.show::after {
+    left: unset;
+    right: 20%;
+  }
+  .language-switcher-language-url ul.dropdown-menu li {
+    text-align: center;
   }
 }
