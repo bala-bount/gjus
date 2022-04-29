@@ -47,7 +47,7 @@
   ]
 %}
 {% block paragraph %}
-  
+  <div class="row">
   {% if content.field_column_width[0] %}
     {% set width = content.field_column_width.0  %}
     <div class="{{ classes|join(' ') }} col-{{ width }}">
@@ -65,5 +65,6 @@
         {% endfor %}
     {% endblock %}
 
+  </div>
   </div>
 {% endblock paragraph %}
