@@ -62,4 +62,13 @@ function gotjunk_us_preprocess_links__language_block(&$variables) {
   $variables['language'] = $language_code;
   $variables['language_label'] = $variables['links'][$language_code]['link']['#title'];
 }
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for views view list template.
+ */
+function gotjunk_theme_suggestions_views_view_list_alter(&$suggestions, $variables) {
+  $view_name = $variables['view']->id();
 
+  if($view_name == 'blog_categories_dropdown_view') {
+    $suggestions[] = 'views_view_list__blog_categories_dropdown';
+  }
+}
