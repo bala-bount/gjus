@@ -92,7 +92,7 @@ $entity_type = $element['#entity_type'];
 $bundle = $element['#bundle'];
 $fieldName = $element['#field_name'];
 
-if ($entity_type == 'paragraph' && ( $bundle == 'banner_with_title_and_subtitle' || $bundle == 'image_with_title_and_items' 
+if ($entity_type == 'paragraph' && ( $bundle == 'banner_with_title_and_subtitle' 
     || $bundle == 'title_and_description' 
     || ($bundle == 'card_deck' && $fieldName == 'field_cards') 
     || ($bundle == 'card' && $fieldName == 'field_layout') 
