@@ -79,3 +79,10 @@ function gotjunk_us_theme_suggestions_paragraph_alter(&$suggestions, $variables)
     $suggestions[] = 'paragraph__' . $parent->bundle() . '__' .  $paragraph->bundle();
   }
 }
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for views view unformatted template.
+ */
+function gotjunk_us_theme_suggestions_views_view_unformatted_alter(&$suggestions, $variables) {
+  $view_name = $variables['view']->id();
+  $suggestions[] = 'views_view_unformatted__' . $view_name;
+}
