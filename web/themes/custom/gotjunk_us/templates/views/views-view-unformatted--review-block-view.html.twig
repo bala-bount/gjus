@@ -18,21 +18,14 @@
 {% if title %}
   <h3>{{ title }}</h3>
 {% endif %}
-{% for row in rows %}
-  {%
-    set row_classes = [
-      default_row_class ? 'views-row',
-    ]
-  %}
-  <div{{ row.attributes.addClass(row_classes) }}>
-    <div id="review-carousel" class="carousel carousel-fade" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        {% if loop.index == 1 %}
-          <div class="carousel-item active">{{ row.content }}</div>
-        {% else %}
-          <div class="carousel-item">{{ row.content }}</div>
-        {% endif %}
-      </div>
-    </div>
+<div id="review-carousel" class="carousel carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    {% for row in rows %}
+      {% if loop.index == 1 %}
+        <div class="carousel-item active">{{ row.content }}</div>
+      {% else %}
+        <div class="carousel-item">{{ row.content }}</div>
+      {% endif %}
+    {% endfor %}
   </div>
-{% endfor %}
+</div>
