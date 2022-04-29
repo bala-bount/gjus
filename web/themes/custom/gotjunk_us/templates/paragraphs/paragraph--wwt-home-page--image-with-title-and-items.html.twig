@@ -51,7 +51,7 @@
 
   {% if content.field_column_width[0] %}
     {% set width = content.field_column_width.0  %}
-    <div class="{{ classes|join(' ') }} col-{{ width }}">
+    <div class="{{ classes|join(' ') }} col-md-{{ width }}">
   {% else %}
     <div{{ attributes.addClass(classes) }}>
   {% endif %}
@@ -61,9 +61,11 @@
         {% if content.field_title_text[0] %}
             {{ content.field_title_text}}
         {% endif %}
+        <ul>
         {% for key, item in content.field_items if key|first != '#' %}
             <li>{{ item }}</li>
         {% endfor %}
+        </ul>
     {% endblock %}
 
   </div>
