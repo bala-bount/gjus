@@ -18,7 +18,7 @@
 {% if title %}
   <h3>{{ title }}</h3>
 {% endif %}
-<div id="review-carousel" class="carousel carousel-fade" data-bs-ride="carousel">
+<div id="review-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-inner">
     {% for row in rows %}
       {% if loop.index == 1 %}
