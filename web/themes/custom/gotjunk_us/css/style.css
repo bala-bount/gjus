@@ -788,6 +788,7 @@ b, strong {
 .node.node--type-wwt-home-page .paragraph_field_items > .paragraph.col-md-8 ul,
 .node.node--type-wwt-home-page .paragraph_field_items > .paragraph.col-md-12 ul {
   columns: 2;
+  clear: both;
 }
 .node.node--type-wwt-home-page .paragraph_field_items > .paragraph ul {
   list-style: none;
@@ -1209,15 +1210,43 @@ b, strong {
 }
 #block-gotjunk-us-content .node--type-custom-page .view-blog-categories-dropdown-view {
   width: 33%;
+  float: right;
+  margin-bottom: 1rem;
 }
 #block-gotjunk-us-content .node--type-custom-page .view-blog-categories-dropdown-view .btn.dropdown-toggle {
   background-color: #fafafa;
   border: 1px solid #ccc;
   border-radius: 0;
+  text-align: left;
+  font-size: .875rem;
+  color: rgba(0,0,0,.75);
+}
+#block-gotjunk-us-content .node--type-custom-page .view-blog-categories-dropdown-view .btn.dropdown-toggle:after {
+  border-top: 0.2em solid;
+  border-right: 0.2em solid transparent;
+  border-left: 0.2em solid transparent;
+  float: right;
+  margin-top: 0.625rem;
 }
 #block-gotjunk-us-content .node--type-custom-page .view-blog-categories-dropdown-view .btn.dropdown-toggle:hover {
   background-color: #f3f3f3;
   border-color: #999;
+}
+#block-gotjunk-us-content .node--type-custom-page .view-blog-categories-dropdown-view .dropdown-menu {
+  background: #fafafa;
+  transform: translate(0px, 2.375rem) !important;
+  padding: 0;
+  border: 1px solid #999;
+}
+#block-gotjunk-us-content .node--type-custom-page .view-blog-categories-dropdown-view .dropdown-menu li a {
+  font-size: .875rem;
+  color: rgba(0,0,0,.75);
+  padding: 0px 0.625rem;
+}
+#block-gotjunk-us-content .node--type-custom-page .view-blog-categories-dropdown-view .dropdown-menu li a:active,
+#block-gotjunk-us-content .node--type-custom-page .view-blog-categories-dropdown-view .dropdown-menu li a:hover {
+  background-color: #0d6efd;
+  color: #fff;
 }
   /* Footer */
   
@@ -1836,8 +1865,8 @@ b, strong {
   max-width: 100%;
   padding: 0;
 }
-.featured-bottom .row,
-.featured-top .view-banner-block-view .row {
+.featured-bottom .row, .featured-top .view-banner-block-view .row, 
+#block-gotjunk-us-content .node--type-custom-page .view-blog-categories-dropdown-view .row {
   --bs-gutter-x:0;
 }
 .featured-bottom .view-review-block-view {
