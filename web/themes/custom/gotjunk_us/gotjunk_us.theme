@@ -67,9 +67,7 @@ function gotjunk_us_preprocess_links__language_block(&$variables) {
  */
 function gotjunk_us_theme_suggestions_views_view_list_alter(&$suggestions, $variables) {
   $view_name = $variables['view']->id();
-
-  if($view_name == 'blog_categories_dropdown_view') {
-    $suggestions[] = 'views_view_list__blog_categories_dropdown';
+  $suggestions[] = 'views_view_list__' . $view_name;
 }
 /**
  * Implements hook_theme_suggestions_HOOK_alter() for paragraph template.
