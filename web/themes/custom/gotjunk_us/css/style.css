@@ -1264,7 +1264,7 @@ b, strong {
   transform: translateY(-50%);
 }
 .view-blog-home-featured-article .blog-featured-container p.article-category,
-.node--type-custom-page .views-element-container .view-blog-home-top-2-list .views-view-grid > .row .views-field-field-blog-categories a
+.node--type-custom-page .views-element-container .view-blog-home-top-2-list .views-view-grid > .row .views-field-field-blog-categories a,
 .node--type-custom-page .views-element-container .view-blog-home-list .views-view-grid > .row .views-field-field-blog-categories a {
   text-transform: uppercase;
   font-size: .75rem;
@@ -1272,15 +1272,21 @@ b, strong {
   line-height: 1.25rem;
   margin-bottom: 0.5rem;
 }
-.view-blog-home-featured-article .blog-featured-container p.article-category p.article-title {
+.view-blog-home-featured-article .blog-featured-container p.article-title {
   font-size: 1.5rem;
   color: #00539f;
   line-height: 2rem;
   margin-bottom: 0.5rem;
 }
+.view-blog-home-featured-article .blog-featured-container p.article-title a {
+  text-decoration: none;
+  font-family: 'Roboto-Light';
+  color: #00539f;
+}
 .view-blog-home-featured-article .blog-featured-container div.view-read-more a {
   display: inline-block;
   width: auto;
+  margin: 0;
 }
 .node--type-custom-page .views-element-container .view-blog-home-top-2-list .views-view-grid > .row, 
 .node--type-custom-page .views-element-container .view-blog-home-list .views-view-grid > .row {
@@ -1296,8 +1302,25 @@ b, strong {
   color: #333333;
 }
 .node--type-custom-page .views-element-container .view-blog-home-top-2-list .views-view-grid .views-col,
-.node--type-custom-page .views-element-container .view-blog-home-list .views-view-grid .views-col {
+.node--type-custom-page .views-element-container .view-blog-home-list .views-view-grid .views-col,
+.node--type-custom-page .view-blog-home-list {
   margin-bottom: 4rem;
+}
+.node--type-custom-page .views-element-container .view-blog-home-list .views-view-grid > .row .views-field-title {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.node--type-custom-page .view-blog-home-list .js-pager__items.pager {
+  padding: 0;
+}
+.node--type-custom-page .view-blog-home-list .js-pager__items.pager .pager__item {
+  list-style: none;
+  text-align: center;
+}
+.node--type-custom-page .view-blog-home-list .js-pager__items.pager a.button {
+  width: auto;
+  display: inline-block;
+  margin: 0;
 }
   /* Footer */
   
@@ -1782,7 +1805,8 @@ b, strong {
 }
 .field--name-field-home-content .paragraph--type--collapsible-description #read-more a.read-availavility, 
 .wwt-service-wroks .content .service-content .field--name-field-button a, 
-.view-blog-home-featured-article .blog-featured-container .view-read-more a {
+.view-blog-home-featured-article .blog-featured-container .view-read-more a, 
+.view-blog-home-list .js-pager__items.pager a.button {
     display: block;
     padding: 1rem 2rem;
     font-size: 1rem;
