@@ -1348,13 +1348,13 @@ b, strong {
 }
 #block-gotjunk-us-content .view-taxonomy-term > .row {
   clear: both;
-  margin-top: 4rem;
+  margin-top: 2.5rem;
   display: inline-block;
 }
-#block-gotjunk-us-content .view-taxonomy-term .views-view-grid > .row .row.views-col > a {
+#block-gotjunk-us-content .view-taxonomy-term .views-view-grid > .row.views-row .views-col > a {
   display: inline-block;
 }
-#block-gotjunk-us-content .view-taxonomy-term .view-header a.blog-return-btn {
+#block-gotjunk-us-content .view-taxonomy-term .view-header a.blog-return-btn, #block-gotjunk-us-content .view-blog-author-bio-view .view-header a.blog-return-btn {
   margin-top: 3rem;
   margin-bottom: 1.5rem;
   display: block;
@@ -1368,7 +1368,17 @@ b, strong {
   width: 66%;
 }
 #block-gotjunk-us-content .view-id-taxonomy_term .view-blog-categories-dropdown-view {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+}
+#block-gotjunk-us-content .view-blog-author-bio-view .view-content .views-row .main-author-row {
+  background: #f7f7f7;
+  padding: 1.5rem;
+  margin-bottom: 4rem;
+}
+#block-gotjunk-us-content .view-blog-author-bio-view .view-content .views-row .main-author-row .row > div p:first-child {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
   /* Footer */
   
