@@ -1298,7 +1298,8 @@ b, strong {
   margin: 0;
 }
 .node--type-custom-page .views-element-container .view-blog-home-top-2-list .views-view-grid > .row, 
-.node--type-custom-page .views-element-container .view-blog-home-list .views-view-grid > .row {
+.node--type-custom-page .views-element-container .view-blog-home-list .views-view-grid > .row,
+#block-gotjunk-us-content .view-taxonomy-term .views-view-grid > .row {
   --bs-gutter-x: 1.875rem;
   width: auto;
 }
@@ -1312,7 +1313,7 @@ b, strong {
 }
 .node--type-custom-page .views-element-container .view-blog-home-top-2-list .views-view-grid .views-col,
 .node--type-custom-page .views-element-container .view-blog-home-list .views-view-grid .views-col,
-.node--type-custom-page .view-blog-home-list {
+.node--type-custom-page .view-blog-home-list, #block-gotjunk-us-content .view-taxonomy-term {
   margin-bottom: 4rem;
 }
 .node--type-custom-page .views-element-container .view-blog-home-list .views-view-grid > .row .views-field-title {
@@ -1327,7 +1328,7 @@ b, strong {
   text-align: center;
 }
 .node--type-custom-page .view-blog-home-list .js-pager__items.pager a.button, 
-#block-gotjunk-us-content .field--type-text-with-summary a.button {
+#block-gotjunk-us-content .field--type-text-with-summary p a.button {
   width: auto;
   display: inline-block;
   margin: 0;
@@ -1345,7 +1346,30 @@ b, strong {
   width: 100%;
   height: 100%;
 }
-
+#block-gotjunk-us-content .view-taxonomy-term > .row {
+  clear: both;
+  margin-top: 4rem;
+  display: inline-block;
+}
+#block-gotjunk-us-content .view-taxonomy-term .views-view-grid > .row .row.views-col > a {
+  display: inline-block;
+}
+#block-gotjunk-us-content .view-taxonomy-term .view-header a.blog-return-btn {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  display: block;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-family: 'Roboto-Medium';
+  color: #00539f;
+}
+#block-gotjunk-us-content .view-taxonomy-term .view-header .taxonomy-term {
+  float: left;
+  width: 66%;
+}
+#block-gotjunk-us-content .view-id-taxonomy_term .view-blog-categories-dropdown-view {
+  margin-top: 1rem;
+}
   /* Footer */
   
 .site-footer {
@@ -1681,7 +1705,8 @@ b, strong {
 #block-languageswitcherinterfacetext .nav.links-inline {
   display: block;
 }
-.views-element-container .views-view-grid .views-col .views-field-title {
+.views-element-container .views-view-grid .views-col .views-field-title,
+#block-gotjunk-us-content .view-taxonomy-term .views-view-grid > .row .views-col > a {
     font-family: 'Roboto-Light',Helvetica,Arial,sans-serif;
     font-size: 1.5rem;
     font-weight: 500;
