@@ -1274,7 +1274,8 @@ b, strong {
 }
 .view-blog-home-featured-article .blog-featured-container p.article-category,
 .node--type-custom-page .views-element-container .view-blog-home-top-2-list .views-view-grid > .row .views-field-field-blog-categories a,
-.node--type-custom-page .views-element-container .view-blog-home-list .views-view-grid > .row .views-field-field-blog-categories a {
+.node--type-custom-page .views-element-container .view-blog-home-list .views-view-grid > .row .views-field-field-blog-categories a,
+.view-blog-author-specific-list .views-view-grid > .row .views-field-field-blog-categories a {
   text-transform: uppercase;
   font-size: .75rem;
   font-family: 'Roboto-Bold';
@@ -1299,7 +1300,7 @@ b, strong {
 }
 .node--type-custom-page .views-element-container .view-blog-home-top-2-list .views-view-grid > .row, 
 .node--type-custom-page .views-element-container .view-blog-home-list .views-view-grid > .row,
-#block-gotjunk-us-content .view-taxonomy-term .views-view-grid > .row {
+#block-gotjunk-us-content .view-taxonomy-term .views-view-grid > .row, .view-blog-author-specific-list .views-view-grid > .row {
   --bs-gutter-x: 1.875rem;
   width: auto;
 }
@@ -1308,12 +1309,14 @@ b, strong {
   margin-bottom: 1rem;
 }
 .node--type-custom-page .views-element-container .view-blog-home-top-2-list .views-view-grid > .row .views-field-field-blog-categories a,
-.node--type-custom-page .views-element-container .view-blog-home-list .views-view-grid > .row .views-field-field-blog-categories a {
+.node--type-custom-page .views-element-container .view-blog-home-list .views-view-grid > .row .views-field-field-blog-categories a,
+.view-blog-author-specific-list .views-view-grid > .row .views-field-field-blog-categories a {
   color: #333333;
 }
 .node--type-custom-page .views-element-container .view-blog-home-top-2-list .views-view-grid .views-col,
 .node--type-custom-page .views-element-container .view-blog-home-list .views-view-grid .views-col,
-.node--type-custom-page .view-blog-home-list, #block-gotjunk-us-content .view-taxonomy-term {
+.node--type-custom-page .view-blog-home-list, #block-gotjunk-us-content .view-taxonomy-term,
+.view-blog-author-specific-list .views-view-grid .views-col {
   margin-bottom: 4rem;
 }
 .node--type-custom-page .views-element-container .view-blog-home-list .views-view-grid > .row .views-field-title {
