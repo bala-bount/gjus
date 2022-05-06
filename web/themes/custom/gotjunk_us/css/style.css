@@ -805,7 +805,8 @@ select,.form-select {
 .menu--what-we-do-menu .nav .menu-item--expanded .menu>li a.active {
   color: #8dc63f;
 }
-.region-featured-top .menu--wwt-menu button.btn-navbar, .region-featured-top .menu--what-we-do-menu button.btn-navbar {
+.menu--wwt-menu button.btn-navbar, .menu--what-we-do-menu button.btn-navbar,
+.wwt-menu-title.column-menu {
   display: none;
 }
 .node.node--type-wwt-home-page .field--name-body p a {
@@ -2242,11 +2243,13 @@ select,.form-select {
   .region-featured-top .navigation .nav-collapse.always-show.collapsing {
     transition: none;
   }
-  .menu--wwt-menu button.btn-navbar,.menu--what-we-do-menu button.btn-navbar {
+  .menu--wwt-menu button.btn-navbar,.menu--what-we-do-menu button.btn-navbar, .wwt-menu-title.column-menu {
     display: block;
   }
   .featured-top .menu--wwt-menu .nav .menu-item--expanded .menu, 
-  .featured-top .menu--what-we-do-menu .nav .menu-item--expanded .menu,  .hide-for-respnsive {
+  .featured-top .menu--what-we-do-menu .nav .menu-item--expanded .menu,  .hide-for-respnsive,
+  .menu--wwt-menu .nav .menu-item--expanded a:hover + .menu, .menu--wwt-menu .nav .menu-item--expanded .menu:hover, 
+  .menu--what-we-do-menu .nav .menu-item--expanded a:hover + .menu, .menu--what-we-do-menu .nav .menu-item--expanded .menu:hover {
     display: none;
   }
 }
