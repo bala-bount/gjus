@@ -72,13 +72,13 @@
 
       // Logic check for WWT Item pages, WWT Main page, WWD Child page
       if(wwtItem.length > 0) {
-        var menuTitleGrandparent = $.trim($(".menu--wwt-menu .nav li a.active").html());
+        var menuTitleGrandparent = $.trim($(".menu--wwt-menu .nav li.menu-item--active-trail a").html());
         var spaceChar = menuTitleGrandparent.indexOf(" ");
         var newTitle = menuTitleGrandparent.substring(0,spaceChar);
         $(".wwt-menu-title").html(newTitle);
         wwt_page_title_link();
       } else if (wwtMain.length > 0) {
-        var menuTitleGrandparent = $.trim($(".menu--wwt-menu .nav li a.active").html());
+        var menuTitleGrandparent = $.trim($(".menu--wwt-menu .nav li.menu-item--active-trail a").html());
 
         if (menuTitleGrandparent == "What We Take") {
           $(".wwt-menu-title").html(menuTitleGrandparent);
@@ -95,21 +95,21 @@
 
       } 
       else if (wwdChild.length > 0) {
-        var menuTitle = $.trim($(".menu--what-we-do-menu .nav li a.active").html());
+        var menuTitle = $.trim($(".menu--what-we-do-menu .nav li.menu-item--active-trail a").html());
         $(".wwd-menu-title").html(menuTitle);
         wwd_page_title_link();
       } else if (wwdMain.length > 0) {
-        var menuTitle = $.trim($(".menu--what-we-do-menu .nav li a.active").html());
+        var menuTitle = $.trim($(".menu--what-we-do-menu .nav li.menu-item--active-trail a").html());
         $(".wwd-menu-title").html(menuTitle);
         wwd_page_title_link();
       } 
 
       // Resolve double-tap issue for WWT/WWD sticky nav
-      wwt_page_mobile_menu();
+      // wwt_page_mobile_menu();
       // Run again if window size changes to check width
-      $(window).resize(function() {
-        wwt_page_mobile_menu();
-      });
+      // $(window).resize(function() {
+      //   wwt_page_mobile_menu();
+      // });
 
       function wwt_page_title_link() {
         $(".wwt-menu-title").wrapInner("<a></a>");
@@ -127,18 +127,18 @@
         $(".wwt-menu-title a").attr("href",linkURL);
       }
 
-      function wwt_page_mobile_menu() {
-        if(screen.width <= 991) {
-          $(".menu--wwt-menu .nav-child").click(function() {
-            window.location = $(this).find("a").attr("href");
-            return false;
-          });
-          $(".menu--what-we-do-menu .nav-child").click(function() {
-            window.location = $(this).find("a").attr("href");
-            return false;
-          });
-        }
-      }
+      // function wwt_page_mobile_menu() {
+      //   if(screen.width <= 991) {
+      //     $(".menu--wwt-menu ul.menu").click(function() {
+      //       window.location = $(this).find("a").attr("href");
+      //       return false;
+      //     });
+      //     $(".menu--what-we-do-menu ul.menu").click(function() {
+      //       window.location = $(this).find("a").attr("href");
+      //       return false;
+      //     });
+      //   }
+      // }
     }
   }
 

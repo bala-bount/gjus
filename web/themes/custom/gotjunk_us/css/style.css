@@ -2207,11 +2207,11 @@ select,.form-select {
     width: 200px;
   }
   /* responsive menu */
-  .region-featured-top .menu--wwt-menu, .region-featured-top .menu--what-we-do-menu {
+  .menu--wwt-menu,.menu--what-we-do-menu {
     position: relative;
   }
-  .region-featured-top .menu--wwt-menu .nav-collapse.always-show,
-  .region-featured-top .menu--what-we-do-menu .nav-collapse.always-show {
+  .menu--wwt-menu .nav-collapse.always-show,
+  .menu--what-we-do-menu .nav-collapse.always-show {
     overflow: visible;
     width: 100%;
     position: absolute;
@@ -2220,11 +2220,11 @@ select,.form-select {
     z-index: 99;
     left: 0px;
   }
-  .region-featured-top .menu--wwt-menu .nav-collapse.always-show > .nav,
-  .region-featured-top .menu--what-we-do-menu .nav-collapse.always-show > .nav {
+  .menu--wwt-menu .nav-collapse.always-show > .nav,
+  .menu--what-we-do-menu .nav-collapse.always-show > .nav {
     display: block;
   }
-  .region-featured-top .menu--wwt-menu button.btn-navbar, .region-featured-top .menu--what-we-do-menu button.btn-navbar {
+  .menu--wwt-menu button.btn-navbar, .menu--what-we-do-menu button.btn-navbar {
     border: 0;
     background: none;
     font-size: 30px;
@@ -2234,7 +2234,7 @@ select,.form-select {
     border-top: 1px solid #d9d9d9;
     text-align: left;
   }
-  .region-featured-top .menu--wwt-menu .column-menu, .region-featured-top .menu--what-we-do-menu .column-menu {
+  .menu--wwt-menu .column-menu > a, .menu--what-we-do-menu .column-menu > a {
     font-size: 20px;
     font-family: 'Roboto-Bold';
     color: #00539f;
@@ -2242,11 +2242,12 @@ select,.form-select {
   .region-featured-top .navigation .nav-collapse.always-show.collapsing {
     transition: none;
   }
-  .hide-for-respnsive {
-    display: none;
-  }
-  .region-featured-top .menu--wwt-menu button.btn-navbar, .region-featured-top .menu--what-we-do-menu button.btn-navbar {
+  .menu--wwt-menu button.btn-navbar,.menu--what-we-do-menu button.btn-navbar {
     display: block;
+  }
+  .featured-top .menu--wwt-menu .nav .menu-item--expanded .menu, 
+  .featured-top .menu--what-we-do-menu .nav .menu-item--expanded .menu,  .hide-for-respnsive {
+    display: none;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -2580,8 +2581,5 @@ select,.form-select {
   .views-element-container .view-blog-author-specific-list .views-view-grid > .row .views-field-field-teaser-image img,
   #block-gotjunk-us-content .view-taxonomy-term .views-view-grid > .row img, #block-gotjunk-us-content .view-taxonomy-term .view-header .taxonomy-term {
     width: 100%;
-  }
-  .menu--wwt-menu .nav .menu-item--expanded .menu {
-    display: none;
   }
 }
