@@ -2197,6 +2197,7 @@ select,.form-select {
   }
   .region-featured-top .menu--wwt-menu .nav-collapse.always-show, .region-featured-top .menu--what-we-do-menu .nav-collapse.always-show {
     display: block;
+    margin: 0 auto;
   }
 }
 @media only screen and (max-width: 991px) {
