@@ -24,8 +24,13 @@
   We call a macro which calls itself to render the full tree.
   @see http://twig.sensiolabs.org/doc/tags/macro.html
 #}
+<div class="wwt-menu-title wwd-menu-title col-4 column-menu"></div>
+<button data-target=".nav-collapse" data-bs-toggle="collapse" data-bs-target="#wwtNavbar" class="btn-navbar col-4 mobile-menu-btn" type="button" title="Expand mobile sub menu">
+  <i class="fa fa-chevron-down"></i>
+</button>
+<div class="nav-collapse always-show collapse" id="wwtNavbar">
 {{ menus.menu_links(items, attributes, 0) }}
-
+</div>
 {% macro menu_links(items, attributes, menu_level) %}
   {% import _self as menus %}
   {% if items %}

@@ -57,5 +57,89 @@
       }
     }
   }
+  
+  Drupal.behaviors.mobileMenuWWT = {
+    attach: function(context, settings) {
+
+      $(".mobile-menu-btn").click(function() {
+        $(this).find("i").toggleClass("fa-chevron-down fa-chevron-up");
+      });
+      // WWT/WWD Pages mobile menu title
+      var wwdMain = $("body.node--type-wwd-main-page");
+      var wwdChild = $("body.node--type-wwd-child-page");
+      var wwtMain = $("body.node--type-wwt-home-page");
+      var wwtItem = $("body.node--type-wwt-items-page");
+
+      // Logic check for WWT Item pages, WWT Main page, WWD Child page
+      if(wwtItem.length > 0) {
+        var menuTitleGrandparent = $.trim($(".menu--wwt-menu .nav li a.active").html());
+        var spaceChar = menuTitleGrandparent.indexOf(" ");
+        var newTitle = menuTitleGrandparent.substring(0,spaceChar);
+        $(".wwt-menu-title").html(newTitle);
+        wwt_page_title_link();
+      } else if (wwtMain.length > 0) {
+        var menuTitleGrandparent = $.trim($(".menu--wwt-menu .nav li a.active").html());
+
+        if (menuTitleGrandparent == "What We Take") {
+          $(".wwt-menu-title").html(menuTitleGrandparent);
+        } else if (menuTitleGrandparent == "Ce que l’on prend") {
+          $(".wwt-menu-title").html(menuTitleGrandparent);
+        } else {
+          var spaceChar = menuTitleGrandparent.indexOf(" ");
+          var newTitle = menuTitleGrandparent.substring(0,spaceChar);
+          $(".wwt-menu-title").html(newTitle);
+        }
+
+        // Apply link to mobile menu.
+        wwt_page_title_link();
+
+      } 
+      else if (wwdChild.length > 0) {
+        var menuTitle = $.trim($(".menu--what-we-do-menu .nav li a.active").html());
+        $(".wwd-menu-title").html(menuTitle);
+        wwd_page_title_link();
+      } else if (wwdMain.length > 0) {
+        var menuTitle = $.trim($(".menu--what-we-do-menu .nav li a.active").html());
+        $(".wwd-menu-title").html(menuTitle);
+        wwd_page_title_link();
+      } 
+
+      // Resolve double-tap issue for WWT/WWD sticky nav
+      wwt_page_mobile_menu();
+      // Run again if window size changes to check width
+      $(window).resize(function() {
+        wwt_page_mobile_menu();
+      });
+
+      function wwt_page_title_link() {
+        $(".wwt-menu-title").wrapInner("<a></a>");
+        var linkURL = $(".menu--wwt-menu .menu-item--active-trail > a").attr("href");
+
+        $(".menu--wwt-menu  .menu-item--active-trail").addClass("hide-for-respnsive");
+        $(".wwt-menu-title a").attr("href",linkURL);
+      }
+
+      function wwd_page_title_link() {
+        $(".wwt-menu-title").wrapInner("<a></a>");
+        var linkURL = $(".menu--what-we-do-menu .menu-item--active-trail > a").attr("href");
+
+        $(".menu--what-we-do-menu .menu-item--active-trail").addClass("hide-for-respnsive");
+        $(".wwt-menu-title a").attr("href",linkURL);
+      }
+
+      function wwt_page_mobile_menu() {
+        if(screen.width <= 991) {
+          $(".menu--wwt-menu .nav-child").click(function() {
+            window.location = $(this).find("a").attr("href");
+            return false;
+          });
+          $(".menu--what-we-do-menu .nav-child").click(function() {
+            window.location = $(this).find("a").attr("href");
+            return false;
+          });
+        }
+      }
+    }
+  }
 
 })(jQuery, Drupal);

@@ -210,9 +210,9 @@ select,.form-select {
 .collapse.navbar-collapse .navigation {
   margin-left: auto;
 }
-.collapse.navbar-collapse.show .navigation ul.navbar-nav {
+/* .collapse.navbar-collapse.show .navigation ul.navbar-nav {
   padding: 0.938rem 0px 0.938rem;
-}
+} */
 .header .language-switcher-language-url {
   margin-left: 0.625rem;
 }
@@ -804,6 +804,9 @@ select,.form-select {
 .menu--wwt-menu .nav .menu-item--expanded .menu>li a.active,
 .menu--what-we-do-menu .nav .menu-item--expanded .menu>li a.active {
   color: #8dc63f;
+}
+.region-featured-top .menu--wwt-menu button.btn-navbar, .region-featured-top .menu--what-we-do-menu button.btn-navbar {
+  display: none;
 }
 .node.node--type-wwt-home-page .field--name-body p a {
   text-decoration: underline;
@@ -2190,7 +2193,10 @@ select,.form-select {
 @media only screen and (min-width: 992px) {
   .header-container .collapse.navbar-collapse {
     margin-top: 2.5rem;
-  } 
+  }
+  .region-featured-top .menu--wwt-menu .nav-collapse.always-show, .region-featured-top .menu--what-we-do-menu .nav-collapse.always-show {
+    display: block;
+  }
 }
 @media only screen and (max-width: 991px) {
   .navbar-light .navbar-brand {
@@ -2199,7 +2205,49 @@ select,.form-select {
   }
   .navbar-light .navbar-brand img {
     width: 200px;
-  }  
+  }
+  /* responsive menu */
+  .region-featured-top .menu--wwt-menu, .region-featured-top .menu--what-we-do-menu {
+    position: relative;
+  }
+  .region-featured-top .menu--wwt-menu .nav-collapse.always-show,
+  .region-featured-top .menu--what-we-do-menu .nav-collapse.always-show {
+    overflow: visible;
+    width: 100%;
+    position: absolute;
+    top: 48px;
+    background: rgb(255, 255, 255);
+    z-index: 99;
+    left: 0px;
+  }
+  .region-featured-top .menu--wwt-menu .nav-collapse.always-show > .nav,
+  .region-featured-top .menu--what-we-do-menu .nav-collapse.always-show > .nav {
+    display: block;
+  }
+  .region-featured-top .menu--wwt-menu button.btn-navbar, .region-featured-top .menu--what-we-do-menu button.btn-navbar {
+    border: 0;
+    background: none;
+    font-size: 30px;
+  }
+  .menu--wwt-menu .nav li a, .menu--what-we-do-menu .nav li a {
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #d9d9d9;
+    text-align: left;
+  }
+  .region-featured-top .menu--wwt-menu .column-menu, .region-featured-top .menu--what-we-do-menu .column-menu {
+    font-size: 20px;
+    font-family: 'Roboto-Bold';
+    color: #00539f;
+  }
+  .region-featured-top .navigation .nav-collapse.always-show.collapsing {
+    transition: none;
+  }
+  .hide-for-respnsive {
+    display: none;
+  }
+  .region-featured-top .menu--wwt-menu button.btn-navbar, .region-featured-top .menu--what-we-do-menu button.btn-navbar {
+    display: block;
+  }
 }
 @media only screen and (max-width: 767px) {
   #page-wrapper .header {
@@ -2210,8 +2258,11 @@ select,.form-select {
   }
   .header-container .navbar-collapse {
     background-color: #00539f;
+    /* padding: 0.938rem 0px 0.938rem; */
+    /* margin-top: 0.275rem; */
+  }
+  #block-gotjunk-us-main-menu ul.navbar-nav {
     padding: 0.938rem 0px 0.938rem;
-    margin-top: 0.275rem;
   }
   .header-container .navbar-collapse ul.navbar-nav li {
     text-align: center;
@@ -2219,13 +2270,10 @@ select,.form-select {
   .header-container .navbar-collapse ul.navbar-nav li.jobs-more-menu, 
   .header .language-switcher-language-url {
     display: none;
-  }
-  .header-container .navbar-collapse ul.navbar-nav li a {
-    color: #fff;
-  }
+  }  
   .header-container .navbar-collapse ul.navbar-nav li a.nav-link.active, 
-  .header-container .navbar-collapse ul.navbar-nav li a, 
-  .header-container .navbar-collapse ul.navbar-nav li span {
+  .header-container .navbar-collapse ul.navbar-nav li a, .header-container .navbar-collapse ul.navbar-nav li a:hover,
+  .header-container .navbar-collapse ul.navbar-nav li a:focus, .header-container .navbar-collapse ul.navbar-nav li span {
     color: #fff;
     padding: 0.75rem 0;
   }
@@ -2532,5 +2580,8 @@ select,.form-select {
   .views-element-container .view-blog-author-specific-list .views-view-grid > .row .views-field-field-teaser-image img,
   #block-gotjunk-us-content .view-taxonomy-term .views-view-grid > .row img, #block-gotjunk-us-content .view-taxonomy-term .view-header .taxonomy-term {
     width: 100%;
+  }
+  .menu--wwt-menu .nav .menu-item--expanded .menu {
+    display: none;
   }
 }
