@@ -706,14 +706,16 @@ select,.form-select {
 .menu--what-we-do-menu.sticky .nav li.wwt-menu-book-now {
   display: block;
 }
-.menu--wwt-menu .nav li.wwt-menu-book-now a,
-.menu--what-we-do-menu .nav li.wwt-menu-book-now a {
+.menu--wwt-menu .nav li.wwt-menu-book-now a, .menu--what-we-do-menu .nav li.wwt-menu-book-now a, .sticky .wwt-menu-book.column-book-now a {
   color: #fff;
   background: #8dc63f;
   padding: 0.625rem 2.5rem;
   font-family: 'Roboto-Bold';
   font-size: 0.938rem;
   margin-top: 0.625rem;
+}
+.navigation.sticky .wwt-menu-book.column-book-now a {
+  padding: 0.875rem 2.5rem;
 }
 .menu--wwt-menu .nav li.menu-item--active-trail>a.active, 
 .menu--wwt-menu .nav li.menu-item--active-trail:focus>a.active,
@@ -2211,13 +2213,15 @@ select,.form-select {
   /* responsive menu */
   .menu--wwt-menu,.menu--what-we-do-menu {
     position: relative;
+    padding-right: 7px;
+    padding-left: 7px;
   }
   .menu--wwt-menu .nav-collapse.always-show,
   .menu--what-we-do-menu .nav-collapse.always-show {
     overflow: visible;
     width: 100%;
     position: absolute;
-    top: 48px;
+    top: 62px;
     background: rgb(255, 255, 255);
     z-index: 99;
     left: 0px;
@@ -2250,7 +2254,8 @@ select,.form-select {
   .featured-top .menu--wwt-menu .nav .menu-item--expanded .menu, 
   .featured-top .menu--what-we-do-menu .nav .menu-item--expanded .menu,  .hide-for-respnsive,
   .menu--wwt-menu .nav .menu-item--expanded a:hover + .menu, .menu--wwt-menu .nav .menu-item--expanded .menu:hover, 
-  .menu--what-we-do-menu .nav .menu-item--expanded a:hover + .menu, .menu--what-we-do-menu .nav .menu-item--expanded .menu:hover {
+  .menu--what-we-do-menu .nav .menu-item--expanded a:hover + .menu, .menu--what-we-do-menu .nav .menu-item--expanded .menu:hover,
+  .menu--wwt-menu.sticky .nav li.wwt-menu-book-now, .menu--what-we-do-menu.sticky .nav li.wwt-menu-book-now {
     display: none;
   }
   .menu--wwt-menu .nav > li.menu-item--active-trail>a:after, .menu--wwt-menu .nav > li:hover>a:after, .menu--what-we-do-menu .nav > li.menu-item--active-trail>a:after, .menu--what-we-do-menu .nav > li:hover>a:after {
