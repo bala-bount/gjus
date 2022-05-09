@@ -806,7 +806,7 @@ select,.form-select {
   color: #8dc63f;
 }
 .menu--wwt-menu button.btn-navbar, .menu--what-we-do-menu button.btn-navbar,
-.wwt-menu-title.column-menu {
+.wwt-menu-title.column-menu, .wwt-menu-book.column-book-now {
   display: none;
 }
 .node.node--type-wwt-home-page .field--name-body p a {
@@ -2244,7 +2244,7 @@ select,.form-select {
   .region-featured-top .navigation .nav-collapse.always-show.collapsing {
     transition: none;
   }
-  .menu--wwt-menu button.btn-navbar,.menu--what-we-do-menu button.btn-navbar, .wwt-menu-title.column-menu {
+  .menu--wwt-menu button.btn-navbar,.menu--what-we-do-menu button.btn-navbar, .wwt-menu-title.column-menu, .sticky .wwt-menu-book.column-book-now {
     display: block;
   }
   .featured-top .menu--wwt-menu .nav .menu-item--expanded .menu, 
@@ -2252,6 +2252,9 @@ select,.form-select {
   .menu--wwt-menu .nav .menu-item--expanded a:hover + .menu, .menu--wwt-menu .nav .menu-item--expanded .menu:hover, 
   .menu--what-we-do-menu .nav .menu-item--expanded a:hover + .menu, .menu--what-we-do-menu .nav .menu-item--expanded .menu:hover {
     display: none;
+  }
+  .menu--wwt-menu .nav > li.menu-item--active-trail>a:after, .menu--wwt-menu .nav > li:hover>a:after, .menu--what-we-do-menu .nav > li.menu-item--active-trail>a:after, .menu--what-we-do-menu .nav > li:hover>a:after {
+    background: none;
   }
 }
 @media only screen and (max-width: 767px) {
