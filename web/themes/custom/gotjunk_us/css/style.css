@@ -2225,6 +2225,7 @@ select,.form-select {
     background: rgb(255, 255, 255);
     z-index: 99;
     left: 0px;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
   }
   .menu--wwt-menu .nav-collapse.always-show > .nav,
   .menu--what-we-do-menu .nav-collapse.always-show > .nav {
@@ -2241,7 +2242,7 @@ select,.form-select {
     text-align: left;
   }
   .menu--wwt-menu .column-menu > a, .menu--what-we-do-menu .column-menu > a {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-family: 'Roboto-Bold';
     color: #00539f;
   }
@@ -2250,6 +2251,10 @@ select,.form-select {
   }
   .menu--wwt-menu button.btn-navbar,.menu--what-we-do-menu button.btn-navbar, .wwt-menu-title.column-menu, .sticky .wwt-menu-book.column-book-now {
     display: block;
+  }
+  .wwt-menu-book.column-book-now {
+    text-align: right;
+    padding-right: 0.313rem;
   }
   .featured-top .menu--wwt-menu .nav .menu-item--expanded .menu, 
   .featured-top .menu--what-we-do-menu .nav .menu-item--expanded .menu,  .hide-for-respnsive,
@@ -2593,5 +2598,20 @@ select,.form-select {
   .views-element-container .view-blog-author-specific-list .views-view-grid > .row .views-field-field-teaser-image img,
   #block-gotjunk-us-content .view-taxonomy-term .views-view-grid > .row img, #block-gotjunk-us-content .view-taxonomy-term .view-header .taxonomy-term {
     width: 100%;
+  }  
+}
+@media only screen and (max-width: 469px) {
+  .wwt-menu-book.column-book-now a {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .menu--wwt-menu .column-menu > a, .menu--what-we-do-menu .column-menu > a {
+    font-size: 1.063rem;
+  }
+}
+@media only screen and (max-width: 379px) {
+  .wwt-menu-book.column-book-now a {
+    padding-right: 0.875rem;
+    padding-left: 0.875rem;
   }
 }

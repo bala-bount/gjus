@@ -85,9 +85,10 @@
         } else if (menuTitleGrandparent == "Ce que l’on prend") {
           $(".wwt-menu-title").html(menuTitleGrandparent);
         } else {
-          var spaceChar = menuTitleGrandparent.indexOf(" ");
-          var newTitle = menuTitleGrandparent.substring(0,spaceChar);
-          $(".wwt-menu-title").html(newTitle);
+          // var spaceChar = menuTitleGrandparent.indexOf(" ");
+          // var newTitle = menuTitleGrandparent.substring(0,spaceChar);
+          // $(".wwt-menu-title").html(newTitle);
+          $(".wwt-menu-title").html(menuTitleGrandparent);
         }
 
         // Apply link to mobile menu.
