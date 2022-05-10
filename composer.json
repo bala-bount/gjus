@@ -66,6 +66,7 @@
         "drupal/addtoany": "^1.16",
         "drupal/admin_toolbar": "^3.1",
         "drupal/bootstrap_barrio": "^5.5",
+        "drupal/clientside_validation": "^3.0@RC",
         "drupal/core-composer-scaffold": "^9.2",
         "drupal/core-recommended": "^9.2",
         "drupal/metatag": "^1.19",
