@@ -1461,7 +1461,8 @@ select,.form-select {
   text-transform: uppercase;
 }
 .block-webform .webform-submission-account-request-form-form .js-form-item input[type=text],
-.webform-submission-contact-form .js-form-item input[type=text] {
+.webform-submission-contact-form .js-form-item input[type=text], .webform-submission-contact-form .js-form-item input[type=email],
+.webform-submission-contact-form .js-form-item textarea.form-control {
   margin-bottom: 0;
 }
 .block-webform .webform-submission-account-request-form-form .js-form-item textarea {
@@ -1486,7 +1487,6 @@ select,.form-select {
 }
 .webform-submission-contact-form .js-form-item label.error {
   color: #FF0000;
-  margin-top: -8px;
 }
 .webform-submission-contact-form .js-form-item label.form-required {
   display: inline;
