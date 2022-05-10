@@ -1248,7 +1248,8 @@ select,.form-select {
   width: 66%;
   margin: 3rem auto 1.5rem;
 }
-#block-gotjunk-us-content .node--type-page, #block-commercialvideoblock, .block-webform .webform-submission-account-request-form-form {
+#block-gotjunk-us-content .node--type-page, #block-commercialvideoblock, .block-webform .webform-submission-account-request-form-form,
+.webform-submission-contact-form {
   width: 66%;
   margin: 0 auto;
 }
@@ -1455,16 +1456,19 @@ select,.form-select {
 .blog-return-btn i.fas {
   margin-right: 0.5rem;
 }
-.block-webform .webform-submission-account-request-form-form .js-form-item label {
+.block-webform .webform-submission-account-request-form-form .js-form-item label.js-form-required, 
+.webform-submission-contact-form .js-form-item label.js-form-required {
   text-transform: uppercase;
 }
-.block-webform .webform-submission-account-request-form-form .js-form-item input[type=text] {
+.block-webform .webform-submission-account-request-form-form .js-form-item input[type=text],
+.webform-submission-contact-form .js-form-item input[type=text] {
   margin-bottom: 0;
 }
 .block-webform .webform-submission-account-request-form-form .js-form-item textarea {
   border-radius: 0;
 }
-.block-webform .webform-submission-account-request-form-form .form-actions button {
+.block-webform .webform-submission-account-request-form-form .form-actions button,
+.webform-submission-contact-form .form-actions button {
   background: #00539f;
   font-family: 'Roboto-Bold';
   color: #fff;
@@ -1474,10 +1478,25 @@ select,.form-select {
   padding: 1rem 2rem;
   text-transform: uppercase;
 }
-.block-webform .webform-submission-account-request-form-form .form-actions button.form-submit::before  {
+.block-webform .webform-submission-account-request-form-form .form-actions button.form-submit::before,
+.webform-submission-contact-form .form-actions button.form-submit::before  {
   background: none;
   width: 0;
   height: 0;
+}
+.webform-submission-contact-form .js-form-item label.error {
+  color: #FF0000;
+  margin-top: -8px;
+}
+.webform-submission-contact-form .js-form-item label.form-required {
+  display: inline;
+  clear: both;
+}
+.webform-submission-contact-form .js-form-item label.form-required::after {
+  content: "*";
+  color: #FF0000;
+  font-family: 'Roboto-Bold';
+  padding: 4px;
 }
   /* Footer */
   
@@ -1987,7 +2006,8 @@ select,.form-select {
 .wwt-service-wroks .content .service-content .field--name-field-button a:hover, 
 .view-blog-home-featured-article .blog-featured-container .view-read-more a:hover, 
 .view-blog-home-list .js-pager__items.pager a.button:hover, #block-gotjunk-us-content .field--type-text-with-summary a.button:hover,
-.view-taxonomy-term .js-pager__items.pager a.button:hover, .block-webform .webform-submission-account-request-form-form .form-actions button:hover {
+.view-taxonomy-term .js-pager__items.pager a.button:hover, .block-webform .webform-submission-account-request-form-form .form-actions button:hover,
+.webform-submission-contact-form .form-actions button:hover {
   background: #004382;
 }
 .field--name-field-home-content .read-more-expand, .field--name-field-home-content .read-more-collapse,
