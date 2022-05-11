@@ -368,11 +368,18 @@ select,.form-select {
 .navigation.menu--sub-menu .dropdown-full-menu {
   margin: 0;
 }
-.header-search {
-  margin-left: 0.625rem;
-  display: flex;
+/* search header */
+.search-block-form #search-block-form {
+  padding: 0;
+  flex-flow: nowrap;
+  margin-left: 1.25rem;
+  /* align-items: center; */
 }
-.header-search .btn-submit {
+.search-block-form .form-actions, .search-block-form fieldset.js-form-type-search {
+  margin: 0 !important;
+  padding: 0;
+}
+.search-block-form .form-actions .form-submit {
   background-color: transparent;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -381,11 +388,13 @@ select,.form-select {
   margin: 0.188rem 0 0px 0.313rem;
   padding: 0;
   width: 25px;
-  background: url(assets/images/flags/css-sprites.png) no-repeat -112px -48px;
+  background: url(../images/flags/css-sprites.png) no-repeat -112px -48px;
   outline: 0;
   font-size: 0;
+  border: none;
 }
-.header-search .form-control {
+.search-block-form .form-search {
+  display: block;
   height: 25px;
   margin: 1px 0;
   padding: 0 0.188rem;
@@ -398,6 +407,8 @@ select,.form-select {
   box-shadow: inset 0 1px 2px rgb(0 0 0 / 10%);
   color: rgba(0,0,0,.75);
   font-size: .875rem;
+  transition: box-shadow .45s,border-color .45s ease-in-out;
+  transition: box-shadow .45s,border-color .45s ease-in-out,-webkit-box-shadow .45s;
 }
 /* Banner area */
 .region-featured-top .block-block-content {
@@ -1472,7 +1483,8 @@ select,.form-select {
   border-radius: 0;
 }
 .block-webform .webform-submission-account-request-form-form .form-actions button,
-.webform-submission-contact-form .form-actions button {
+.webform-submission-contact-form .form-actions button, 
+.webform-submission-franchise-form-form .form-actions button {
   background: #00539f;
   font-family: 'Roboto-Bold';
   color: #fff;
@@ -1483,7 +1495,8 @@ select,.form-select {
   text-transform: uppercase;
 }
 .block-webform .webform-submission-account-request-form-form .form-actions button.form-submit::before,
-.webform-submission-contact-form .form-actions button.form-submit::before  {
+.webform-submission-contact-form .form-actions button.form-submit::before,
+.webform-submission-franchise-form-form .form-actions button.form-submit::before  {
   background: none;
   width: 0;
   height: 0;
@@ -2098,7 +2111,7 @@ body.lang-fr-ca .outerspinner {
 .view-blog-home-featured-article .blog-featured-container .view-read-more a:hover, 
 .view-blog-home-list .js-pager__items.pager a.button:hover, #block-gotjunk-us-content .field--type-text-with-summary a.button:hover,
 .view-taxonomy-term .js-pager__items.pager a.button:hover, .block-webform .webform-submission-account-request-form-form .form-actions button:hover,
-.webform-submission-contact-form .form-actions button:hover {
+.webform-submission-contact-form .form-actions button:hover, .webform-submission-franchise-form-form .form-actions button:hover {
   background: #004382;
 }
 .field--name-field-home-content .read-more-expand, .field--name-field-home-content .read-more-collapse,
