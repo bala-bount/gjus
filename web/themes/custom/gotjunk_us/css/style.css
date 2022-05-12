@@ -215,6 +215,7 @@ select,.form-select {
 } */
 .header .language-switcher-language-url {
   margin-left: 0.625rem;
+  position: relative;
 }
 .language-switcher-language-url a.dropdown-toggle {
   color: #333;
@@ -494,41 +495,7 @@ select,.form-select {
 .region-featured-top .block-views-blockbanner-block-view-block-1 .view-id-banner_block_view .card-img-overlay .field--name-field-media-image img {
   max-width: 450px;
 }
-/* green menu */
-/* .menu--home-menu {
-  background-color: #8dc63f;
-}
-.menu--home-menu .nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.menu--home-menu .nav li {
-  border-left: 1px solid #ffffff;
-  z-index: 100;
-  width: 249px;
-}
-.menu--home-menu .nav li a {
-  text-align: left;
-  line-height: 0.875rem;
-  padding: 1.25rem 0.75rem 1.25rem 0.75rem;
-  color: #fff;
-  font-size: .875rem;
-  font-family: 'Roboto-Bold',Helvetica,Arial,sans-serif;
-  display: block;
-  text-transform: uppercase;
-}
-.menu--home-menu .nav li a.is-active {
-    color: #000;
-}
-.menu--home-menu .nav li li.active-trail a, 
-.menu--home-menu .nav li li a.active,
-.menu--home-menu .nav li a:hover {
-  color: #000000;
-}
-.menu--home-menu .nav > li:last-child {
-  border-right: 1px solid #ffffff;
-} */
+
 .featured-top .block-webform {
   z-index: 400;
   padding: 1.5rem 0;
@@ -1735,8 +1702,8 @@ body.lang-fr-ca .outerspinner {
     white-space: nowrap;
     overflow: hidden;
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border: 2px solid #ffffff;
     border-radius: 50%;
 }
@@ -1778,8 +1745,8 @@ body.lang-fr-ca .outerspinner {
 .navbar-light .navbar-nav .nav-item a, .navbar-light .navbar-nav .nav-item span {
   color: inherit;
   display: inline-block;
-  text-transform: uppercase;
-  font-size: .875rem;
+  text-transform: capitalize;
+  font-size: 1rem;
   color: #333;
   font-family: 'Roboto-Bold',Helvetica,Arial,sans-serif;
 }
@@ -2409,7 +2376,7 @@ body.lang-fr-ca .outerspinner {
   .header-container .navbar-collapse ul.navbar-nav li {
     text-align: center;
   }
-  .header-container .navbar-collapse ul.navbar-nav li.jobs-more-menu, 
+  .header-container .navbar-collapse ul.navbar-nav li.gj-more-menu, 
   .header .language-switcher-language-url {
     display: none;
   }  
