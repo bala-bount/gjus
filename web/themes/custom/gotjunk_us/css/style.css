@@ -1227,7 +1227,9 @@ select,.form-select {
   margin: 3rem auto 1.5rem;
 }
 #block-gotjunk-us-content .node--type-page, #block-commercialvideoblock, .block-webform .webform-submission-account-request-form-form,
-.webform-submission-contact-form {
+.webform-submission-contact-form, #block-gotjunk-us-content .node--type-custom-page .block-field-blocknodecustom-pagetitle,  
+#block-gotjunk-us-content .node--type-custom-page .block-field-blocknodecustom-pagebody, 
+#block-gotjunk-us-content .node--type-custom-page .webform-submission-account-request-form-form {
   width: 66%;
   margin: 0 auto;
 }
@@ -1445,6 +1447,16 @@ select,.form-select {
 .webform-submission-contact-form .js-form-item textarea.form-control {
   margin-bottom: 0;
 }
+.block-webform .webform-submission-account-request-form-form .js-form-item input[type=text]:focus,
+.block-webform .webform-submission-account-request-form-form .js-form-item input[type=email]:focus,
+.block-webform .webform-submission-account-request-form-form .js-form-item textarea.form-control:focus,
+.webform-submission-contact-form .js-form-item input[type=text]:focus, .webform-submission-contact-form .js-form-item input[type=email]:focus,
+.webform-submission-contact-form .js-form-item textarea.form-control:focus {
+  background: #fafafa;
+  border-color: #999;
+  outline: none;
+  box-shadow: 0 0 5px #999;
+}
 .block-webform .webform-submission-account-request-form-form .js-form-item textarea,
 .webform-submission-contact-form .js-form-item textarea{
   border-radius: 0;
@@ -1568,6 +1580,9 @@ body.lang-fr-ca .outerspinner {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
+}
+.webform-submission-account-request-form-form .webform-flexbox {
+  flex-flow: column;
 }
   /* Footer */
   
@@ -2025,15 +2040,20 @@ body.lang-fr-ca .outerspinner {
 .field--name-field-home-content h1, .node.node--type-wwt-home-page .field--name-field-sub-title, 
 .node.node--type-wwt-items-page .field--name-field-items-sub-title,
 .node--type-wwd-main-page .field--name-field-content .paragraph--type--title-and-description h1,
-.node--type-wwd-child-page .field--name-field-title-and-description .field__item .paragraph h1 {
+.node--type-wwd-child-page .field--name-field-title-and-description .field__item .paragraph h1, 
+.node--type-custom-page .block-field-blocknodecustom-pagetitle .field--name-title {
     line-height: 3.5rem;
     padding-top: 0;
     padding-left: 0;
-    /* margin-top: 3.125rem; */
     margin-top: 3rem;
     margin-bottom: 0.625rem;
     text-align: center;
     font-size: 3rem;
+}
+.node--type-custom-page .block-field-blocknodecustom-pagetitle .field--name-title {
+  margin-bottom: 1.5rem;
+  display: block;
+  color: #00539f;
 }
 .node.node--type-wwt-home-page .field--name-field-sub-title {
   color: #00539f;
@@ -2179,9 +2199,6 @@ body.lang-fr-ca .outerspinner {
   max-width: 770px;
   margin: 0 auto;
 }
-/* .field--name-field-home-content .paragraph--type--title-and-description h3 {
-  font-size: 2.5rem;
-} */
 .field--name-field-home-content .paragraph--type--title-and-description .field--name-field-media-oembed-video {
   margin-bottom: 2.375rem;
 }
@@ -2578,7 +2595,10 @@ body.lang-fr-ca .outerspinner {
   .featured-bottom .review-block-section h4 {
     white-space: normal;
   }
-  #block-gotjunk-us-page-title h1.title, #block-gotjunk-us-content .node--type-page, #block-commercialvideoblock {
+  #block-gotjunk-us-page-title h1.title, #block-gotjunk-us-content .node--type-page, #block-commercialvideoblock, 
+  #block-gotjunk-us-content .node--type-custom-page .block-field-blocknodecustom-pagetitle,  
+  #block-gotjunk-us-content .node--type-custom-page .block-field-blocknodecustom-pagebody, 
+  #block-gotjunk-us-content .node--type-custom-page .webform-submission-account-request-form-form {
     width: 100%;
   }
   #block-gotjunk-us-page-title h1.title, #block-gotjunk-us-content .node--type-page h2 {
