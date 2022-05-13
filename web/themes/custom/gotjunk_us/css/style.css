@@ -497,7 +497,8 @@ select,.form-select {
 }
 
 .featured-top .block-webform {
-  z-index: 400;
+  /* z-index: 400; */
+  z-index: 100;
   padding: 1.5rem 0;
   background-color: #00539f;
 }
@@ -1603,8 +1604,8 @@ body.lang-fr-ca .outerspinner {
   border: none;
   background-color: #fff;
 }
-.ui-dialog.webform-confirmation-modal .webform-confirmation-modal--content h1.page-title {
- font-size: 30px;
+.ui-dialog.webform-confirmation-modal .webform-confirmation-modal--content h1#page-title {
+ font-size: 34px;
  color:#8dc63f;
 }
   /* Footer */
