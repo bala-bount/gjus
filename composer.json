@@ -19,7 +19,8 @@
     ],
     "require-dev": {
         "drupal/core-dev": "^9.2",
-        "drupal/fancy_file_delete": "^2.0"
+        "drupal/fancy_file_delete": "^2.0",
+        "drupal/structure_sync": "^2.0"
     },
     "conflict": {
             "drupal/drupal": "*"
@@ -66,6 +67,7 @@
         "drupal/addtoany": "^1.16",
         "drupal/admin_toolbar": "^3.1",
         "drupal/bootstrap_barrio": "^5.5",
+        "drupal/clientside_validation": "^3.0@RC",
         "drupal/core-composer-scaffold": "^9.2",
         "drupal/core-recommended": "^9.2",
         "drupal/metatag": "^1.19",
