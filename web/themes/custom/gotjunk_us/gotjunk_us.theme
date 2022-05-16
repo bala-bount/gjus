@@ -56,7 +56,7 @@ function gotjunk_us_preprocess_links__language_block(&$variables) {
   foreach ($variables['links'] as $i => $link) {
     if (isset($link['link']['#options']['language'])) {
       $linkLanguage = $link['link']['#options']['language'];
-      $variables['links'][$i]['link']['#title'] = $linkLanguage->get('label');
+      $variables['links'][$i]['link']['#title'] = $linkLanguage->get('name');
     }
   }
   // External URI for Australia link.
