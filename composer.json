@@ -70,6 +70,7 @@
         "drupal/clientside_validation": "^3.0@RC",
         "drupal/core-composer-scaffold": "^9.2",
         "drupal/core-recommended": "^9.2",
+        "drupal/editor_advanced_link": "^2.0",
         "drupal/feeds": "^3.0@beta",
         "drupal/feeds_ex": "^1.0@beta",
         "drupal/linkit": "^5.0@beta",
