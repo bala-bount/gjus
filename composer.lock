@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "38e8af156415dd49f58f9c164af3b76a",
+    "content-hash": "0501c5cad7657dd94e92d0ee960aa4e1",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2217,18 +2217,18 @@
             }
         },
         {
-            "name": "drupal/feeds_http_auth_fetcher",
-            "version": "1.0.2",
+            "name": "drupal/feeds_fetcher_headers",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/feeds_http_auth_fetcher.git",
-                "reference": "1.0.2"
+                "url": "https://git.drupalcode.org/project/feeds_fetcher_headers.git",
+                "reference": "1.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/feeds_http_auth_fetcher-1.0.2.zip",
-                "reference": "1.0.2",
-                "shasum": "5e06e0eb06d4d95fa60bbe70bc1eda524874b2af"
+                "url": "https://ftp.drupal.org/files/projects/feeds_fetcher_headers-1.0.0.zip",
+                "reference": "1.0.0",
+                "shasum": "edf9185bac3ad58f0fa8306f49bb65be55ba725e"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -2236,11 +2236,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.2",
-                    "datestamp": "1639149777",
+                    "version": "1.0.0",
+                    "datestamp": "1634468684",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
                     }
                 }
             },
@@ -2250,18 +2250,14 @@
             ],
             "authors": [
                 {
-                    "name": "michaelfavia",
-                    "homepage": "https://www.drupal.org/user/49137"
-                },
-                {
-                    "name": "yogeshmpawar",
-                    "homepage": "https://www.drupal.org/user/2922907"
+                    "name": "eabquina",
+                    "homepage": "https://www.drupal.org/user/3087733"
                 }
             ],
-            "description": "Add an HTTP Authorization header to the regular HTTP fetcher",
-            "homepage": "https://www.drupal.org/project/feeds_http_auth_fetcher",
+            "description": "Add Headers to the regular Feeds HTTP fetcher",
+            "homepage": "https://www.drupal.org/project/feeds_fetcher_headers",
             "support": {
-                "source": "https://git.drupalcode.org/project/feeds_http_auth_fetcher"
+                "source": "https://git.drupalcode.org/project/feeds_fetcher_headers"
             }
         },
         {
